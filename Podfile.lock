@@ -1,0 +1,26 @@
+PODS:
+  - Alamofire (5.10.2)
+  - Moya (15.0.0):
+    - Moya/Core (= 15.0.0)
+  - Moya/Core (15.0.0):
+    - Alamofire (~> 5.0)
+  - TamaraSDK (1.0.18):
+    - Moya
+
+DEPENDENCIES:
+  - TamaraSDK
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - Moya
+    - TamaraSDK
+
+SPEC CHECKSUMS:
+  Alamofire: 7193b3b92c74a07f85569e1a6c4f4237291e7496
+  Moya: 138f0573e53411fb3dc17016add0b748dfbd78ee
+  TamaraSDK: dd5935511c1754aacd6bb0392262233ccefe5318
+
+PODFILE CHECKSUM: 58e06a1ed628d8b99cb4d35c1951cbe10df2f5ad
+
+COCOAPODS: 1.16.2

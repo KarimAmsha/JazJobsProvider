@@ -1,0 +1,6 @@
+framework module TamaraSDK {
+  umbrella header "TamaraSDK-umbrella.h"
+
+  export *
+  module * { export * }
+}

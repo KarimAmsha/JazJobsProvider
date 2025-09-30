@@ -1,0 +1,565 @@
+/* 
+  Localizable.strings
+  Wishy
+
+  Created by Karim Amsha on 27.04.2024.
+  
+*/
+
+"Switch to English" = "التبديل إلى الإنجليزية";
+"Switch to Arabic" = "التبديل إلى العربية";
+"Share your path with others" = "شارك طريقك مع الآخرين";
+"Getting to your destination is easier" = "وصولك إلى وجهتك أسهل";
+"Invest your car" = "استثمر سيارتك";
+"Through the availability of many cars you can easily find someone who will save you the time and trouble of transportation" = "من خلال توفر العديد من السيارات يمكنك بسهولة أن تجد من يوفر عليك وقت وعناء المواصلات";
+"Create New Account" = "إنشاء حساب جديد";
+"Next" = "التالي";
+"Register" = "التسجيل";
+"Enter your phone number to create new account" = "ادخل رقم هاتفك لإنشاء حساب جديد";
+"Create New Account" = "إنشاء حساب جديد";
+"Enter code!" = "تأكيد رقم الهاتف!";
+"Phone Number" = "رقم الهاتف";
+"Error" = "خطأ";
+"Loading" = "جاري التحميل...";
+"Verify Code" = "تحقق من الرمز";
+"Resend code after" = "إعادة إرسال الرمز بعد";
+"Personal Information" = "البيانات الشخصية";
+"Complete Registeration" = "إتمام عملية التسجيل";
+"Full Name" = "الإسم الكامل";
+"Email" = "البريد الإلكتروني";
+"Are you have a car" = "هل تمتلك سيارة؟";
+"Car Type" = "نوع السيارة";
+"Car Model" = "موديل السيارة";
+"Car Color" = "لون السيارة";
+"Car Number" = "رقم السيارة";
+"Choose Photo" = "إختر صورة";
+"Take Photo" = "إلتقط صورة";
+"Cancel" = "إلغاء";
+"Ok" = "موافق";
+"Home" = "الرئيسية";
+"Orders" = "الطلبات";
+"Notifications" = "الاشعارات";
+"Settings" = "الإعدادات";
+"Hello" = "مرحبا";
+"Search for place" = "البحث عن مكان";
+"Joining Request" = "طلب إنضمام";
+"Delivery Request" = "طلب توصيل";
+"Current Orders" = "الطلبات الحالية";
+"Completed Orders" = "الطلبات المكتملة";
+"Cancelled Orders" = "الطلبات الملغية";
+"Trip Number" = "رقم الرحلة";
+"From" = "من";
+"To" = "إلى";
+"New" = "جديد";
+"News" = "الجديدة";
+"Current Order" = "الطلبات الحالية";
+"Finished" = "المنتهية";
+"Canceled" = "الملغية";
+"Opened Order" = "طلب مفتوح";
+"Completed" = "مكتمل";
+"Show Details" = "عرض التفاصيل";
+"Car Information" = "معلومات السيارة";
+"Trip Date" = "تاريخ الرحلة";
+"Date Of The First Trip" = "تاريخ أول رحلة";
+"New Passenger" = "راكب جديد";
+"Agree On Joining" = "الموافقة على الإنضمام";
+"Order Details" = "تفاصيل الطلب";
+"Show On Map" = "عرض على الخريطة";
+"Trip Day" = "أيام الرحلة";
+"Driver Informations" = "معلومات السائق";
+"Person Informations" = "معلومات الشخص";
+"Number of available seats" = "عدد المقاعد المتاحة";
+"Number of required seats" = "عدد المقاعد المطلوبة";
+"Driver Notes" = "ملاحظات السائق";
+"Notes" = "ملاحظات";
+"Join Now" = "انضم الأن";
+"Make a delivery offer" = "تقديم عرض توصيل";
+"Delivery Offer" = "عرض توصيل";
+"Min Price" = "أقل سعر";
+"Max Price" = "أعلى سعر";
+"Add note (Optional)" = "أضف ملاحظة (اختياري)";
+"Delivery offer has been successfully submitted" = "تم تقديم عرض التوصيل بنجاح";
+"Show Request Details" = "عرض تفاصيل الطلب";
+"Add Review" = "تقييم";
+"Join To Trip" = "الانضمام إلى الرحلة";
+"Select the destination on the map" = "حدد الوجهة على الخريطة";
+"Specify the price" = "حدد السعر";
+"The price should be between" = "يجب ان يكون السعر بين";
+"Is the trip daily?" = "هل الرحلة بشكل يومي؟";
+"Trip Time" = "وقت الرحلة";
+"Trip Path" = "مسار الرحلة";
+"Start Point" = "نقطة البداية";
+"End Point" = "نقطة النهاية";
+"Specify Start Point" = "حدد نقطة البداية";
+"Specify End Point" = "حدد نقطة النهاية";
+"Specify Destination" = "تحديد الوجهة";
+"Please Specify Start Point" = "الرجاء تحديد نقطة بداية";
+"Please Specify End Point" = "الرجاء تحديد نقطة نهاية";
+"Destination has been selected" = "تم تحديد الوجهة";
+"Joining request has been successfully submitted" = "تم تقديم طلب الانضمام بنجاح";
+"Done" = "تم";
+"Profile" = "البروفايل";
+"Save Changes" = "حفظ التغييرات";
+"Wallet" = "المحفظة";
+"About Us" = "من نحن؟";
+"Contact Us" = "تواصل معنا";
+"Share App" = "مشاركة التطبيق";
+"Terms And Conditions" = "الشروط والأحكام";
+"Logout" = "تسجيل الخروج";
+"My Wallet" = "محفظتي";
+"Last Transaction" = "اخر عملية مالية";
+"Total Account" = "الرصيد الإجمالي";
+"SAR" = "ر.س";
+"Finicial Transactions" = "المعاملات المالية";
+"Add Account" = "أضف رصيد";
+"Trip Title" = "عنوان الرحلة";
+"First Trip Date" = "تاريخ أول رحلة";
+"Maximum number of passengers per flight" = "الحد الأقصى للركاب في الرحلة";
+"Submit Join Request" = "تقديم طلب الانضمام";
+"Joining request created successfully" = "تم انشاء طلب الانضمام بنجاح";
+"Joining Requests" = "طلبات الانضمام";
+"Price" = "السعر";
+"Request Accept" = "قبول الطلب";
+"Request Reject" = "رفض الطلب";
+"Passengers Count" = "عدد الركاب";
+"Agree On" = "أوافق على";
+"Specify Destination On Map" = "حدد الوجهة على الخريطة";
+"Submit Delivery Request" = "تقديم طلب التوصيل";
+"Delivery request created successfully" = "تم انشاء طلب التوصيل بنجاح";
+"Your Location" = "حدد موقعك";
+"An unknown network error occurred." = "حدث خطأ غير معروف";
+"Bad request. Please check your input." = "فشل الطلب. الرجاء فحصل مدخلاتك";
+"Unauthorized. Please log in." = "غير موثق. الرجاء تسجيل الدخول";
+"Resource not found." = "الموارد غير موجودة";
+"Server error. Please try again later." = "خطأ سيرفر. الرجاء المحاولة مرة اخرى فيما بعد";
+"Invalid data received." = "بينانات المستلمة غير صحيحة";
+"Decoding error" = "ترميز خاطيء";
+"An unknown network error occurred." = "خطأ شبكة غير معروف";
+"No internet connection. Please check your network." = "لا يوجد اتصال انترنت. الرجاء فحص شبكتك.";
+"Invalid URL" = "عنوان URL غير صالح";
+"Response validation failed" = "فشل التحقق من الاستجابة";
+"Error With Token" = "خطأ في ال Token";
+"Are you sure you want to sign out of your account? You can return to your account using your data at any time!" = "هل أنت متأكد من أنك تريد تسجيل الخروج من حسابك؟ يمكنك الرجوع لحسابك باستخدام بياناتك في أي وقت!";
+"Message" = "رسالة";
+"Please agree on terms and conditions" = "الرجاء الموافقة على الشروط والأحكام";
+"Successfully Updated" = "تم التعديل بنجاح";
+"Seats" = "مقاعد";
+"Delivery Offers" = "عروض التوصيل";
+"Accepted" = "موافق";
+"Started" = "الحالية";
+"Accept" = "موافق";
+"Start" = "بدء";
+"Finish" = "انهاء";
+"Canceled By Driver" = "ملغي";
+"Canceled By User" = "ملغي";
+"Attend" = "موجود";
+"Not Attend" = "غير موجود";
+"Description" = "الوصف";
+"Cancellation Reason" = "سبب الالغاء";
+"Send!" = "ارسال!";
+"Delete" = "حذف";
+"Are you sure you want to delete this item!.." = "هل انت متأكد انك تريد حذف هذا العنصر..";
+"Order No" = "رقم الطلب";
+"Pay with Card" = "الدفع بواسطة بطاقة";
+"Pay with Apple Pay" = "الدفع بوساطة ابل بي";
+"Amount" = "الرصيد";
+"Exceeds Limits" = "تجاوز الحد الاقصى";
+"Accepted Offers" = "العروض المقبولة";
+"Invalid Token" = "انتهت صلاحية رمزك الشخصي, الرجاء الدخول مرة اخرى";
+"Your country" = "بلدك";
+"Coupon" = "الكوبون";
+"Invite Friend" = "دعوة صديق";
+"Comfort and speed of completion" = "الراحة وسرعة الانجاز";
+"Safety" = "الأمان";
+"Easy and simple design" = "تصميم سهل وبسيط";
+"While you are at home, you can search in your surroundings for business service providers with ease and in the fastest way" = "يمكنك البحث وانت بالبيت في محيطك عن مزودين الخدمات عمل بكل سهولة وباسرع طريقة";
+"Through the business platform, payment and transaction security is guaranteed." = "من خلال منصة العمل تضمن امان الدفع والتعامل.";
+"Ease of handling and simplicity of designs, enabling you to add all your information in the shortest possible time." = "سهولة التعامل وبساطة التصاميم بحيث تمكنكم من إضافة كافة معلوماتكم في اقل وقت ممكن.";
+"Skip" = "تخطي";
+"Welcome" = "مرحبا بك!👋";
+"Login" = "تسجيل الدخول";
+"You Don't Have Account" = "ليس لديك حساب؟";
+"Register Now" = "سجل الآن!";
+"You Have Account" = "لديك حساب بالفعل؟ ";
+"Login Now" = "سجل دخول الآن!";
+"Code Was Send To" = "قم بادخال رمز التفعيل المرسل الى رقم هاتفك";
+"You Dont Receive Code" = "لم تستلم رمزاً؟ ";
+"Request New Code" = "طلب رمز جديد!";
+"Confirm" = "تأكيد";
+"Account Was Successfully Created" = "لقد تم انشاء الحساب بنجاح!";
+"You have created a new account and now you can start using the application, but we recommend that you complete your profile information to improve your experience as a user!" = "لقد قمت بانشاء حساب جديد والآن يمكنك البدء باستخدام التطبيق ولكنك ننصح باكمال معلومات الملف الشخصي الخاص لتحسين تجربتك كمستخدم!";
+"Complete Profile" = "اكمال ملف المنشأة! 👋";
+"Browse Services" = "تصفح الخدمات!";
+"Initial Data" = "البيانات الاساسية";
+"Address Details" = "تفاصيل العنوان";
+"Street Name" = "اسم الشارع";
+"Building No" = "رقم البناية";
+"Floor No" = "رقم الطابق";
+"Save & Continue" = "حفظ واستمرار";
+"Finished Orders" = "الطلبات المنتهية";
+"Canceled Orders" = "الطلبات الملغية";
+"My Orders" = "طلباتي";
+"Service Provider" = "منفذ الخدمة";
+"Confirm Order" = "تأكيد الطلب";
+"Add New Order" = "اضافة طلب جديد";
+"Initial Info" = "المعلومات الاساسية";
+"Basic Service Type" = "نوع الخدمة الاساسي";
+"Sub Service Type" = "نوع الخدمة الفرعي";
+"Click here to select service" = "اضغط لاختيار نوع الخدمة";
+"Date" = "التاريخ";
+"Time" = "الوقت";
+"Service Place" = "مكان تقديم الخدمة";
+"House" = "المنزل";
+"Work" = "العمل";
+"Other" = "اخرى";
+"Submit a service request!" = "تقديم طلب الخدمة!";
+"Your service request has been completed successfully!" = "لقد تم طلب الخدمة بنجاح!";
+"We have received your request for service and we will review your request and respond to you as soon as possible. You can follow the status of the order from the home page or by clicking the next button." = "لقد استملنا طلبك للخدمة وسنقوم بمراجعة طلبك والرد عليك في اسرع وقت ممكن.
+يمكن متابعة حالة الطلب من الصفحة الرئيسية او بالضغط على الزر التالي.";
+"Order Page" = "صفحة الطلبات";
+"Geographical location" = "الموقع الجغرافي";
+"Order Status" = "حالة الطلب";
+"Cancel Order" = "الغاء الطلب";
+"Yes, Sure" = "نعم أنا متأكد";
+"Back" = "رجوع";
+"Are you sure to cancel the order?" = "هل أنت متأكد من إلغاء الطلب؟";
+"Do you want to cancel your next order?" = "هل تريد إلغاء الطلب التالي؟";
+"Please note that after confirming the cancellation of your order, you will not be able to access it again. The money will be returned to your bank account or card within five working days" = "يرجى الانتباه الى انه بعد تاكيد الغاء طلبك لا يمكنك الوصول اليه مره اخرى. سيتم ارجاع الفلوس الى حسابك البنكي او بطاقتك خلال خمس ايام عمل";
+"Review Provider" = "تقييم مزود الخدمة";
+"Add Comment" = "ادخل تعليقك على الخدمة";
+"Send Review" = "ارسال تقييمي!";
+"Services List" = "قائمة الخدمات";
+"Provider Reviews" = "تقييمات المزود";
+"Provider Service Details" = "تفاصيل مزود الخدمة";
+"Service Review" = "تقييم الخدمة";
+"My Profile" = "ملفك الشخصي!";
+"Edit Profile" = "تعديل الملف";
+"About App" = "عن التطبيق";
+"Open Close Notifications" = "تفعيل الاشعارات / اغلاقها";
+"Use Policy" = "سياسة الاستخدام";
+"Privacy Policy" = "سياسة الخصوصية";
+"Additional Details" = "تفاصيل إضافية";
+"Any additional details could improve the service provided to you" = "اي تفاصيل اضافية يمكن ان تحسن تقديم الخدمة لك";
+"Please enter specific text" = "يرجى ادخال نص معين";
+"Edit My Profile" = "تعديل الملف الشخصي";
+"After sending your inquiry, we will follow up with you via the attached email to respond to your inquiry." = "بعد ارسال الاستفسار الخاص بك سنقوم بالمتابعة معك عبر البريد الالكتروني المرفق من خلالكم للرد على استفساركم.";
+"Message Title" = "عنوان الرسالة";
+"Important details missing" = "تفاصيل مهمة ناقصة";
+"Message Content" = "محتوى الرسالة";
+"Please enter full details of your problem here..." = "يرجى ادخال كامل تفاصيل مشكلتكم هنا ...";
+"Flat No" = "رقم الشقة";
+"Address Book" = "دفتر العناوين";
+"Add Address" = "اضافة عنوان";
+"Name" = "الاسم";
+"home" = "المنزل";
+"An unknown error occurred." = "خطأ غير معروف";
+"Edit Address" = "تعديل العنوان";
+"Select Address" = "اختر العنوان";
+"Verify" = "تحقق";
+"Underway" = "قيد التسليم!";
+"Progress" = "قيد التسليم";
+"Updated" = "المعدلة";
+"No orders found" = "لا يوجد طلبات";
+"Start Order" = "بدء الطلب";
+"Finish Order" = "انهاء الطلب";
+"Update Order" = "تعديل الطلب";
+"Extra Services" = "خدمات اضافية";
+"Extra" = "اضافات";
+"Confirmation Code" = "كود التأكيد";
+"Payment upon completion of the order" = "الدفع عند اتمام الطلب";
+"Pay Now" = "ادفع الان";
+"Discount" = "الخصم";
+"Tax" = "الضريبة";
+"Total" = "المجموع";
+"Payment to complete the order" = "الدفع لاتمام الطلب";
+"Address not found" = "لا يوجد عنوان";
+"Total Before Tax" = "المجموع قبل الضريبة";
+"New Tax" = "الضريبة الجديدة";
+"New Total" = "المجموع الجديد";
+"Payment required for new services" = "المطلوب دفعه مقابل الخدمات الجديدة";
+"Total Before Discount" = "المجموع قبل الخصم";
+"Happy to see you again! Enter the following data correctly to access your account..." = "املأ الحقول التالية للوصول إلى حسابك والعودة لملفلك الشخصي مرة أخرى!";
+"We are honored to have you with us! Enter the following data correctly to create a new account..." = "نتشرف بوجودك معنا! قم بادخال البيانات التالية بشكل صحيح لانشاء حساب جديد ...";
+"Upload a clear personal photo of the owner of this account to add it to your account data..." = "قم برفع صورة شخصية واضحة لمالك هذا الحساب لاضافتها الى بيانات حسابك ...";
+"Confirm Identity" = "تأكيد الهوية! 👋";
+"Click to upload your profile picture" = "قم بالضغط لرفع الصورة الشخصية ";
+"Click to upload a photo of your ID" = "قم بالضغط لرفع رخصة المنشأة";
+"We have sent a one-time password to verify your password change request" = "لقد أرسلنا كلمة مرور لمرة واحدة للتحقق من طلب تغيير كلمة المرور الخاصة بك";
+"It is preferable that the image be clear, in a clear frame, and without adding any effects or modifications..." = "يجب أن تكون الصورة واضحة عن الرخصة ومجدده بآخر تحديث ممكن لها ...";
+"Completing your personal page data means increasing your chance of getting work and networking with other businesses..." = "استكمال بيانات المنشأة يساعدك في توضيح طبيعة عملكم للمستقلين وغيرهم ...";
+"Field of work and experiences" = "البيانات الاساسية";
+"Personal profile" = "نبذة عن المنشأة";
+"Address" = "العنوان";
+"Work Field" = "القطاع التي تعمل به المنشأة";
+"Show Options" = "عرض الخيارات";
+"Experiences" = "رقم السجل";
+"+ Add new experience" = "+ إضافة خبرة جديدة";
+"Date of Birth" = "تاريخ الميلاد";
+"Full Description" = "الوصف الكامل";
+"Day - month - year" = "يوم - شهر - سنة";
+"In addition to choosing the geographical location" = "اضافة لاختيار الموقع الجغرافي";
+"You can choose your address by clicking here and choose your geographical location using the map..." = "يمكنك اختيار عنوانك بالضغط هنا واختيار موقعك الجغرافي باستخدام الخريطة ...";
+"Country" = "الدولة";
+"City" = "المدينة";
+"Building Name" = "اسم البناية";
+"Offers" = "العروض";
+"Discover" = "الاستكشاف";
+"Messages" = "الرسائل";
+"Previous Orders" = "الطلبات السابقة";
+"Experiance Years" = "سنوات الخبرة";
+"Company Rate" = "تقييم الشركة";
+"Offers List" = "قائمة العروض";
+"Browse your list of offers..." = "قم بتصفح قائمة المشاريع الخاصة بك ...";
+"All" = "الكل";
+"Opened Offers" = "العروض المفتوحة";
+"Closed Offers" = "العروض المغلقة";
+"Application Settings!" = "اعدادات التطبيق!";
+"Adjust the application settings to suit you..." = "قم بضبط اعدادات التطبيق بما يناسبك ...";
+"Control sending and receiving notifications from the application!" = "تحكم في ارسال واستقبال الاشعارات من التطبيق!";
+"Click to learn more about us and what we offer!" = "اضغط لتعرف عنا وعن ما نقدمه أكثر وأكثر!";
+"Terms of use and privacy policy" = "سياسة الاستخدام والخصوصية";
+"If you want to avoid problems with usage, click here!" = "اذا كنت تريد تجنب الوقوع في مشاكل الاستخدام٬ اضغط هنا!";
+"We are happy and hope to see you again soon!" = "يسعدنا ونتمنى أن نراك مجدداً في الوقت القريب!";
+"Browse the list of received notifications" = "تصفح قائمة الاشعارات المستلمة";
+"Click to change your profile picture" = "قم بالضغط لتغيير صورتك الشخصية";
+"Edit your personal account information (name, photo, etc.)" = "قم بتعديل بيانات حسابك الشخصي “الاسم٬ الصورة وغيرها”";
+"Discover Offers!" = "استكشاف العروض!";
+"Explore the world of offers here..." = "قم باستكشاف عالم العروض من هنا ...";
+"Job title, company name, contract type" = "مسمى وظيفي٬ اسم شركة٬ نوع عقد";
+"Make your offer now!" = "قدم عرضك الآن!";
+"Facility Evaluations" = "تقييمات المنشأة";
+"Submit your offer" = "تقديم العرض الخاص بك";
+"Hourly Rate" = "سعر الساعة";
+"Salary" = "الراتب الشهري";
+"Submit Offer" = "تقديم العرض";
+"Please note that the facility will be able to browse your profile and profile, in addition to the value of the offer you entered!" = "يرجى العلم بان المنشأة ستكون قادرة على تصفح ملفك الشخصي والنبذه الخاصة بك بالاضافة الى قيمة العرض الذي قمت بادخاله!";
+"Filter your search for offers" = "فلترة البحث عن عروض";
+"Employment Application" = "طلب التوظيف";
+"Service Requests" = "طلبات الخدمات";
+"Employment Applications" = "طلبات التوظيف";
+"Filter your search" = "فلترة البحث";
+"Write the message here" = "اكتب رسالتك هنا";
+"Company Name" = "اسم المنشأة";
+"Support" = "الدعم الفني";
+"Add Order" = "اضافة طلب";
+"Add a order and wait for offers!" = "قم باضافة طلب وانتظار العروض !";
+"Work Field" = "قطاع العمل";
+"Order Title" = "عنوان الطلب";
+"Order Description" = "تفاصيل الطلب";
+"Post Offer" = "نشر العرض";
+"Opened Message" = "الرسائل المفتوحة";
+"New Message" = "رسالة جديدة";
+"Send Message" = "إرسال الرسالة";
+"Message Description" = "تفاصيل الرسالة";
+"We are always here to hear from you!" = "نحن هنا دائماً لنسمع منكم!";
+"It is preferable that the image be clear and show the details of the logo to better identify the facility..." = "يفضل أن تكون الصورة واضحة وتوضح تفاصيل الشعار للتعرف على المنشأة بشكل أفضل ...";
+"Company File" = "ملف المنشأة!";
+"Browse and manage your profile" = "قم بتصفح وادارة ملفكم الشخصي";
+"Received Offers" = "العروض المستلمة";
+"Accept Or Reject Offer" = "قبول او رفض الطلب";
+"User Type" = "نوع المستخدم";
+"Personal" = "باحث عن عمل";
+"Company" = "منشأة";
+"Images Required" = "الصور مطلوبة";
+"Order Type" = "نوع الطلب";
+"Offer Type" = "نوع العرض";
+"Work Type" = "مطلوب للعمل";
+"Job Orders" = "طلبات التوظيف";
+"Services Orders" = "طلبات الخدمات";
+"Online" = "اونلاين";
+"Offline" = "اوفلاين";
+"Personal1" = "فردي";
+"Company1" = "شركات";
+"Hourly" = "عقد بالساعة";
+"Daily" = "يومي";
+"Yearly" = "سنوي";
+"Limited" = "محدد";
+"Unlimted" = "غير محدد";
+"Execution Type" = "نوع التنفيذ";
+"Days No." = "عدد الايام";
+"Employee No." = "عدد الموظفين";
+"Guest" = "دخول كزائر";
+"Password" = "كلمة المرور";
+"Forget Password" = "هل نسيت كلمة المرور؟";
+"Restore password" = "استعادة كلمة المرور";
+"Don't worry, simple steps to recover your account password.." = "لا تقلق، خطوات بسيطة لاستعادة كلمة مرور حسابك..";
+"Verify Phone Number" = "تحقق من رقم الهاتف";
+"Are you remember Password?" = "هل تذكرت كلمة المرور؟";
+"Back To Login" = "العودة لتسجيل الدخول";
+"We send message to You" = "لقد ارسلنا لك رسالة!";
+"Create New Password" = "إنشاء كلمة مرور جديدة!";
+"Amazing, now create a new password and please do not share it with anyone." = "مذهل، الآن قم بإنشاء كلمة مرور جديدة ويرجى عدم مشاركتها مع أي شخص.";
+"New Password" = "كلمة المرور الجديدة";
+"Confirm New Password" = "تأكيد كلمة المرور الجديدة";
+"Confirm Change Password" = "تأكيد تغيير كلمة المرور";
+"Drop a map pin to your location" = "قم بإسقاط دبوس الخريطة إلى موقعك";
+"Select This Location" = "اختيار هذا الموقع";
+"Skip for later" = "تخطي لوقت لاحق";
+"Categories" = "التصنيفات";
+"Complete Order" = "استكمال الطلب";
+"Selected Services" = "الخدمات المختارة";
+"Add New Services" = "اضافة خدمات أخرى";
+"Add New Location" = "اضافة موقع جديد";
+"Service Location" = "مكان تنفيذ الخدمة";
+"Attach illustrative pictures" = "ارفاق صور توضيحية";
+"Click here to attach illustrative pictures of the nature of the problem you are facing and which requires a technician to solve it!" = "اضغط هنا لارفاق صور توضيحية عن طبيعة المشكلة التي تواجهها وتحتاج الى  فني لحلها!";
+"More description about the service" = "وصف اكثر عن الخدمة";
+"Payment" = "الدفع";
+"Choose the payment method that suits you" = "اختار طريقة الدفع المناسبة لك";
+"Discount Coupun" = "كوبون الخصم";
+"Prices do not include spare parts!" = "الاسعار لا تشمل قطع الغيار!";
+"Payment Method" = "طريقة الدفع";
+"Payment completed successfully!" = "تمت الطلب بنجاح!";
+"The payment process has been completed successfully and you can now follow the status of your order from the orders page." = "لقد تمت عملية الدفع بنجاح ويمكنك الان متابعة حالة طلبك من صفحة الطلبات.";
+"Back To Home" = "العودة للرئيسية";
+"The payment process was not completed!" = "لم تكتمل عملية الدفع!";
+"Your payment was not completed. Please ensure that there is sufficient balance or contact the bank." = "لم تتم عملية الدفع الخاصة بك٬ يرجى التاكد من وجود رصيد كافي او التواصل مع البنك.";
+"Choose another payment method" = "اختيار طريقة دفع أخرى";
+"Back To Orders" = "العودة للطلبات";
+"Continue To Order" = "متابعة الطلب";
+"Show Order details and status" = "استعرض تفاصيل طلبك وحالته";
+"Details of service provision" = "تفاصيل تقديم الخدمة";
+"Contact Number" = "رقم التواصل";
+"I want to complete the order!" = "اريد اكمال الطلب!";
+"Yes, I want to cancel!" = "نعم٬ اريد الالغاء!";
+"No data found" = "لا يوجد بيانات";
+"Control your profile and data from here!" = "قم بتعديل بيانات حسابك الشخصي “الاسم٬ الصورة وغيرها”";
+"Account Password" = "كلمة مرور الحساب";
+"Edit Phone Number" = "تعديل رقم الهاتف";
+"Change your account password in simple and quick steps!" = "قم بتغيير كلمة مرور حسابك بخطوات بسيطة وسريعة!";
+"Change your phone number in simple and quick steps!" = "قم بتغيير رقم هاتفك بخطوات بسيطة وسريعة!";
+"Control the style of receiving notifications “offers, order status, etc.”" = "تحكم بنمط استقبال الاشعارات “العروض٬ حالة الطلبات وغيرها”";
+"If you encounter a problem during your journey through the application, we are here for you!" = "في حال واجهتك مشكلة خلال رحلتك في التطبيق٬ نحن هنا لاجلك!";
+"Please review and read the usage policy to avoid any error during your transaction!" = "يرجى مراجعة وقراءة سياسة الاستخدام لتجنب اي خطأ خلال تعاملك!";
+"Please review and read the privacy policy to save your data and information!" = "يرجى مراجعة وقراءة سياسة الخصوصية لحفظ بياناتك ومعلوماتك!";
+"Current Password" = "كلمة المرور الحالية";
+"Current Phone Number" = "رقم الهاتف الحالي";
+"New Phone Number" = "رقم الهاتف الجديد";
+"Take advantage of the points!" =  "الاستفادة من النقاط!";
+"Delete Account" = "حذف الحساب";
+"Tap to delete your account" = "اضغط لحذف الحساب";
+"Are you sure you want to delete your account?" = "هل أنت متأكد أنك تريد حذف الحساب؟";
+"Confirm Password" = "تأكيد كلمة المرور";
+"Statistics" = "احصائيات";
+"Address Title Required" = "اسم العنوان مطلوب";
+"No Addresses Found" = "لا يوجد عنوان";
+"Details Of Service Provider" = "تفاصيل مقدم الخدمة";
+"Are you sure you want to delete your account, after account deletition, you can create and login again." = "هل انت متأكد انك تريد حذف حسابك, بعد حذف الحساب بامكانك انشاء حساب مرة اخرى والدخول مرة اخرى الى التطبيق.";
+"Show All" = "عرض الكل";
+"Amount" = "الرصيد";
+"Check Coupon" = "فحص الكوبون";
+"Finicial Data" = "البيانات المالية";
+"My Points" = "نقاطي";
+"Check your points and change it with our services" = "قم بفحص نقاطك واستبدلها بخدماتنا";
+"You can use wallet as payment method in the app" = "يمكنك الاستفادة من المحفظة في عمليات الدفع داخل التطبيق";
+"Pay Online" = "ادفع اونلاين";
+"Pay By Wallet" = "الدفع بالمحفظة";
+"My Location" = "عنواني الحالي";
+"More" = "المزيد";
+"Search by name or service type .." = "البحث باسم او نوع الخدمة ..";
+"Quantity" = "الكمية";
+"Current Location" = "موقعي";
+"Prefinished" = "الغير مؤكدة";
+"Points" = "عدد النقاط";
+"Point" = "نقطة!";
+"How to work?" = "كيف تعمل";
+"Order And Gather Points" = "اطلب واجمع نقاط";
+"With every completed and paid order, you will receive 3 points for every 1 riyal you spend on your order." = "مع كل طلب مكتمل ومدفوع ستحصل على ٣ نقاط مقابل كل ١ ريال تنفقه على طلبك.";
+"Discover Products And Services" = "اكتشف المنتجات والخدمات";
+"For every 1,500 points you get, you can get a discount on your order from selected restaurants and stores in your area." = "لكل ١٥٠٠ نقطة تحصل عليها يمكنك الحصول على خصم على طلبك من المطاعم والمتاجر المختارة في منطقتك.";
+"Ready To Replace" = "مستعد للاستبدال";
+"Redeem your points for discounts through the payment page when placing the order. Points will expire after 90 days." = "استبدل نقاطك بخصومات من خلال صفحة الدفع عند تقديم الطلب. ستنتهي صلاحية النقاط بعد ٩٠ يوما.";
+"Pay Cash" = "الدفع نقدي";
+"Points Value" = "قيمة نقاطك";
+"Do you want to rechange your points?" = "هل تريد استبدال قيمة نقاطك؟";
+"Please complete your profile to continue to add an order" = "يرجى إكمال ملفك الشخصي للمتابعة في إضافة طلب";
+"An error occured, Please try again" = "حدث خطأ اثناء عملية الدفع يرجى المحاولة مرة أخرى";
+"New Finicial Data" = "البيانات المالية الجديدة";
+"Discover App" = "استكشف التطبيق ..";
+"Login/ New Account" = "تسجيل الدخول/ مستخدم جديد";
+"Enter required data to access your account ..." = "ادخل البيانات المطلوبة للوصول الى حسابك ...";
+"Enter your phone number to to create account ..." = "ادخل رقم الهاتف لتسجيل حساب جديد على منصتنا";
+"We sent code to your phone number" = "لقد قمنا بارسال رمز لمرة واحدة الى رقم هاتفك";
+"Send login code" = "إرسال رمز الدخول";
+"Enter 'OTP' Code" = "ادخل رمز الدخول “OTP”";
+"Birth of Date" = "تاريخ الميلاد";
+"Wishes" = "الأمنيات";
+"Cart" = "السلة";
+"Search for product" = "البحث عن منتج";
+"Public Categories" = "تصنيفات عامة";
+"My Wishes!" = "أمنياتي!";
+"My Wishes Lists" = "قوائم امنياتي";
+"Friends Wishes" = "أمنيات الاصدقاء!";
+"Complete your purchase now!" = "اتمام عملية الشراء الآن!";
+"Success Payment" = "عملية دفع ناجحة";
+"Payment Was Success" = "تم الطلب بنجاح!";
+"You have completed your contribution to fulfilling the wish of" = "لقد قمت باتمام المساهمة في تحقيق الأمنية لـ";
+"Discover Categories" = "استكشاف التنصيفات!";
+"Event Reminders" = "التذكير بالمناسبات";
+"Way" = "في الطريق";
+"Unconfirmed" = "غير مؤكدة";
+"Upcoming Reminders" = "تذكير المناسبات القادمة";
+"Add New Reminder" = "اضافة تذكير جديد";
+"Special Categories" = "تصنيفات خاصة";
+"Send Gift Now" = "اهديها لـشخص الان!";
+"Name of the person to whom it is sent" = "اسم الشخص المرسل اليه";
+"Didn't find your friend? Send an invitation now!" = "لم تجد صديقك؟ قم بارسال دعوة الان!";
+"Friend Wishes" = "أمنيات صديق!";
+"Public Lists" = "القوائم العلنية";
+"Retail System" = "نظام القَطَّة";
+"Add To Cart" = "اضافة الى السلة";
+"Delete Cart" = "حذف السلة";
+"Are you want to delete cart!" = "هل انت متأكد انك تريد حذف السلة!";
+"Are you want to delete this item from cart!" = "هل انت متأكد انك تريد حذف هذا العنصر من السلة!";
+"Explor" = "استكشاف";
+"Favourite" = "المفضلة";
+"Add To My Wishes" = "اضافة لامنياتي!";
+"Product Summary" = "ملخص المنتجات";
+"Order Summary" = "ملخص الطلب";
+"Tax:" = "الضريبة:";
+"Delivery Cost:" = "تكلفة التوصيل:";
+"Express Cost:" = "تكلفة اكسبرس:";
+"Total Price:" = "السعر الاجمالي:";
+"Total Discount:" = "مجموع الخصم:";
+"Final Total:" = "المجموع:";
+"Product Details" = "تفاصيل المنتج";
+"Create New Group" = "إنشاء قائمة أمنيات جديدة!";
+"Group Name" = "إسم القائمة";
+"Save Group" = "حفظ القائمة";
+"New Group" = "قائمة جديدة؟";
+"Click to create new group" = "اضغط لانشاء قائمة جديدة";
+"Privacy" = "الخصوصية";
+"Public" = "عامة";
+"Private" = "خاصة";
+"Add Friend" = "اضافة صديق";
+"Add" = "اضافة";
+"Reminder Title" = "عنوان المناسبة";
+"Reminder Date" = "تاريخ المناسبة";
+"Reminder Befor" = "تذكير قبل (عدد ايام)";
+"Save Reminder" = "حفظ التذكير";
+"User Products" = "اعمال العملاء";
+"Add User Products" = "اضافة منتج";
+"Product Title" = "عنوان المنتج";
+"Product Name" = "اسم المنتج";
+"Note" = "ملاحظة";
+"Images" = "الصور";
+"iban" = "الايبان";
+"Add Photos" = "اضافة صور";
+"Select Images" = "اختر صور";
+"Events" = "المناسبات";
+"Needs Offer" = "هل تريد عرض سعر؟";
+"Submit" = "ارسال";
+"VIP Gift and Events" = "المناسبات وهدايا VIP";
+"Select Events" = "اختر المناسبة";
+"Gender" = "الجنس";
+"Male" = "ذكر";
+"Female" = "أنثى";
+"Reject" = "رفض";
+"Go To Login" = "الذهاب الى تسجيل الدخول";
+"Please login to see the contents" = "الرجاء تسجيل الدخول لرؤية المحتوى";
+"VIP Gift" = "هدايا VIP";
+"Events" = "تجهيز المناسبات";
+"Estimated amount" = "المبلغ التقديري";
+"Your order has been successfully added to the cart, do you want to go to the cart?" = "لقد تم اضافة طلبك الى السلة بنجاح, هل تريد الذهاب الى السلة؟";
+"Pay Mada" = "الدفع بمدى - ابل بي";
+"Pay Tamara" = "الدفع بتمارا";
