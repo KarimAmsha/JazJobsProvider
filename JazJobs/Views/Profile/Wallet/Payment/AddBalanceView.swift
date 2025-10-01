@@ -18,7 +18,6 @@ struct AddBalanceView: View {
 
     @EnvironmentObject var appRouter: AppRouter
     @StateObject private var orderViewModel = OrderViewModel(errorHandling: ErrorHandling())
-    @StateObject private var hyperPaymentViewModel = HyperPaymentViewModel()
 
     @State private var selectedBrand: HyperpayBrand = .mada
     @State private var currentHyperpayId: String?
@@ -70,28 +69,14 @@ struct AddBalanceView: View {
                 LoadingView()
             }
             
-            if selectedBrand == .apple, canShowApplePay
-            {
-                ApplePaySection {
-                    if let amountValue = amount.toDouble(), amountValue > 0 {
-                        startHyperpayPayment(amount: amountValue)
-                    } else {
-                        orderViewModel.errorMessage = "يرجى إدخال المبلغ بشكل صحيح"
-                    }
-                }
-                .frame(height: 48)
-                .padding(.horizontal)
-                .padding(.vertical, 8)
-            } else {
-                // زر دفع عادي
-                Button {
-                    checkCoupon()
-                } label: {
-                    Text(LocalizedStringKey.send)
-                }
-                .buttonStyle(PrimaryButton(fontSize: 18, fontWeight: .bold, background: .primary(), foreground: .white, height: 48, radius: 12))
-                .disabled(orderViewModel.isLoading)
+            // زر دفع عادي
+            Button {
+                checkCoupon()
+            } label: {
+                Text(LocalizedStringKey.send)
             }
+            .buttonStyle(PrimaryButton(fontSize: 18, fontWeight: .bold, background: .primary(), foreground: .white, height: 48, radius: 12))
+            .disabled(orderViewModel.isLoading)
 
             Spacer()
         }
@@ -102,57 +87,6 @@ struct AddBalanceView: View {
         }
         .sheet(isPresented: $showBrandSheet) {
             BrandSheet(selectedBrand: $selectedBrand, showBrandSheet: $showBrandSheet, canShowApplePay: canShowApplePay)
-        }
-        .overlay(
-            MessageAlertObserverView(
-                message: $hyperPaymentViewModel.errorMessage,
-                alertType: .constant(.error)
-            )
-        )
-        .fullScreenCover(isPresented: $hyperPaymentViewModel.isShowingCheckout) {
-            if let checkoutId = hyperPaymentViewModel.checkoutId {
-                HyperpayCheckoutView(
-                    checkoutId: checkoutId,
-                    paymentBrands: [selectedBrand.displayName],
-                    onResult: { result in
-                        switch result {
-                        case .success(let resourcePath):
-                            checkHyperpayStatus(resourcePath: checkoutId)
-                        case .failure(let error):
-                            orderViewModel.errorMessage = error.localizedDescription
-                            orderViewModel.isLoading = false
-                        }
-                    },
-                    onDismiss: {
-                        // أغلق الشاشة فقط هنا!
-                        hyperPaymentViewModel.isShowingCheckout = false
-                    }
-                )
-            }
-        }
-        .fullScreenCover(isPresented: $showApplePaySheet) {
-            if let checkoutId = applePayCheckoutId {
-                ApplePayControllerView(
-                    checkoutId: checkoutId,
-                    amount: applePayAmount,
-                    onResult: { result in
-                        showApplePaySheet = false
-                        switch result {
-                        case .success(let hyperpayId):
-                            checkHyperpayStatus(resourcePath: hyperpayId)
-                        case .failure(let error):
-                            orderViewModel.errorMessage = error.localizedDescription
-                            orderViewModel.isLoading = false
-                        }
-                    }
-                )
-            }
-        }
-        // ⬅️ Overlay إضافي للودينج الخاص بـ HyperPaymentViewModel (مع الحفاظ على القديم)
-        .overlay {
-            if hyperPaymentViewModel.isLoading {
-                LoadingView()
-            }
         }
     }
 
@@ -165,58 +99,10 @@ struct AddBalanceView: View {
         }
 
         if coupon.isEmpty {
-            startHyperpayPayment(amount: amountValue)
         } else {
             orderViewModel.checkWalletCoupon(params: [:]) {
                 if let finalTotal = orderViewModel.coupon?.final_total {
-                    startHyperpayPayment(amount: finalTotal)
                 }
-            }
-        }
-    }
-
-    func startHyperpayPayment(amount: Double) {
-        orderViewModel.isLoading = true
-        hyperPaymentViewModel.requestCheckoutId(
-            amount: amount,
-            brandType: selectedBrand.dbValue
-        ) { checkoutId in
-            if let id = checkoutId {
-                currentHyperpayId = id
-                if selectedBrand == .apple {
-                    if !canShowApplePay {
-                        orderViewModel.errorMessage = "جهازك لا يدعم Apple Pay أو لم يتم إضافة بطاقة"
-                        orderViewModel.isLoading = false
-                        return
-                    }
-                    showApplePaySheet(checkoutId: id, amount: amount)
-                } else {
-                    hyperPaymentViewModel.isShowingCheckout = true
-                }
-            } else {
-                orderViewModel.errorMessage = "تعذر بدء عملية الدفع"
-                orderViewModel.isLoading = false
-            }
-        }
-    }
-
-    // وظيفة عرض Apple Pay Sheet (ضعها في extension)
-    func showApplePaySheet(checkoutId: String, amount: Double) {
-        applePayCheckoutId = checkoutId
-        applePayAmount = amount
-        showApplePaySheet = true
-    }
-
-    func checkHyperpayStatus(resourcePath: String) {
-        hyperPaymentViewModel.checkPaymentStatus(
-            hyperpayId: resourcePath,
-            brandType: selectedBrand.dbValue
-        ) { status, response in
-            orderViewModel.isLoading = false
-            if status {
-                addBalance()
-            } else {
-                orderViewModel.errorMessage = "فشلت عملية الدفع"
             }
         }
     }

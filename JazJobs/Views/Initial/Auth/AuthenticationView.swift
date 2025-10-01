@@ -29,7 +29,7 @@ struct AuthenticationView: View {
         } else if loginStatus == .changePassword {
 //            CreatePasswordView(id: "", mobile: "", loginStatus: $loginStatus)
         } else if case .identityConfirmation(let token) = loginStatus {
-//            IdentityConfirmationView(token: token, loginStatus: $loginStatus)
+            IdentityConfirmationView(token: token, loginStatus: $loginStatus)
         } else if loginStatus == .selectLocation {
 //            SelectLocationView(loginStatus: $loginStatus)
         }
@@ -39,3 +39,4 @@ struct AuthenticationView: View {
 #Preview {
     AuthenticationView(loginStatus: .constant(.login))
 }
+

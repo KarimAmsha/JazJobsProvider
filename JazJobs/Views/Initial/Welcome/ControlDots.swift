@@ -11,10 +11,17 @@ struct ControlDots: View {
     let numberOfPages: Int
     @Binding var currentPage: Int
 
+    private let itemWidth: CGFloat = 100
+    private let itemHeight: CGFloat = 4
+    private let spacing: CGFloat = 8
+
     var body: some View {
-        HStack {
+        HStack(spacing: spacing) {
             ForEach(0..<numberOfPages, id: \.self) { page in
-                Image(page == currentPage ? "ic_current_page_dot" : "ic_page_dot")
+                Capsule()
+                    .fill(page == currentPage ? Color.green0CB057() : Color.blueLight())
+                    .frame(width: itemWidth, height: itemHeight)
+                    .animation(.easeInOut(duration: 0.2), value: currentPage)
             }
         }
         .padding(.vertical, 8)

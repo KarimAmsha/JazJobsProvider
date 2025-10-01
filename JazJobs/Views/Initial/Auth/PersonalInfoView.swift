@@ -18,177 +18,119 @@ struct PersonalInfoView: View {
     @StateObject private var viewModel = UserViewModel(errorHandling: ErrorHandling())
     @State private var userLocation: CLLocationCoordinate2D? = nil
     @State private var region = MKCoordinateRegion(
-        center: CLLocationCoordinate2D(
-            latitude: 24.7136,
-            longitude: 46.6753
-        ),
-        span: MKCoordinateSpan(
-            latitudeDelta: 5,
-            longitudeDelta: 5
-        )
+        center: CLLocationCoordinate2D(latitude: 24.7136, longitude: 46.6753),
+        span: MKCoordinateSpan(latitudeDelta: 5, longitudeDelta: 5)
     )
-    @State private var description: String = LocalizedStringKey.specificText
-    @State var placeholderString = LocalizedStringKey.specificText
-    @State private var isFloatingPickerPresented = false
-    @StateObject var mediaPickerViewModel = MediaPickerViewModel()
-    @FocusState private var keyIsFocused: Bool
     @State private var isShowingDatePicker = false
     @State private var dateStr: String = ""
     @State private var date: Date = Date()
 
-    private var isImageSelected: Bool {
-        mediaPickerViewModel.selectedImage != nil
-    }
+    // MARK: - Multi-step states
+    @State private var currentStep: Int = 0 // 0: Work & Experiences, 1: Overview, 2: Address
+
+    // Step 0: Work & Experiences
+    @State private var workField: String = ""
+    @State private var experiences: [String] = [""]
+
+    // Step 1: Overview
+    @State private var overviewText: String = ""
+
+    // Step 2: Address details
+    @State private var address: String = ""
+    @State private var isShowingMap = false
+    @State private var country: String = ""
+    @State private var city: String = ""
+    @State private var streetName: String = ""
+    @State private var buildingName: String = ""
+    @State private var buildingNo: String = ""
+    @State private var floorNo: String = ""
 
     var body: some View {
         GeometryReader { geometry in
             VStack(alignment: .leading, spacing: 0) {
                 ScrollView(.vertical, showsIndicators: false) {
-                    VStack(alignment: .leading, spacing: 12) {
-                        VStack(alignment: .center, spacing: 8) {
-                            profileImageView()
-                                .shadow(color: .primary().opacity(0.16), radius: 2.5, x: 0, y: 5)
-                            
-                            Button {
-                                isFloatingPickerPresented.toggle()
-                            } label: {
-                                Text(LocalizedStringKey.uploadProfilePicture)
+                    VStack(alignment: .leading, spacing: 16) {
+
+                        // Header
+                        VStack(alignment: .leading, spacing: 8) {
+                            Text(LocalizedStringKey.completeProfile)
+                                .customFont(weight: .bold, size: 24)
+                                .foregroundColor(.primaryBlack())
+                            Text(LocalizedStringKey.completeProfileMessage)
+                                .customFont(weight: .regular, size: 12)
+                                .foregroundColor(.gray999999())
+                        }
+
+                        // Tabs
+                        Picker("", selection: $currentStep) {
+                            Text(LocalizedStringKey.workExperiences).tag(0)
+                            Text(LocalizedStringKey.personalProfile).tag(1)
+                            Text(LocalizedStringKey.address).tag(2)
+                        }
+                        .pickerStyle(.segmented)
+
+                        VStack(alignment: .leading, spacing: 0) {
+                            if currentStep == 0 {
+                                workAndExperiencesStep
+                            } else if currentStep == 1 {
+                                overviewStep
+                            } else {
+                                addressStep
                             }
-                            .buttonStyle(PrimaryButton(fontSize: 12, fontWeight: .medium, background: .primaryLightActive(), foreground: .primary(), height: 44, radius: 12))
-                            .disabled(viewModel.isLoading)
 
+                            // يثبت المحتوى أعلى ويمنع تمدد لا نهائي
+                            Spacer(minLength: 0)
                         }
-                        .frame(maxWidth: .infinity)
-                        .padding(24)
-                        .background(Color.primaryLightHover().cornerRadius(4))
-                        .padding(6)
-                        .background(Color.primaryLight().cornerRadius(4))
 
-                        Text(LocalizedStringKey.personalInformation)
-                            .customFont(weight: .bold, size: 16)
-                            .foregroundColor(.primaryBlack())
-
-                        VStack(alignment: .leading) {
-                            Text(LocalizedStringKey.fullName)
-                                .customFont(weight: .medium, size: 12)
-
-                            TextField(LocalizedStringKey.fullName, text: $name)
-                                .placeholder(when: name.isEmpty) {
-                                    Text(LocalizedStringKey.fullName)
-                                        .foregroundColor(.gray999999())
-                                }
-                                .focused($keyIsFocused)
-                                .customFont(weight: .regular, size: 14)
-                                .accentColor(.primary())
-                                .padding(.horizontal, 16)
-                                .padding(.vertical, 18)
-                                .roundedBackground(cornerRadius: 12, strokeColor: .primaryBlack(), lineWidth: 1)
+                        if viewModel.isLoading {
+                            LoadingView()
                         }
-                        .foregroundColor(.black222020())
-
-                        VStack(alignment: .leading) {
-                            Text(LocalizedStringKey.email)
-                                .customFont(weight: .medium, size: 12)
-
-                            TextField(LocalizedStringKey.email, text: $email)
-                                .placeholder(when: name.isEmpty) {
-                                    Text(LocalizedStringKey.email)
-                                        .foregroundColor(.gray999999())
-                                }
-                                .focused($keyIsFocused)
-                                .customFont(weight: .regular, size: 14)
-                                .keyboardType(.emailAddress)
-                                .accentColor(.primary())
-                                .padding(.horizontal, 16)
-                                .padding(.vertical, 18)
-                                .roundedBackground(cornerRadius: 12, strokeColor: .primaryBlack(), lineWidth: 1)
-                        }
-                        .foregroundColor(.black222020())
-                        
-//                        VStack(alignment: .leading) {
-//                            Text(LocalizedStringKey.dob)
-//                                .customFont(weight: .medium, size: 12)
-//                            
-//                            HStack {
-//                                TextField(LocalizedStringKey.dmy, text: $dateStr)
-//                                    .placeholder(when: dateStr.isEmpty) {
-//                                        Text(LocalizedStringKey.dmy)
-//                                            .foregroundColor(.gray999999())
-//                                    }
-//                                    .customFont(weight: .regular, size: 14)
-//                                    .disabled(true)
-//
-//                                Spacer()
-//                                
-//                                Image("ic_calendar")
-//                                    .foregroundColor(.black)
-//                            }
-//                            .padding(.horizontal, 16)
-//                            .padding(.vertical, 18)
-//                            .roundedBackground(cornerRadius: 12, strokeColor: .primaryBlack(), lineWidth: 1)
-//                            .onTapGesture {
-//                                isShowingDatePicker = true
-//                            }
-//                        }
-
-                        Spacer()
-
-                        if let uploadProgress = viewModel.uploadProgress {
-                            // Display the progress view only when upload is in progress
-                            LinearProgressView(LocalizedStringKey.loading, progress: uploadProgress, color: .primary())
-                        }
-                        
-                        Button {
-                            update()
-                        } label: {
-                            Text(LocalizedStringKey.saveChanges)
-                        }
-                        .buttonStyle(GradientPrimaryButton(fontSize: 16, fontWeight: .bold, background: Color.primaryGradientColor(), foreground: .white, height: 48, radius: 12))
-                        .disabled(viewModel.isLoading)
                     }
                     .padding()
-                    .frame(maxWidth: .infinity)
-                    .frame(minHeight: geometry.size.height)
+                    .frame(maxWidth: .infinity, alignment: .topLeading)
+                    // لا تربط minHeight بارتفاع GeometryReader داخل ScrollView لتفادي حلقات التخطيط
                 }
+
+                // Bottom buttons
+                HStack(spacing: 12) {
+                    if currentStep > 0 {
+                        Button {
+                            withAnimation { currentStep -= 1 }
+                        } label: {
+                            Text(LocalizedStringKey.back)
+                        }
+                        .buttonStyle(PrimaryButton(fontSize: 16, fontWeight: .bold, background: .primaryLightActive(), foreground: .primary(), height: 48, radius: 12))
+                        .disabled(viewModel.isLoading)
+                    }
+
+                    Button {
+                        withAnimation {
+                            if currentStep < 2 {
+                                currentStep += 1
+                            } else {
+                                update()
+                            }
+                        }
+                    } label: {
+                        Text(LocalizedStringKey.next)
+                    }
+                    .buttonStyle(GradientPrimaryButton(fontSize: 16, fontWeight: .bold, background: Color.primaryGradientColor(), foreground: .white, height: 48, radius: 12))
+                    .disabled(viewModel.isLoading)
+                }
+                .padding([.horizontal, .bottom])
             }
+            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
         }
         .dismissKeyboardOnTap()
-        .fullScreenCover(isPresented: $mediaPickerViewModel.isPresentingImagePicker, content: {
-            ImagePicker(sourceType: mediaPickerViewModel.sourceType, completionHandler: mediaPickerViewModel.didSelectImage)
-        })
-        .popup(isPresented: $isFloatingPickerPresented) {
-            FloatingPickerView(
-                isPresented: $isFloatingPickerPresented,
-                onChoosePhoto: {
-                    // Handle choosing a photo here
-                    mediaPickerViewModel.choosePhoto()
-                },
-                onTakePhoto: {
-                    // Handle taking a photo here
-                    mediaPickerViewModel.takePhoto()
-                }
-            )
-        } customize: {
-            $0
-                .type(.toast)
-                .position(.bottom)
-                .animation(.spring())
-                .closeOnTapOutside(false)
-                .closeOnTap(false)
-                .backgroundColor(.black.opacity(0.5))
-        }
         .navigationBarBackButtonHidden()
         .background(Color.background())
         .toolbar {
             ToolbarItem(placement: .navigationBarLeading) {
                 HStack {
-                    Image("ic_gift")
-
                     VStack(alignment: .leading, spacing: 2) {
-                        Text(LocalizedStringKey.myProfile)
+                        Text(LocalizedStringKey.completeProfile)
                             .customFont(weight: .bold, size: 20)
-                        
-                        Text(LocalizedStringKey.profileHint)
+                        Text(LocalizedStringKey.completeProfileMessage)
                             .customFont(weight: .regular, size: 12)
                     }
                     .foregroundColor(Color.primaryBlack())
@@ -196,11 +138,15 @@ struct PersonalInfoView: View {
             }
         }
         .onAppear {
-            getUserData()
+            // تجنب الشبكة/الموقع أثناء الـ Preview لأنهما قد يسببان تعليق المعاينة
+            let isPreview = ProcessInfo.processInfo.environment["XCODE_RUNNING_FOR_PREVIEWS"] == "1"
+            if !isPreview {
+                getUserData()
 
-            // Use the user's current location if available
-            if let userLocation = LocationManager.shared.userLocation {
-                self.userLocation = userLocation
+                if let userLocation = LocationManager.shared.userLocation {
+                    self.userLocation = userLocation
+                    region.center = userLocation
+                }
             }
         }
         .overlay(
@@ -237,6 +183,257 @@ struct PersonalInfoView: View {
     PersonalInfoView()
         .environmentObject(UserSettings())
         .environmentObject(AppState())
+        .environmentObject(AppRouter())
+}
+
+extension PersonalInfoView {
+    // MARK: - Steps
+
+    private var workAndExperiencesStep: some View {
+        VStack(alignment: .leading, spacing: 12) {
+            Text(LocalizedStringKey.workField)
+                .customFont(weight: .medium, size: 12)
+                .foregroundColor(.primaryBlack())
+
+            ZStack {
+                TextField(LocalizedStringKey.showOptions, text: $workField)
+                    .placeholder(when: workField.isEmpty) {
+                        Text(LocalizedStringKey.showOptions)
+                            .foregroundColor(.gray999999())
+                    }
+                    .customFont(weight: .regular, size: 14)
+                    .foregroundColor(.black1C2433())
+                    .padding(.horizontal, 16)
+                    .padding(.vertical, 18)
+                    .roundedBackground(cornerRadius: 8, strokeColor: .primaryBlack(), lineWidth: 1)
+
+                HStack {
+                    Spacer()
+                    Image(systemName: "chevron.down")
+                        .foregroundColor(.black1F1F1F())
+                        .padding(.trailing, 14)
+                }
+            }
+
+            Text(LocalizedStringKey.experiences)
+                .customFont(weight: .medium, size: 12)
+                .foregroundColor(.primaryBlack())
+
+            VStack(spacing: 10) {
+                ForEach(experiences.indices, id: \.self) { index in
+                    TextField("", text: Binding(
+                        get: { experiences[index] },
+                        set: { experiences[index] = $0 }
+                    ))
+                    .placeholder(when: experiences[index].isEmpty) {
+                        Text("Experience \(index + 1)")
+                            .foregroundColor(.gray999999())
+                    }
+                    .customFont(weight: .regular, size: 14)
+                    .foregroundColor(.black1C2433())
+                    .padding(.horizontal, 16)
+                    .padding(.vertical, 18)
+                    .roundedBackground(cornerRadius: 8, strokeColor: .primaryBlack(), lineWidth: 1)
+                }
+
+                Button {
+                    experiences.append("")
+                } label: {
+                    Text(LocalizedStringKey.newExperiences)
+                }
+                .buttonStyle(PrimaryButton(fontSize: 12, fontWeight: .medium, background: .primaryLightActive(), foreground: .primary(), height: 40, radius: 8))
+            }
+        }
+        .foregroundColor(.black222020())
+    }
+
+    private var overviewStep: some View {
+        VStack(alignment: .leading, spacing: 12) {
+            Text(LocalizedStringKey.dob)
+                .customFont(weight: .medium, size: 12)
+                .foregroundColor(.primaryBlack())
+
+            HStack {
+                TextField(LocalizedStringKey.dmy, text: $dateStr)
+                    .placeholder(when: dateStr.isEmpty) {
+                        Text(LocalizedStringKey.dmy)
+                            .foregroundColor(.gray999999())
+                    }
+                    .customFont(weight: .regular, size: 14)
+                    .disabled(true)
+
+                Spacer()
+
+                Image("ic_calendar")
+                    .foregroundColor(.black)
+            }
+            .padding(.horizontal, 16)
+            .padding(.vertical, 18)
+            .roundedBackground(cornerRadius: 12, strokeColor: .primaryBlack(), lineWidth: 1)
+            .onTapGesture {
+                isShowingDatePicker = true
+            }
+
+            Text(LocalizedStringKey.fullDescription)
+                .customFont(weight: .medium, size: 12)
+                .foregroundColor(.primaryBlack())
+
+            TextEditor(text: $overviewText)
+                .customFont(weight: .regular, size: 14)
+                .foregroundColor(.black121212())
+                .padding(.horizontal)
+                .padding(.vertical, 14)
+                .cornerRadius(12)
+                .frame(height: 180)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 12)
+                        .inset(by: 0.5)
+                        .stroke(Color(red: 0.93, green: 0.93, blue: 0.93), lineWidth: 1)
+                )
+        }
+    }
+
+    private var addressStep: some View {
+        VStack(alignment: .leading, spacing: 12) {
+            Text(LocalizedStringKey.address)
+                .customFont(weight: .medium, size: 12)
+                .foregroundColor(.primaryBlack())
+
+            Button {
+                isShowingMap = true
+            } label: {
+                VStack(spacing: 8) {
+                    Text(LocalizedStringKey.chooseLocation)
+                        .customFont(weight: .medium, size: 14)
+                        .foregroundColor(.primaryBlack())
+                    Text(LocalizedStringKey.hint4)
+                        .customFont(weight: .regular, size: 11)
+                        .foregroundColor(.gray999999())
+                        .multilineTextAlignment(.center)
+                }
+                .frame(maxWidth: .infinity, minHeight: 120)
+                .background(
+                    RoundedRectangle(cornerRadius: 12)
+                        .stroke(style: StrokeStyle(lineWidth: 1, dash: [6]))
+                        .foregroundColor(Color.gray.opacity(0.4))
+                )
+            }
+            .buttonStyle(.plain)
+            .sheet(isPresented: $isShowingMap) {
+                FullMapView(region: $region, isShowingMap: $isShowingMap, address: $address)
+            }
+
+            Text(LocalizedStringKey.country)
+                .customFont(weight: .medium, size: 12)
+                .foregroundColor(.primaryBlack())
+            ZStack {
+                TextField("", text: $country)
+                    .placeholder(when: country.isEmpty) {
+                        Text(LocalizedStringKey.country)
+                            .foregroundColor(.gray999999())
+                    }
+                    .customFont(weight: .regular, size: 14)
+                    .foregroundColor(.black1C2433())
+                    .padding(.horizontal, 16)
+                    .padding(.vertical, 18)
+                    .roundedBackground(cornerRadius: 8, strokeColor: .primaryBlack(), lineWidth: 1)
+
+                HStack {
+                    Spacer()
+                    Image(systemName: "chevron.down")
+                        .foregroundColor(.black1F1F1F())
+                        .padding(.trailing, 14)
+                }
+            }
+
+            Text(LocalizedStringKey.city)
+                .customFont(weight: .medium, size: 12)
+                .foregroundColor(.primaryBlack())
+            ZStack {
+                TextField("", text: $city)
+                    .placeholder(when: city.isEmpty) {
+                        Text(LocalizedStringKey.city)
+                            .foregroundColor(.gray999999())
+                    }
+                    .customFont(weight: .regular, size: 14)
+                    .foregroundColor(.black1C2433())
+                    .padding(.horizontal, 16)
+                    .padding(.vertical, 18)
+                    .roundedBackground(cornerRadius: 8, strokeColor: .primaryBlack(), lineWidth: 1)
+
+                HStack {
+                    Spacer()
+                    Image(systemName: "chevron.down")
+                        .foregroundColor(.black1F1F1F())
+                        .padding(.trailing, 14)
+                }
+            }
+
+            Text(LocalizedStringKey.streetName)
+                .customFont(weight: .medium, size: 12)
+                .foregroundColor(.primaryBlack())
+            TextField("", text: $streetName)
+                .placeholder(when: streetName.isEmpty) {
+                    Text(LocalizedStringKey.streetName)
+                        .foregroundColor(.gray999999())
+                }
+                .customFont(weight: .regular, size: 14)
+                .foregroundColor(.black1C2433())
+                .padding(.horizontal, 16)
+                .padding(.vertical, 18)
+                .roundedBackground(cornerRadius: 8, strokeColor: .primaryBlack(), lineWidth: 1)
+
+            Text(LocalizedStringKey.buildingName)
+                .customFont(weight: .medium, size: 12)
+                .foregroundColor(.primaryBlack())
+            TextField("", text: $buildingName)
+                .placeholder(when: buildingName.isEmpty) {
+                    Text(LocalizedStringKey.buildingName)
+                        .foregroundColor(.gray999999())
+                }
+                .customFont(weight: .regular, size: 14)
+                .foregroundColor(.black1C2433())
+                .padding(.horizontal, 16)
+                .padding(.vertical, 18)
+                .roundedBackground(cornerRadius: 8, strokeColor: .primaryBlack(), lineWidth: 1)
+
+            HStack(spacing: 12) {
+                VStack(alignment: .leading, spacing: 6) {
+                    Text(LocalizedStringKey.buildingNo)
+                        .customFont(weight: .medium, size: 12)
+                        .foregroundColor(.primaryBlack())
+                    TextField("", text: $buildingNo)
+                        .placeholder(when: buildingNo.isEmpty) {
+                            Text(LocalizedStringKey.buildingNo)
+                                .foregroundColor(.gray999999())
+                        }
+                        .keyboardType(.numberPad)
+                        .customFont(weight: .regular, size: 14)
+                        .foregroundColor(.black1C2433())
+                        .padding(.horizontal, 16)
+                        .padding(.vertical, 18)
+                        .roundedBackground(cornerRadius: 8, strokeColor: .primaryBlack(), lineWidth: 1)
+                }
+
+                VStack(alignment: .leading, spacing: 6) {
+                    Text(LocalizedStringKey.floorNo)
+                        .customFont(weight: .medium, size: 12)
+                        .foregroundColor(.primaryBlack())
+                    TextField("", text: $floorNo)
+                        .placeholder(when: floorNo.isEmpty) {
+                            Text(LocalizedStringKey.floorNo)
+                                .foregroundColor(.gray999999())
+                        }
+                        .keyboardType(.numberPad)
+                        .customFont(weight: .regular, size: 14)
+                        .foregroundColor(.black1C2433())
+                        .padding(.horizontal, 16)
+                        .padding(.vertical, 18)
+                        .roundedBackground(cornerRadius: 8, strokeColor: .primaryBlack(), lineWidth: 1)
+                }
+            }
+        }
+    }
 }
 
 extension PersonalInfoView {
@@ -245,51 +442,36 @@ extension PersonalInfoView {
             name = viewModel.user?.full_name ?? ""
             email = viewModel.user?.email ?? ""
             dateStr = viewModel.user?.formattedDOB ?? ""
+            address = viewModel.user?.address ?? ""
         }
     }
     
     private func update() {
-        var imageData: Data? = nil
-        var params: [String: Any] = [:]
+        let expString = experiences
+            .map { $0.trimmingCharacters(in: .whitespacesAndNewlines) }
+            .filter { !$0.isEmpty }
+            .joined(separator: " | ")
 
-        if isImageSelected, let uiImage = mediaPickerViewModel.selectedImage {
-            // Convert the UIImage to Data, if needed
-            imageData = uiImage.jpegData(compressionQuality: 0.8)
-        }
-
-        params = [
+        let params: [String: Any] = [
             "email": email,
             "full_name": name,
-            "lat": userLocation?.latitude ?? 0.0,
-            "lng": userLocation?.longitude ?? 0.0,
-            "address": "",
             "dob": dateStr,
+            "full_description": overviewText,
+            "work_field": workField,
+            "experiences": expString,
+            "lat": region.center.latitude,
+            "lng": region.center.longitude,
+            "address": address,
+            "country": country,
+            "city": city,
+            "street_name": streetName,
+            "building_name": buildingName,
+            "building_no": buildingNo,
+            "floor_no": floorNo
         ]
-        
-        viewModel.updateUserDataWithImage(imageData: imageData, additionalParams: params) { _ in
-            settings.loggedIn = true
-        }
-    }
-}
 
-extension PersonalInfoView {
-    @ViewBuilder
-    func profileImageView() -> some View {
-        if let selectedImage = mediaPickerViewModel.selectedImage {
-            Image(uiImage: selectedImage)
-                .resizable()
-                .frame(width: 115, height: 115)
-                .cornerRadius(8)
-        } else {
-            let imageURL = viewModel.user?.image?.toURL()
-            AsyncImageView(
-                width: 115,
-                height: 115,
-                cornerRadius: 8,
-                imageURL: imageURL,
-                placeholder: Image(systemName: "photo.circle"),
-                contentMode: .fill
-            )
+        viewModel.updateUserData(params: params) { _ in
+            settings.loggedIn = true
         }
     }
 }

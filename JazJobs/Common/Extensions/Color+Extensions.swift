@@ -36,7 +36,7 @@ extension Color {
     static
     func primaryGradientColor() -> LinearGradient {
         let colors = [Color.primary1(), Color.primary2()]
-        return LinearGradient(gradient: Gradient(colors: colors), startPoint: .topLeading, endPoint: .bottomTrailing)
+        return LinearGradient(gradient: Gradient(colors: colors), startPoint: .top, endPoint: .bottom)
     }
 
     static
@@ -47,47 +47,56 @@ extension Color {
 
     static
     func primary1() -> Color {
-        return Color(hex: "A850D3")//"09335E")
+        // Brand top color: #05659E
+        return Color(hex: "05659E")
     }
     
     static
     func primary2() -> Color {
-        return Color(hex: "7D25A8")//"09335E")
+        // Brand bottom color: #04517E
+        return Color(hex: "04517E")
     }
     
     static
     func primary() -> Color {
-        return Color(hex: "7D25A8")//"09335E")
+        // Main brand color (matches top color)
+        return Color(hex: "05659E")
     }
 
     static
     func primaryNormal() -> Color {
-        return Color(hex: "9942C4")
+        // Equal to main brand color
+        return Color(hex: "05659E")
     }
     
     static
     func primaryLight() -> Color {
-        return Color(hex: "F5ECF9")
+        // Light tint of primary
+        return Color(hex: "E6F3F8")
     }
 
     static
     func primaryDark() -> Color {
-        return Color(hex: "043356")
+        // Dark shade (matches bottom gradient)
+        return Color(hex: "04517E")
     }
 
     static
     func primaryDarker() -> Color {
-        return Color(hex: "021828")
+        // Darker shade for strong contrast
+        return Color(hex: "033C5D")
     }
 
     static
     func primaryLightHover() -> Color {
-        return Color(hex: "F0E3F6")
+        // Slightly darker than primaryLight for hover state
+        return Color(hex: "D9EEF6")
     }
 
     static
     func primaryLightActive() -> Color {
-        return Color(hex: "DFC4ED")
+        // Darker than hover for active state
+        return Color(hex: "BFE1EE")
     }
 
     static
@@ -582,8 +591,8 @@ extension Color {
     
     static
     func GetGradientBGColor() -> LinearGradient {
-        let colors = [Color.primary(), Color.primary()]
-        return LinearGradient(gradient: Gradient(colors: colors), startPoint: .bottom, endPoint: .top)
+        let colors = [Color.primary1(), Color.primary2()]
+        return LinearGradient(gradient: Gradient(colors: colors), startPoint: .top, endPoint: .bottom)
     }
 
     static

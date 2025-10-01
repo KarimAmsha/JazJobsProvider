@@ -13,81 +13,27 @@ struct MainView: View {
     @EnvironmentObject var settings: UserSettings
     @State var showAddOrder = false
     @State private var path = NavigationPath()
-    @ObservedObject var appRouter = AppRouter()
-    @ObservedObject var viewModel = InitialViewModel(errorHandling: ErrorHandling())
+    @EnvironmentObject var appRouter: AppRouter
+    @StateObject var viewModel = InitialViewModel(errorHandling: ErrorHandling())
 
     var body: some View {
         NavigationStack(path: $appRouter.navPath) {
             ZStack {
-                Rectangle()
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
-                    .foregroundColor(.clear)
-                    .background(.white)
+                Color.white.ignoresSafeArea()
 
-                GeometryReader { geometry in
-                    VStack(spacing: 0) {
-                        Spacer()
-                        switch appState.currentPage {
-                        case .home:
-                            HomeView()
-                        case .explor:
-                            ExplorView()
-                        case .cart:
-                            if settings.id == nil {
-                                CustomeEmptyView()
-                            } else {
-                                CartView()
-                            }
-                        case .favourite:
-                            if settings.id == nil {
-                                CustomeEmptyView()
-                            } else {
-                                FavoriteView(viewModel: viewModel)
-                            }
-                        case .more:
-                            if settings.id == nil {
-                                CustomeEmptyView()
-                            } else {
-                                ProfileView()
-                            }
-                        }
-                        
-                        ZStack {
-                            VStack(spacing: 0) {
-                                CustomDivider()
-                                
-                                HStack(spacing: 4) {
-                                    TabBarIcon(appState: appState, assignedPage: .home, width: geometry.size.width/6, height: geometry.size.height/30, iconName: "ic_home", tabName: LocalizedStringKey.home, isAddButton: false, isCart: false)
-                                    
-                                    Spacer()
+                VStack(spacing: 0) {
+                    // محتوى الصفحة حسب التبويب الحالي
+                    pageContent()
+                        .background(Color.background())
 
-                                    TabBarIcon(appState: appState, assignedPage: .explor, width: geometry.size.width/6, height: geometry.size.height/30, iconName: "ic_wishes", tabName: LocalizedStringKey.explor, isAddButton: false, isCart: false)
-
-                                    Spacer()
-
-                                    TabBarIcon(appState: appState, assignedPage: .cart, width: geometry.size.width/6, height: geometry.size.height/30, iconName: "ic_cart", tabName: LocalizedStringKey.cart, isAddButton: false, isCart: true)
-                                    
-                                    Spacer()
-
-                                    TabBarIcon(appState: appState, assignedPage: .favourite, width: geometry.size.width/6, height: geometry.size.height/30, iconName: "ic_category", tabName: LocalizedStringKey.favourite, isAddButton: false, isCart: false)
-
-                                    Spacer()
-
-
-                                    TabBarIcon(appState: appState, assignedPage: .more, width: geometry.size.width/6, height: geometry.size.height/30, iconName: "ic_profile", tabName: LocalizedStringKey.more, isAddButton: false, isCart: false)
-                                }
-                                .padding(.horizontal)
-                                .frame(width: geometry.size.width, height: geometry.size.height/10)
-                            }
-                        }
-                        .padding(.bottom, 10)
-                    }
+                    // شريط التبويب
+                    tabBar()
+                        .background(Color.white)
+                        .shadow(color: .black.opacity(0.05), radius: 2, x: 0, y: -1)
                 }
-                .background(Color.background())
-                .edgesIgnoringSafeArea(.bottom)
             }
             .toolbarColorScheme(.light, for: .navigationBar)
-            .toolbarBackground(Color.background(),for: .navigationBar)
+            .toolbarBackground(Color.background(), for: .navigationBar)
             .navigationBarTitleDisplayMode(.inline)
             .navigationDestination(for: AppRouter.Destination.self) { destination in
                 switch destination {
@@ -224,9 +170,114 @@ struct MainView: View {
     }
 }
 
+// MARK: - Subviews
+extension MainView {
+    @ViewBuilder
+    private func pageContent() -> some View {
+        switch appState.currentPage {
+        case .home:
+            HomeView() // الطلبات
+        case .explor:
+            ExplorView() // الرسائل (Placeholder)
+        case .cart:
+            if settings.id == nil {
+                CustomeEmptyView()
+            } else {
+                NotificationsView() // الإشعارات
+            }
+        case .favourite:
+            ExplorView() // الاستكشاف
+        case .more:
+            if settings.id == nil {
+                CustomeEmptyView()
+            } else {
+                ProfileView() // الإعدادات
+            }
+        }
+    }
+
+    @ViewBuilder
+    private func tabBar() -> some View {
+        VStack(spacing: 0) {
+            CustomDivider()
+            HStack {
+                TabBarIcon(
+                    appState: appState,
+                    assignedPage: .home,
+                    width: 22, height: 22,
+                    iconName: "",
+                    tabName: LocalizedStringKey.orders,
+                    isAddButton: false,
+                    isCart: false,
+                    systemIconName: "house",
+                    selectedSystemIconName: "house.fill"
+                )
+
+                Spacer()
+
+                TabBarIcon(
+                    appState: appState,
+                    assignedPage: .explor,
+                    width: 22, height: 22,
+                    iconName: "",
+                    tabName: LocalizedStringKey.messages,
+                    isAddButton: false,
+                    isCart: false,
+                    systemIconName: "bubble.left.and.bubble.right",
+                    selectedSystemIconName: "bubble.left.and.bubble.right.fill"
+                )
+
+                Spacer()
+
+                TabBarIcon(
+                    appState: appState,
+                    assignedPage: .favourite,
+                    width: 22, height: 22,
+                    iconName: "",
+                    tabName: LocalizedStringKey.discover,
+                    isAddButton: false,
+                    isCart: false,
+                    systemIconName: "safari",
+                    selectedSystemIconName: "safari.fill"
+                )
+
+                Spacer()
+
+                TabBarIcon(
+                    appState: appState,
+                    assignedPage: .cart,
+                    width: 22, height: 22,
+                    iconName: "",
+                    tabName: LocalizedStringKey.notifications,
+                    isAddButton: false,
+                    isCart: false,
+                    systemIconName: "bell",
+                    selectedSystemIconName: "bell.fill"
+                )
+
+                Spacer()
+
+                TabBarIcon(
+                    appState: appState,
+                    assignedPage: .more,
+                    width: 22, height: 22,
+                    iconName: "",
+                    tabName: LocalizedStringKey.settings,
+                    isAddButton: false,
+                    isCart: false,
+                    systemIconName: "gearshape",
+                    selectedSystemIconName: "gearshape.fill"
+                )
+            }
+            .padding(.horizontal)
+            .frame(height: 64)
+        }
+    }
+}
+
 #Preview {
     MainView()
         .environmentObject(UserSettings())
         .environmentObject(AppState())
+        .environmentObject(AppRouter())
 }
-

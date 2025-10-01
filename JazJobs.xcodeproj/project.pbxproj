@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 60;
+	objectVersion = 56;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -233,13 +233,7 @@
 		1EFB9B352C1C4CFE00C15CE4 /* VIPGiftView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFB9B342C1C4CFE00C15CE4 /* VIPGiftView.swift */; };
 		1EFB9B372C1C624B00C15CE4 /* EventListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFB9B362C1C624B00C15CE4 /* EventListView.swift */; };
 		520BB0382DC959AC00DB6315 /* SafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520BB0372DC959AB00DB6315 /* SafariView.swift */; };
-		521C5EC72E47CCE20089EA38 /* ipworks3ds_sdk_deploy_9048.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 526644B52E17ACE9005DEA6D /* ipworks3ds_sdk_deploy_9048.xcframework */; };
-		521C5EC82E47CCE20089EA38 /* ipworks3ds_sdk_deploy_9048.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 526644B52E17ACE9005DEA6D /* ipworks3ds_sdk_deploy_9048.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		52348E0B2DD8B84F00E4EBE5 /* ValidatedTextEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52348E0A2DD8B84E00E4EBE5 /* ValidatedTextEditor.swift */; };
-		526644BF2E17AD36005DEA6D /* OPPWAMobile.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 526644B62E17ACE9005DEA6D /* OPPWAMobile.xcframework */; };
-		526644C02E17AD36005DEA6D /* OPPWAMobile.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 526644B62E17ACE9005DEA6D /* OPPWAMobile.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		526644C72E17C6AF005DEA6D /* HyperPaymentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526644C62E17C6AA005DEA6D /* HyperPaymentViewModel.swift */; };
-		526644CA2E17C6EC005DEA6D /* HyperpayCheckoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526644C92E17C6EB005DEA6D /* HyperpayCheckoutView.swift */; };
 		529EC5042DC8B8F0009AB1FF /* ErrorObserverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529EC5032DC8B8EF009AB1FF /* ErrorObserverView.swift */; };
 		529EC5062DC8C0AA009AB1FF /* PopupObserverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529EC5052DC8C0A9009AB1FF /* PopupObserverView.swift */; };
 		529EC5082DC8C1F2009AB1FF /* MessageStatusObserverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529EC5072DC8C1F1009AB1FF /* MessageStatusObserverView.swift */; };
@@ -247,8 +241,7 @@
 		529EC50C2DC90304009AB1FF /* TamaraWebViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529EC50B2DC90302009AB1FF /* TamaraWebViewModel.swift */; };
 		529EC50E2DC9031A009AB1FF /* TamaraWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529EC50D2DC90318009AB1FF /* TamaraWebView.swift */; };
 		52BEF2EF2DD9DD9D0013309C /* Notification.Name+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BEF2EE2DD9DD8E0013309C /* Notification.Name+Extension.swift */; };
-		52E611052E26A6EE001788EA /* ApplePayButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E611042E26A6ED001788EA /* ApplePayButtonView.swift */; };
-		52E611072E26A8E3001788EA /* ApplePayControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E611062E26A8E1001788EA /* ApplePayControllerView.swift */; };
+		52DDC82E2E8D238400BAEECF /* IdentityConfirmationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DDC82D2E8D238400BAEECF /* IdentityConfirmationView.swift */; };
 		52F03F922DC1448F00D11215 /* TamaraProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F03F912DC1448E00D11215 /* TamaraProduct.swift */; };
 		A65284F7A04F7A40F9111F3B /* Pods_JazJobs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC3995C4F256389773EFD36C /* Pods_JazJobs.framework */; };
 /* End PBXBuildFile section */
@@ -260,8 +253,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				526644C02E17AD36005DEA6D /* OPPWAMobile.xcframework in Embed Frameworks */,
-				521C5EC82E47CCE20089EA38 /* ipworks3ds_sdk_deploy_9048.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -304,7 +295,7 @@
 		1E2804432C067E4E0021DFB0 /* ProductsSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsSearchView.swift; sourceTree = "<group>"; };
 		1E38FB652C24A8E7001A2B78 /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
 		1E41E1FB2BE942490061AC47 /* FirestoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreService.swift; sourceTree = "<group>"; };
-		1E41E1FD2BE947560061AC47 /* Wishy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Wishy.entitlements; sourceTree = "<group>"; };
+		1E41E1FD2BE947560061AC47 /* JazJobs.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = JazJobs.entitlements; sourceTree = "<group>"; };
 		1E479B302C4D881B006130E1 /* WhatsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsApp.swift; sourceTree = "<group>"; };
 		1E5F318A2BE23C9B00E5A914 /* FriendWishesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendWishesListView.swift; sourceTree = "<group>"; };
 		1E5F318C2BE23E5100E5A914 /* FriendWishesDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendWishesDetailsView.swift; sourceTree = "<group>"; };
@@ -470,12 +461,6 @@
 		1EFB9B362C1C624B00C15CE4 /* EventListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListView.swift; sourceTree = "<group>"; };
 		520BB0372DC959AB00DB6315 /* SafariView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariView.swift; sourceTree = "<group>"; };
 		52348E0A2DD8B84E00E4EBE5 /* ValidatedTextEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidatedTextEditor.swift; sourceTree = "<group>"; };
-		526644B42E17ACE9005DEA6D /* ipworks3ds_sdk_9048.xcframework */ = {isa = PBXFileReference; expectedSignature = "AppleDeveloperProgram:74N8742JFG:n software, Inc."; lastKnownFileType = wrapper.xcframework; path = ipworks3ds_sdk_9048.xcframework; sourceTree = "<group>"; };
-		526644B52E17ACE9005DEA6D /* ipworks3ds_sdk_deploy_9048.xcframework */ = {isa = PBXFileReference; expectedSignature = "AppleDeveloperProgram:74N8742JFG:n software, Inc."; lastKnownFileType = wrapper.xcframework; path = ipworks3ds_sdk_deploy_9048.xcframework; sourceTree = "<group>"; };
-		526644B62E17ACE9005DEA6D /* OPPWAMobile.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = OPPWAMobile.xcframework; sourceTree = "<group>"; };
-		526644C42E17AF25005DEA6D /* Wishy-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Wishy-Bridging-Header.h"; sourceTree = "<group>"; };
-		526644C62E17C6AA005DEA6D /* HyperPaymentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HyperPaymentViewModel.swift; sourceTree = "<group>"; };
-		526644C92E17C6EB005DEA6D /* HyperpayCheckoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HyperpayCheckoutView.swift; sourceTree = "<group>"; };
 		529EC5032DC8B8EF009AB1FF /* ErrorObserverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorObserverView.swift; sourceTree = "<group>"; };
 		529EC5052DC8C0A9009AB1FF /* PopupObserverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupObserverView.swift; sourceTree = "<group>"; };
 		529EC5072DC8C1F1009AB1FF /* MessageStatusObserverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageStatusObserverView.swift; sourceTree = "<group>"; };
@@ -483,8 +468,7 @@
 		529EC50B2DC90302009AB1FF /* TamaraWebViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TamaraWebViewModel.swift; sourceTree = "<group>"; };
 		529EC50D2DC90318009AB1FF /* TamaraWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TamaraWebView.swift; sourceTree = "<group>"; };
 		52BEF2EE2DD9DD8E0013309C /* Notification.Name+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification.Name+Extension.swift"; sourceTree = "<group>"; };
-		52E611042E26A6ED001788EA /* ApplePayButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplePayButtonView.swift; sourceTree = "<group>"; };
-		52E611062E26A8E1001788EA /* ApplePayControllerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplePayControllerView.swift; sourceTree = "<group>"; };
+		52DDC82D2E8D238400BAEECF /* IdentityConfirmationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentityConfirmationView.swift; sourceTree = "<group>"; };
 		52F03F912DC1448E00D11215 /* TamaraProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TamaraProduct.swift; sourceTree = "<group>"; };
 		BC3995C4F256389773EFD36C /* Pods_JazJobs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JazJobs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D31B94C544F163DA89F2F895 /* Pods-JazJobs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JazJobs.release.xcconfig"; path = "Target Support Files/Pods-JazJobs/Pods-JazJobs.release.xcconfig"; sourceTree = "<group>"; };
@@ -521,11 +505,9 @@
 				1ECC94892BDC5D8B002BFE54 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
 				1ECC94B72BDC5D8B002BFE54 /* FirebaseStorageCombine-Community in Frameworks */,
 				1ECC949D2BDC5D8B002BFE54 /* FirebaseFirestoreCombine-Community in Frameworks */,
-				521C5EC72E47CCE20089EA38 /* ipworks3ds_sdk_deploy_9048.xcframework in Frameworks */,
 				1ECC94832BDC5D8B002BFE54 /* FirebaseAnalytics in Frameworks */,
 				1ECC94932BDC5D8B002BFE54 /* FirebaseCrashlytics in Frameworks */,
 				1ECC948D2BDC5D8B002BFE54 /* FirebaseAppDistribution-Beta in Frameworks */,
-				526644BF2E17AD36005DEA6D /* OPPWAMobile.xcframework in Frameworks */,
 				1ECC94992BDC5D8B002BFE54 /* FirebaseDynamicLinks in Frameworks */,
 				1ECC949F2BDC5D8B002BFE54 /* FirebaseFirestoreSwift in Frameworks */,
 				A65284F7A04F7A40F9111F3B /* Pods_JazJobs.framework in Frameworks */,
@@ -857,6 +839,7 @@
 				1ECC95302BDD77B5002BFE54 /* SMSVerificationView.swift */,
 				1ECC95322BDD77D3002BFE54 /* OtpFormFieldView.swift */,
 				1ECC95362BDD8150002BFE54 /* PersonalInfoView.swift */,
+				52DDC82D2E8D238400BAEECF /* IdentityConfirmationView.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -989,10 +972,7 @@
 		1EEC2BCE2BD83E6000975953 /* JazJobs */ = {
 			isa = PBXGroup;
 			children = (
-				526644C82E17C6D0005DEA6D /* Hyperpay */,
-				526644C42E17AF25005DEA6D /* Wishy-Bridging-Header.h */,
-				526644B32E17AC09005DEA6D /* Frameworks */,
-				1E41E1FD2BE947560061AC47 /* Wishy.entitlements */,
+				1E41E1FD2BE947560061AC47 /* JazJobs.entitlements */,
 				1ECC94E52BDC638A002BFE54 /* Info.plist */,
 				1ECC944D2BDC56EE002BFE54 /* Models */,
 				1ECC944C2BDC56E6002BFE54 /* Views */,
@@ -1041,27 +1021,6 @@
 				D31B94C544F163DA89F2F895 /* Pods-JazJobs.release.xcconfig */,
 			);
 			path = Pods;
-			sourceTree = "<group>";
-		};
-		526644B32E17AC09005DEA6D /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				526644B42E17ACE9005DEA6D /* ipworks3ds_sdk_9048.xcframework */,
-				526644B52E17ACE9005DEA6D /* ipworks3ds_sdk_deploy_9048.xcframework */,
-				526644B62E17ACE9005DEA6D /* OPPWAMobile.xcframework */,
-			);
-			path = Frameworks;
-			sourceTree = "<group>";
-		};
-		526644C82E17C6D0005DEA6D /* Hyperpay */ = {
-			isa = PBXGroup;
-			children = (
-				52E611062E26A8E1001788EA /* ApplePayControllerView.swift */,
-				52E611042E26A6ED001788EA /* ApplePayButtonView.swift */,
-				526644C92E17C6EB005DEA6D /* HyperpayCheckoutView.swift */,
-				526644C62E17C6AA005DEA6D /* HyperPaymentViewModel.swift */,
-			);
-			path = Hyperpay;
 			sourceTree = "<group>";
 		};
 		D03752232625DF48AAE5C406 /* Frameworks */ = {
@@ -1196,9 +1155,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-JazJobs/Pods-JazJobs-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-JazJobs/Pods-JazJobs-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1289,6 +1252,7 @@
 				1ECC94EE2BDC6E84002BFE54 /* WelcomeView.swift in Sources */,
 				1EA6D3272C1DB13A007E8AE0 /* WalletData.swift in Sources */,
 				1EC27FF82C03ACAE0007279D /* OrderViewModel.swift in Sources */,
+				52DDC82E2E8D238400BAEECF /* IdentityConfirmationView.swift in Sources */,
 				1ECC94DA2BDC6094002BFE54 /* SplashView.swift in Sources */,
 				1E6084B02BE042C6007D83B1 /* WishesView.swift in Sources */,
 				1ECC95412BDDAB8D002BFE54 /* TabBarIcon.swift in Sources */,
@@ -1333,7 +1297,6 @@
 				1E28042E2C04D3F30021DFB0 /* NotificationRowView.swift in Sources */,
 				1EDEF6782BE17C0C00863C10 /* OrderDetailsView.swift in Sources */,
 				1EC27FEC2C0377450007279D /* CartViewModel.swift in Sources */,
-				526644CA2E17C6EC005DEA6D /* HyperpayCheckoutView.swift in Sources */,
 				1ECC94692BDC5B68002BFE54 /* Text+Extensions.swift in Sources */,
 				1ECC94712BDC5B68002BFE54 /* Date+Extensions.swift in Sources */,
 				1ECC95332BDD77D3002BFE54 /* OtpFormFieldView.swift in Sources */,
@@ -1352,7 +1315,6 @@
 				520BB0382DC959AC00DB6315 /* SafariView.swift in Sources */,
 				1ECC95042BDD14A0002BFE54 /* Pagination.swift in Sources */,
 				1ECC95072BDD1587002BFE54 /* AuthenticationView.swift in Sources */,
-				52E611052E26A6EE001788EA /* ApplePayButtonView.swift in Sources */,
 				1ECC947A2BDC5B8B002BFE54 /* Enum.swift in Sources */,
 				1E38FB662C24A8E7001A2B78 /* CategoryView.swift in Sources */,
 				1ECC94562BDC57EA002BFE54 /* APIClient.swift in Sources */,
@@ -1364,7 +1326,6 @@
 				1ECC94CD2BDC5E49002BFE54 /* ImagePicker.swift in Sources */,
 				1ECC94EC2BDC6A8C002BFE54 /* WelcomeItem.swift in Sources */,
 				1E2804192C04C6700021DFB0 /* AddressBookView.swift in Sources */,
-				526644C72E17C6AF005DEA6D /* HyperPaymentViewModel.swift in Sources */,
 				529EC50E2DC9031A009AB1FF /* TamaraWebView.swift in Sources */,
 				1E28042D2C04D3F30021DFB0 /* NotificationsView.swift in Sources */,
 				1E2804232C04C7C70021DFB0 /* Complain.swift in Sources */,
@@ -1397,7 +1358,6 @@
 				1EDEF6852BE1A93600863C10 /* FriendWishesView.swift in Sources */,
 				1EC27FF02C038A0E0007279D /* CartItemView.swift in Sources */,
 				1E1EDA7C2C1CDA27003047CA /* UserWishesView.swift in Sources */,
-				52E611072E26A8E3001788EA /* ApplePayControllerView.swift in Sources */,
 				1EDEF67D2BE1930C00863C10 /* ProductsListView.swift in Sources */,
 				1E2804422C0634450021DFB0 /* Supplier.swift in Sources */,
 				1EA740582BFBCDFE0028AAD0 /* Products.swift in Sources */,
@@ -1578,24 +1538,24 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = Wishy/Wishy.entitlements;
+				CODE_SIGN_ENTITLEMENTS = JazJobs/JazJobs.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 14;
-				DEVELOPMENT_ASSET_PATHS = "\"Wishy/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"JazJobs/Preview Content\"";
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = CKZBH9QCG3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Wishy/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = Wishy;
+				INFOPLIST_FILE = JazJobs/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = JazJobs;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
-				INFOPLIST_KEY_NSCameraUsageDescription = "Wishy will use camera to upload user photo";
-				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Wishy will use location to send orders, track your order, and continuously provide real-time updates";
-				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Wishy will use location to send orders, track your order, and continuously provide real-time updates";
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Wishy will use location to send orders, track your order, and continuously provide real-time updates";
-				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Wishy will use photo library to upload user photo";
+				INFOPLIST_KEY_NSCameraUsageDescription = "JazJobs will use camera to upload user photo";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "JazJobs will use location to send orders, track your order, and continuously provide real-time updates";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "JazJobs will use location to send orders, track your order, and continuously provide real-time updates";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "JazJobs will use location to send orders, track your order, and continuously provide real-time updates";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "JazJobs will use photo library to upload user photo";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -1608,16 +1568,14 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 3.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = sa.com.Fazaa.Wishy;
+				PRODUCT_BUNDLE_IDENTIFIER = sa.com.jaz.jobs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = WishyLiveProfile15Tem;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "Wishy/Wishy-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1629,24 +1587,24 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = Wishy/Wishy.entitlements;
+				CODE_SIGN_ENTITLEMENTS = JazJobs/JazJobs.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 14;
-				DEVELOPMENT_ASSET_PATHS = "\"Wishy/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"JazJobs/Preview Content\"";
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = CKZBH9QCG3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Wishy/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = Wishy;
+				INFOPLIST_FILE = JazJobs/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = JazJobs;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
-				INFOPLIST_KEY_NSCameraUsageDescription = "Wishy will use camera to upload user photo";
-				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Wishy will use location to send orders, track your order, and continuously provide real-time updates";
-				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Wishy will use location to send orders, track your order, and continuously provide real-time updates";
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Wishy will use location to send orders, track your order, and continuously provide real-time updates";
-				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Wishy will use photo library to upload user photo";
+				INFOPLIST_KEY_NSCameraUsageDescription = "JazJobs will use camera to upload user photo";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "JazJobs will use location to send orders, track your order, and continuously provide real-time updates";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "JazJobs will use location to send orders, track your order, and continuously provide real-time updates";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "JazJobs will use location to send orders, track your order, and continuously provide real-time updates";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "JazJobs will use photo library to upload user photo";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -1659,16 +1617,15 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 3.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = sa.com.Fazaa.Wishy;
+				PRODUCT_BUNDLE_IDENTIFIER = sa.com.jaz.jobs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = WishyLiveProfile15Tem;
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "Wishy/Wishy-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

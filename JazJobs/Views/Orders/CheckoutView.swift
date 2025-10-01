@@ -110,7 +110,6 @@ struct CheckoutView: View {
     @State var tamaraViewModel: TamaraWebViewModel? = nil
     @State private var selectedPayment: PaymentOption = .hyperpay
     @State private var selectedBrand: HyperpayBrand = .mada
-    @StateObject private var hyperPaymentViewModel = HyperPaymentViewModel()
     @State private var currentHyperpayId: String?
     @State private var showBrandSheet = false
 
@@ -157,13 +156,13 @@ struct CheckoutView: View {
                     ProductSummarySection(products: cartItems?.results)
 
                     PurchaseTypeSection(purchaseType: $selectedPurchaseType)
-                        .disabled(orderViewModel.isLoading || hyperPaymentViewModel.isLoading)
+                        .disabled(orderViewModel.isLoading)
 
                     AddressSelectionView(addressTitle: $addressTitle, streetName: $streetName, isShowingMap: $isShowingMap, servicePlace: $servicePlace, locations: $locations, region: $region, isShowingAddress: $isShowingAddress, userLocation: $userLocation, purchaseType: $selectedPurchaseType)
-                        .disabled(orderViewModel.isLoading || hyperPaymentViewModel.isLoading)
+                        .disabled(orderViewModel.isLoading)
 
                     NotesView(notes: $notes, placeholder: placeholderString)
-                        .disabled(orderViewModel.isLoading || hyperPaymentViewModel.isLoading)
+                        .disabled(orderViewModel.isLoading)
 
                     if let cartTotal = cartViewModel.cartTotal {
                         OrderSummarySection(cartTotal: cartTotal)
@@ -174,19 +173,19 @@ struct CheckoutView: View {
                         selectedBrand: $selectedBrand,
                         showBrandSheet: $showBrandSheet,
                         canShowApplePay: canShowApplePay,
-                        isDisabled: orderViewModel.isLoading || hyperPaymentViewModel.isLoading,
+                        isDisabled: orderViewModel.isLoading,
                         amount: cartViewModel.cartTotal?.final_total ?? 0.0
                     )
                 }
                 .padding()
             }
             VStack {
-                if orderViewModel.isLoading || hyperPaymentViewModel.isLoading {
+                if orderViewModel.isLoading {
                     LoadingView()
                 }
                 
                 checkoutButton()
-                    .disabled(orderViewModel.isLoading || hyperPaymentViewModel.isLoading)
+                    .disabled(orderViewModel.isLoading)
             }
             .padding()
         }
@@ -274,96 +273,18 @@ struct CheckoutView: View {
         )
         .overlay(
             MessageAlertObserverView(
-                message: $hyperPaymentViewModel.errorMessage,
-                alertType: .constant(.error)
-            )
-        )
-        .overlay(
-            MessageAlertObserverView(
                 message: $orderViewModel.errorMessage,
                 alertType: .constant(.error)
             )
         )
-        // ⬅️ عرض اللودينج الخاص بـ HyperPaymentViewModel
-        .overlay {
-            if hyperPaymentViewModel.isLoading {
-                LoadingView()
-            }
-        }
         .onChange(of: selectedPurchaseType) { _ in
             addressTitle = ""
             streetName = ""
             selectedAddress = nil
         }
-        .fullScreenCover(isPresented: $hyperPaymentViewModel.isShowingCheckout) {
-            if let checkoutId = hyperPaymentViewModel.checkoutId {
-                HyperpayCheckoutView(
-                    checkoutId: checkoutId,
-                    paymentBrands: [selectedBrand.displayName],
-                    onResult: { result in
-                        // Close the Hyperpay sheet first
-                        hyperPaymentViewModel.isShowingCheckout = false
-                        switch result {
-                        case .success(let resourcePath):
-                            // Ensure resourcePath (hyperpay id) is not empty
-                            let id = resourcePath.trimmingCharacters(in: .whitespacesAndNewlines)
-                            guard !id.isEmpty else {
-                                orderViewModel.errorMessage = "تعذر الحصول على معرف العملية"
-                                hyperPaymentViewModel.isLoading = false
-                                orderViewModel.isLoading = false
-                                return
-                            }
-                            // Show verifying indicator
-                            hyperPaymentViewModel.isLoading = true
-                            checkHyperpayStatus(resourcePath: id)
-                        case .failure(let error):
-                            orderViewModel.errorMessage = error.localizedDescription
-                            hyperPaymentViewModel.isLoading = false
-                            orderViewModel.isLoading = false
-                        }
-                    },
-                    onDismiss: {
-                        // أغلق الشاشة فقط هنا!
-                        hyperPaymentViewModel.isShowingCheckout = false
-                    }
-                )
-            }
-        }
-        .fullScreenCover(isPresented: $showApplePaySheet) {
-            if let checkoutId = applePayCheckoutId {
-                ApplePayControllerView(
-                    checkoutId: checkoutId,
-                    amount: applePayAmount,
-                    onResult: { result in
-                        // Close sheet immediately
-                        showApplePaySheet = false
-                        switch result {
-                        case .success(let hyperpayId):
-                            let id = hyperpayId.trimmingCharacters(in: .whitespacesAndNewlines)
-                            guard !id.isEmpty else {
-                                orderViewModel.errorMessage = "تعذر الحصول على معرف العملية"
-                                hyperPaymentViewModel.isLoading = false
-                                orderViewModel.isLoading = false
-                                return
-                            }
-                            // Show verifying indicator while checking status
-                            hyperPaymentViewModel.isLoading = true
-                            checkHyperpayStatus(resourcePath: id)
-                        case .failure(let error):
-                            // If user closed the sheet before authorization, show clear message
-                            let msg = (error as NSError).userInfo[NSLocalizedDescriptionKey] as? String
-                            orderViewModel.errorMessage = msg ?? "تم إغلاق Apple Pay قبل إتمام التفويض"
-                            hyperPaymentViewModel.isLoading = false
-                            orderViewModel.isLoading = false
-                        }
-                    }
-                )
-            }
-        }
         .fullScreenCover(isPresented: $showTamaraPayment) {
             if let url = URL(string: checkoutUrl) {
                 SafariView(url: url) { redirectedURL in
-                    handleTamaraRedirect(url: redirectedURL)
                 }
             }
         }
@@ -392,12 +313,6 @@ struct CheckoutView: View {
            let amount = cartViewModel.cartTotal?.final_total,
            amount > 0
         {
-            ApplePaySection {
-                startHyperpayPayment(amount: amount)
-            }
-            .frame(height: 48)
-            .padding(.vertical, 8)
-            .disabled(orderViewModel.isLoading || hyperPaymentViewModel.isLoading)
         } else {
             // باقي وسائل الدفع (الزر العادي)
             Button(action: {
@@ -417,7 +332,6 @@ struct CheckoutView: View {
                 case .hyperpay:
                     // تحقق من المستخدم لعمليات الدفع الإلكتروني
                     guard validateUserForOnlinePayment() else { return }
-                    startHyperpayPayment(amount: amount)
                 }
             }) {
                 let buttonLabel: some View = HStack {
@@ -452,64 +366,8 @@ struct CheckoutView: View {
                     radius: 12
                 )
             )
-            .disabled(orderViewModel.isLoading || hyperPaymentViewModel.isLoading)
+            .disabled(orderViewModel.isLoading)
         }
-    }
-
-    func checkHyperpayStatus(resourcePath: String) {
-        let id = resourcePath.trimmingCharacters(in: .whitespacesAndNewlines)
-        guard !id.isEmpty else {
-            orderViewModel.errorMessage = "تعذر الحصول على معرف العملية"
-            hyperPaymentViewModel.isLoading = false
-            orderViewModel.isLoading = false
-            return
-        }
-
-        hyperPaymentViewModel.checkPaymentStatus(
-            hyperpayId: id,
-            brandType: selectedBrand.dbValue
-        ) { status, response in
-            print("cccc response \(String(describing: response))")
-            if status {
-                // Success → addOrder then navigate (inside addOrder completion)
-                addOrder()
-            } else {
-                orderViewModel.errorMessage = self.hyperPaymentViewModel.errorMessage ?? "فشلت عملية الدفع"
-            }
-            // Clean all loading states
-            hyperPaymentViewModel.isLoading = false
-            orderViewModel.isLoading = false
-            // Ensure all sheets are closed
-            hyperPaymentViewModel.isShowingCheckout = false
-            showApplePaySheet = false
-            showTamaraPayment = false
-        }
-    }
-
-    private func handleTamaraRedirect(url: URL) {
-        let urlStr = url.absoluteString
-        showTamaraPayment = false
-
-        if urlStr.contains("wishy.sa/tamara/success") {
-            addOrder()
-        } else if urlStr.contains("wishy.sa/tamara/failure") {
-            orderViewModel.errorMessage = "فشلت عملية الدفع"
-        } else if urlStr.contains("wishy.sa/tamara/cancel") {
-            orderViewModel.errorMessage = "تم إلغاء عملية الدفع"
-        }
-
-        // بغض النظر عن الحالة، أغلق الفيو
-        showTamaraPayment = false
-        // نظّف أي حالات تحميل
-        orderViewModel.isLoading = false
-        hyperPaymentViewModel.isLoading = false
-    }
-    
-    // لا تكتب أي import خاص بالمكتبة
-
-    func testPayment() {
-        let provider = OPPPaymentProvider(mode: .test)
-        print("provider: \(provider)")
     }
 }
 
@@ -808,8 +666,7 @@ extension CheckoutView {
         guard validation == .valid else { 
             // نظّف حالات التحميل إن كانت فعالة
             orderViewModel.isLoading = false
-            hyperPaymentViewModel.isLoading = false
-            return 
+            return
         }
 
         let currentDate = Date()
@@ -846,9 +703,7 @@ extension CheckoutView {
         
         orderViewModel.addOrder(params: params) { id, msg in
             // نظّف التحميل وأغلق أي شاشات
-            hyperPaymentViewModel.isLoading = false
             orderViewModel.isLoading = false
-            hyperPaymentViewModel.isShowingCheckout = false
             showApplePaySheet = false
             showTamaraPayment = false
 
@@ -1177,42 +1032,6 @@ extension CheckoutView {
             return false
         }
         return true
-    }
-
-    func startHyperpayPayment(amount: Double) {
-        let validation = validateAddress(purchaseType: selectedPurchaseType, selectedAddress: selectedAddress, region: region)
-        handleValidationResult(validation)
-        guard validation == .valid else { return }
-
-        hyperPaymentViewModel.requestCheckoutId(
-            amount: amount,
-            brandType: selectedBrand.dbValue
-        ) { checkoutId in
-            print("karim checkout id \(String(describing: checkoutId))")
-            guard let id = checkoutId, !id.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty else {
-                orderViewModel.errorMessage = "تعذر بدء عملية الدفع"
-                hyperPaymentViewModel.isLoading = false
-                orderViewModel.isLoading = false
-                return
-            }
-            currentHyperpayId = id
-            if selectedBrand == .apple {
-                if !canShowApplePay {
-                    orderViewModel.errorMessage = "جهازك لا يدعم Apple Pay أو لم يتم إضافة بطاقة"
-                    return
-                }
-                showApplePaySheet(checkoutId: id, amount: amount)
-            } else {
-                hyperPaymentViewModel.isShowingCheckout = true
-            }
-        }
-    }
-    
-    // وظيفة عرض Apple Pay Sheet
-    func showApplePaySheet(checkoutId: String, amount: Double) {
-        applePayCheckoutId = checkoutId
-        applePayAmount = amount
-        showApplePaySheet = true
     }
 }
 

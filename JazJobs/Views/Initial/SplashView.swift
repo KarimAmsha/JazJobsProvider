@@ -12,6 +12,7 @@ struct SplashView: View {
 
     var body: some View {
         ZStack {
+            // Brand gradient from Color+Extensions (05659E -> 04517E)
             Color.primaryGradientColor()
                 .ignoresSafeArea()
 
@@ -21,7 +22,8 @@ struct SplashView: View {
         .onAppear {
             withAnimation(.easeInOut(duration: 3)) {
                 self.logoOpacity = 1.0
-//                UserSettings.shared.loggedIn = true
+                // إذا حابب تنتقل تلقائيًا بعد الأنيميشن:
+                // UserSettings.shared.loggedIn = true
             }
         }
     }

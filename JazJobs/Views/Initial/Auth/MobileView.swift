@@ -70,3 +70,4 @@ struct MobileView: View {
         stringvar = pureNumber
     }
 }
+
