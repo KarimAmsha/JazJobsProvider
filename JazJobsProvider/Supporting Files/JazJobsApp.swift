@@ -1,6 +1,6 @@
 //
-//  JazJobsApp.swift
-//  JazJobs
+//  JazJobsProviderApp.swift
+//  JazJobsProvider
 //
 //  Created by Karim Amsha on 23.04.2024.
 //
@@ -11,7 +11,7 @@ import FirebaseMessaging
 import FirebaseCrashlytics
 
 @main
-struct JazJobsApp: App {
+struct JazJobsProviderApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     @StateObject var languageManager = LanguageManager()
     @StateObject var appState = AppState()

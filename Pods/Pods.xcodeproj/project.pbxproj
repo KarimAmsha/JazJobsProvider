@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 60;
+	objectVersion = 56;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -24,6 +24,7 @@
 		296BF59A80969CF54CFCD4908064CF87 /* NetworkActivityPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7254C6E20927E24CEF0CB5975677DF6A /* NetworkActivityPlugin.swift */; };
 		29C433665FA967606C6CD5B8A265D1B6 /* Moya-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F516BDD23719136383CBEB8F8832E8CF /* Moya-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2C8B376CE0876B1092807C1E0EDA05FF /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8883DEDF485ED43373350724280B1E5 /* ViewModel.swift */; };
+		34EDFBBD394F92D22AA0552046438150 /* Pods-JazJobsProvider-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 175BF86B5487401743761A45CECC2225 /* Pods-JazJobsProvider-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		36EDE8F37831FDB474E621284702ED94 /* MoyaProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE06CB46A13A4A390A4DC70871652B5 /* MoyaProvider.swift */; };
 		39D449220194AE1CD884069FBF6F735D /* URLSessionConfiguration+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B621A4FEAD26106028D0CE66E5B98C /* URLSessionConfiguration+Alamofire.swift */; };
 		3BCAE7843A2516EBA64768CC0CD79988 /* ParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758668175AB0CB278BCBF0BEF34816D4 /* ParameterEncoder.swift */; };
@@ -33,6 +34,7 @@
 		4683073D3AAAA63310473BAABA8A06F7 /* JSONCodingKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982D6EA0B567585012EDD1D0AC16401D /* JSONCodingKeys.swift */; };
 		47125C828D57F84C6826BE86E0729444 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D60A81E892E26AC0DDD81593FF47FA9 /* NetworkManager.swift */; };
 		47FBA86C15EC8060331926C9A8D54BB1 /* Alamofire-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EFE3E6F0B2264201D69E83E03E54931F /* Alamofire-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4CE89C03F8940A66C1787682057F0113 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 574581962A29DE4FA03BAD8D30FD58FC /* Foundation.framework */; };
 		4D9E593DECA015D410984C771CCFDD12 /* Alamofire-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FE7D7105321913928FC1EEA794ABBDBA /* Alamofire-dummy.m */; };
 		4E2F903C6CB3BBE2D5D5A7F5798F0418 /* RefundsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACFB9FDEAB0015270A53080EFB83887 /* RefundsResponse.swift */; };
 		54A45AF20BFF99BA20B15AF09AC4901C /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FED6311D233698623A7D2E899250B1 /* Notifications.swift */; };
@@ -49,12 +51,11 @@
 		6E68FC477FEBC6BAF22C2ABC21F62A84 /* Moya+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704258A670A548B09D56FC915980D7EB /* Moya+Alamofire.swift */; };
 		6EF3BFC8D8E5C0E208C0BC31548C747B /* CapturePayment.swift in Sources */ = {isa = PBXBuildFile; fileRef = D678FBD93583A0E2D09185529ABBBB42 /* CapturePayment.swift */; };
 		7031749BAEDDAE5A8EB5F60DD5D6D9EC /* Consumer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2786E34655F864F1E85963FBA2167530 /* Consumer.swift */; };
-		70727F2A6C6AA2CA1964B8C5FF131CCF /* Pods-JazJobs-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C6117DBBB2934841DA7D880F42C7986E /* Pods-JazJobs-dummy.m */; };
-		71B1998E145112E51BBEBADD71FCECEE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 574581962A29DE4FA03BAD8D30FD58FC /* Foundation.framework */; };
 		784816E20377112088F07AC28C33E247 /* TamaraApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86B408E901973952F205BECC279637E /* TamaraApi.swift */; };
 		7933EDD15F245D28BE5D99E203E9BD1F /* DataStreamRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D8D671845AC5EE7DED89E8CCFBF10F /* DataStreamRequest.swift */; };
 		7991E450C1860AFB540F60EE6178E3C3 /* TamaraWidgetVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D51EEB2BAEAA3C7063127489632D67 /* TamaraWidgetVC.swift */; };
 		7A232A8D5C0D06F3CE373E1B46422118 /* AFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30395B98C4074FBEC09238DC2E3E761E /* AFError.swift */; };
+		7C7FAED2EEA61B7901B5F94CD61AD076 /* Pods-JazJobsProvider-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F2BCE582B6B9498FCA08E2DD50BC60DA /* Pods-JazJobsProvider-dummy.m */; };
 		849FF90CD07B763B0D53DD4656BDED61 /* DownloadRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7107EB7445D1D71C3CAF076CD1428D /* DownloadRequest.swift */; };
 		8904ED8DEB77CA657A4EED2F86EB961A /* AlamofireExtended.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3051E5E8F6406190BE22DD8ED59588 /* AlamofireExtended.swift */; };
 		8B3D2C8652EC70AE6230068827E11133 /* InvalidState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BB84BDD1C69A4BF39D3ECED4FB41E2 /* InvalidState.swift */; };
@@ -63,7 +64,6 @@
 		8F4AC5455CDD202655025DE431360AEE /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1153800299F600D3F037E747F5894974 /* ParameterEncoding.swift */; };
 		8F7B25E2A5C981C21626B525FB8BD80E /* OrderReferenceResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E34BCE40086C63C2007EFD7BD1593BD /* OrderReferenceResponse.swift */; };
 		900C3F2E457220D13E0363F9DCC7F8A4 /* TamaraSDKPayment.swift in Sources */ = {isa = PBXBuildFile; fileRef = F506759ECC9BEC1CF6781ECCB9504F46 /* TamaraSDKPayment.swift */; };
-		96E83A75366EDF6026B6DC8DCC10CA89 /* Pods-JazJobs-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 73B2377BC55194F96480444804B30175 /* Pods-JazJobs-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9907B0FCC366C3781D16ECC645DAAE2D /* DiscountDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F07E4D8BC1928F825358C1B26DE98A2 /* DiscountDetail.swift */; };
 		9BE312DC66A613AC2625C3F6F5158870 /* OrderReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9D1E444006C9A982967B26BE745BDF /* OrderReference.swift */; };
 		9C89110A7C655E5C39B3135E9020CBF7 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C56A6B9BBDA0410794CC303478D2D1 /* Alamofire.swift */; };
@@ -130,7 +130,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		6A66F14A418B4CAD07DA22952C44C34A /* PBXContainerItemProxy */ = {
+		296828CA4BAF630190273AAB28AD4A01 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EAAA1AD3A8A1B59AB91319EE40752C6D;
+			remoteInfo = Alamofire;
+		};
+		5457C8EDE9517D6A89EF8313A9B7549B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -138,13 +145,6 @@
 			remoteInfo = Moya;
 		};
 		6F880E1833D02F339F3F8D4AA06ABF84 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = EAAA1AD3A8A1B59AB91319EE40752C6D;
-			remoteInfo = Alamofire;
-		};
-		93DA6E628306FD9F05168155CA37EAD1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -165,7 +165,7 @@
 			remoteGlobalIDString = 17F9141D333DA1A7BE5937F227221070;
 			remoteInfo = Moya;
 		};
-		FAF02658F8761875E96232F7B50CE0AE /* PBXContainerItemProxy */ = {
+		F1EB63336EDD1DDA19663665D821CB4C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -175,7 +175,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0049525A675582A0BAC47CF1DF05CF48 /* Pods-JazJobs-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JazJobs-acknowledgements.plist"; sourceTree = "<group>"; };
 		07B6B2E6A063490CAC9153D56A9CEAD6 /* TamaraSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TamaraSDK.debug.xcconfig; sourceTree = "<group>"; };
 		085DBCE7DD98588B2ED103B1C1F36026 /* Alamofire-Alamofire */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "Alamofire-Alamofire"; path = Alamofire.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		0955C5921604733D56320F0B2DABA94D /* AuthoriseOrder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AuthoriseOrder.swift; path = TamaraSDK/TamaraSDK/model/response/AuthoriseOrder.swift; sourceTree = "<group>"; };
@@ -191,12 +190,12 @@
 		16BB123BF9FF9B17448308E940598942 /* TamaraSDK */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = TamaraSDK; path = TamaraSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1727A1C8DED1E3D1ED9641EA826E6F2C /* Session.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Session.swift; path = Source/Core/Session.swift; sourceTree = "<group>"; };
 		173D5A96335FB656828F3418FC188298 /* AnyEncodable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnyEncodable.swift; path = Sources/Moya/AnyEncodable.swift; sourceTree = "<group>"; };
+		175BF86B5487401743761A45CECC2225 /* Pods-JazJobsProvider-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-JazJobsProvider-umbrella.h"; sourceTree = "<group>"; };
 		17A45B841829AABC16622A4BC60187AD /* DataRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DataRequest.swift; path = Source/Core/DataRequest.swift; sourceTree = "<group>"; };
 		19AA7EC3A587E281E8882E938330BAE6 /* URLConvertible+URLRequestConvertible.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "URLConvertible+URLRequestConvertible.swift"; path = "Source/Core/URLConvertible+URLRequestConvertible.swift"; sourceTree = "<group>"; };
 		1AE96F3A395806402447E41E63BFD076 /* Alamofire-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Alamofire-Info.plist"; sourceTree = "<group>"; };
 		1B87C3A23881932730F2BCD23189A4C1 /* URLRequest+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "URLRequest+Alamofire.swift"; path = "Source/Extensions/URLRequest+Alamofire.swift"; sourceTree = "<group>"; };
 		1DE06CB46A13A4A390A4DC70871652B5 /* MoyaProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MoyaProvider.swift; path = Sources/Moya/MoyaProvider.swift; sourceTree = "<group>"; };
-		2010AA92A98A1D5CB0561BE55DABAB32 /* Pods-JazJobs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JazJobs.debug.xcconfig"; sourceTree = "<group>"; };
 		2255DE8B48167122B4CD75331BE9DE00 /* Request.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Request.swift; path = Source/Core/Request.swift; sourceTree = "<group>"; };
 		2362F98BB96B12D56F92EBBBE196D5C7 /* MoyaProvider+Internal.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "MoyaProvider+Internal.swift"; path = "Sources/Moya/MoyaProvider+Internal.swift"; sourceTree = "<group>"; };
 		2446ABE05AC0D60EF136C242B564967B /* SessionDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionDelegate.swift; path = Source/Core/SessionDelegate.swift; sourceTree = "<group>"; };
@@ -210,10 +209,8 @@
 		2ED65CC5DAF70061D764903C46DF15A4 /* TargetType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TargetType.swift; path = Sources/Moya/TargetType.swift; sourceTree = "<group>"; };
 		2F06D42C1E65FFCFAA63EFA94567858A /* WebSocketRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WebSocketRequest.swift; path = Source/Core/WebSocketRequest.swift; sourceTree = "<group>"; };
 		30395B98C4074FBEC09238DC2E3E761E /* AFError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AFError.swift; path = Source/Core/AFError.swift; sourceTree = "<group>"; };
-		30FAFC65BE30C96D4E4141CDFB5518E0 /* Pods-JazJobs.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-JazJobs.modulemap"; sourceTree = "<group>"; };
 		3756A9BBE41ABEE8DCBF5BCA6972C4DA /* Moya */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Moya; path = Moya.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		37A6F0D0122EC0103B0C7746457BC07F /* Moya.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Moya.modulemap; sourceTree = "<group>"; };
-		38200F957959989B472B6F9E88012B28 /* Pods-JazJobs-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JazJobs-frameworks.sh"; sourceTree = "<group>"; };
 		3956C276DD2344297FB0AF5D4E67302F /* Alamofire.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Alamofire.release.xcconfig; sourceTree = "<group>"; };
 		3A53AEB6237786A3895B71861ECAECC0 /* CapturePaymentRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CapturePaymentRequest.swift; path = TamaraSDK/TamaraSDK/model/request/CapturePaymentRequest.swift; sourceTree = "<group>"; };
 		3B078F8D4C72849001FA6C1996962E55 /* Response.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Response.swift; path = Sources/Moya/Response.swift; sourceTree = "<group>"; };
@@ -241,7 +238,7 @@
 		704258A670A548B09D56FC915980D7EB /* Moya+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Moya+Alamofire.swift"; path = "Sources/Moya/Moya+Alamofire.swift"; sourceTree = "<group>"; };
 		705B199A6FE0021564DBABC045B4EA9B /* WidgetProperties.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WidgetProperties.swift; path = TamaraSDK/TamaraSDK/model/response/WidgetProperties.swift; sourceTree = "<group>"; };
 		7254C6E20927E24CEF0CB5975677DF6A /* NetworkActivityPlugin.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkActivityPlugin.swift; path = Sources/Moya/Plugins/NetworkActivityPlugin.swift; sourceTree = "<group>"; };
-		73B2377BC55194F96480444804B30175 /* Pods-JazJobs-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-JazJobs-umbrella.h"; sourceTree = "<group>"; };
+		74541F381F741853D2E1686CC67019AB /* Pods-JazJobsProvider.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JazJobsProvider.release.xcconfig"; sourceTree = "<group>"; };
 		755712DB25CD9ED5B00AB50867C09E3B /* TamaraSDK-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TamaraSDK-umbrella.h"; sourceTree = "<group>"; };
 		758668175AB0CB278BCBF0BEF34816D4 /* ParameterEncoder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEncoder.swift; path = Source/Core/ParameterEncoder.swift; sourceTree = "<group>"; };
 		75F7B29532780FEB9A68EC084BF4183F /* URL+Moya.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "URL+Moya.swift"; path = "Sources/Moya/URL+Moya.swift"; sourceTree = "<group>"; };
@@ -253,12 +250,12 @@
 		86C35D161CC27B79B886F8FA88D0CB4A /* ResourceBundle-Alamofire-Alamofire-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-Alamofire-Alamofire-Info.plist"; sourceTree = "<group>"; };
 		897039CBE5E247D4CF4BD43C1783E539 /* OrderDetail.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OrderDetail.swift; path = TamaraSDK/TamaraSDK/model/response/OrderDetail.swift; sourceTree = "<group>"; };
 		89C44932F02AC44849A98645A847FDFC /* MoyaProvider+Defaults.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "MoyaProvider+Defaults.swift"; path = "Sources/Moya/MoyaProvider+Defaults.swift"; sourceTree = "<group>"; };
+		91C49F19A4848516BD708E58E1C3B637 /* Pods-JazJobsProvider-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JazJobsProvider-Info.plist"; sourceTree = "<group>"; };
 		95C56A6B9BBDA0410794CC303478D2D1 /* Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Source/Alamofire.swift; sourceTree = "<group>"; };
 		982D6EA0B567585012EDD1D0AC16401D /* JSONCodingKeys.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JSONCodingKeys.swift; path = TamaraSDK/TamaraSDK/JSONCodingKeys.swift; sourceTree = "<group>"; };
 		9971EB171EC351FCFD0A5BAD977364F8 /* Task.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Task.swift; path = Sources/Moya/Task.swift; sourceTree = "<group>"; };
 		9B9B3139CB96F85DB5F173DDE56CE525 /* AppError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AppError.swift; path = TamaraSDK/TamaraSDK/api/AppError.swift; sourceTree = "<group>"; };
 		9C1498BB837F5AB52F9A5F01136D9A02 /* MultipartFormData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartFormData.swift; path = Source/Features/MultipartFormData.swift; sourceTree = "<group>"; };
-		9C1BD4F51E67477BF35C7EFA006ABFEF /* Pods-JazJobs */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-JazJobs"; path = Pods_JazJobs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C24E592FB9FE89BCF7256F28A6724AF /* Endpoint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Endpoint.swift; path = Sources/Moya/Endpoint.swift; sourceTree = "<group>"; };
 		9D60A81E892E26AC0DDD81593FF47FA9 /* NetworkManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkManager.swift; path = TamaraSDK/TamaraSDK/api/NetworkManager.swift; sourceTree = "<group>"; };
 		9D8488819978E4B794FF821EF0A0C6A6 /* AccessTokenPlugin.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AccessTokenPlugin.swift; path = Sources/Moya/Plugins/AccessTokenPlugin.swift; sourceTree = "<group>"; };
@@ -278,22 +275,22 @@
 		B5086937FF9335014AB73AB38418B687 /* Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Alamofire.modulemap; sourceTree = "<group>"; };
 		B5D51EEB2BAEAA3C7063127489632D67 /* TamaraWidgetVC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TamaraWidgetVC.swift; path = TamaraSDK/TamaraSDK/controller/TamaraWidgetVC.swift; sourceTree = "<group>"; };
 		B7E9203B85FC95DC51E65F154BD47386 /* TamaraSDK-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TamaraSDK-prefix.pch"; sourceTree = "<group>"; };
-		B8C465DD9A303614B6C5FE0D8D957540 /* Pods-JazJobs-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-JazJobs-acknowledgements.markdown"; sourceTree = "<group>"; };
+		B7FD2188D59378599E0D3DC40489624A /* Pods-JazJobsProvider-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-JazJobsProvider-acknowledgements.markdown"; sourceTree = "<group>"; };
 		BD8C10EBC7E1E851D012AC8643A7B550 /* TamaraSDK-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "TamaraSDK-Info.plist"; sourceTree = "<group>"; };
 		BE0F003D98ECB98DA801692205BC671E /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validation.swift; path = Source/Features/Validation.swift; sourceTree = "<group>"; };
 		C3626CAFE3C6BE7737EB1B2C6442E022 /* VendorInfo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = VendorInfo.swift; path = TamaraSDK/TamaraSDK/model/VendorInfo.swift; sourceTree = "<group>"; };
-		C6117DBBB2934841DA7D880F42C7986E /* Pods-JazJobs-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-JazJobs-dummy.m"; sourceTree = "<group>"; };
-		C664850AFF45838C61CA21A070096AC3 /* Pods-JazJobs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JazJobs.release.xcconfig"; sourceTree = "<group>"; };
+		C7A044650AC17F4B36387CCF85A90F69 /* Pods-JazJobsProvider-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JazJobsProvider-frameworks.sh"; sourceTree = "<group>"; };
 		C86B408E901973952F205BECC279637E /* TamaraApi.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TamaraApi.swift; path = TamaraSDK/TamaraSDK/api/TamaraApi.swift; sourceTree = "<group>"; };
 		C93B2899A70D646B6C04EFED308CE16C /* AvailablePayment.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AvailablePayment.swift; path = TamaraSDK/TamaraSDK/model/response/AvailablePayment.swift; sourceTree = "<group>"; };
 		C991CC52E3BB689B9DEB34FBCA08CD17 /* TamaraSDKCheckout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TamaraSDKCheckout.swift; path = TamaraSDK/TamaraSDK/TamaraSDKCheckout.swift; sourceTree = "<group>"; };
 		C9D8D671845AC5EE7DED89E8CCFBF10F /* DataStreamRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DataStreamRequest.swift; path = Source/Core/DataStreamRequest.swift; sourceTree = "<group>"; };
+		CAA4F434937F0302298E6B39A04C763F /* Pods-JazJobsProvider-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JazJobsProvider-acknowledgements.plist"; sourceTree = "<group>"; };
 		CB8494C24618CCA279F279127D920D8C /* AdditionalData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AdditionalData.swift; path = TamaraSDK/TamaraSDK/model/AdditionalData.swift; sourceTree = "<group>"; };
 		CC9D1E444006C9A982967B26BE745BDF /* OrderReference.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OrderReference.swift; path = TamaraSDK/TamaraSDK/model/request/OrderReference.swift; sourceTree = "<group>"; };
 		D289C39AB8F3679C27580CC3A6DD9F7D /* MultipartUpload.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartUpload.swift; path = Source/Features/MultipartUpload.swift; sourceTree = "<group>"; };
 		D678FBD93583A0E2D09185529ABBBB42 /* CapturePayment.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CapturePayment.swift; path = TamaraSDK/TamaraSDK/model/response/CapturePayment.swift; sourceTree = "<group>"; };
-		D74FC4692A3F2875C7511E503688837D /* Pods-JazJobs-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JazJobs-Info.plist"; sourceTree = "<group>"; };
 		D7BC646D1BF2A0685D484C42BA35F18B /* Alamofire-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-prefix.pch"; sourceTree = "<group>"; };
+		D81C1EF0A95113E222E5BEE00BED5CFA /* Pods-JazJobsProvider.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JazJobsProvider.debug.xcconfig"; sourceTree = "<group>"; };
 		D8883DEDF485ED43373350724280B1E5 /* ViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ViewModel.swift; path = TamaraSDK/TamaraSDK/scenes/ViewModel.swift; sourceTree = "<group>"; };
 		DC7107EB7445D1D71C3CAF076CD1428D /* DownloadRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DownloadRequest.swift; path = Source/Core/DownloadRequest.swift; sourceTree = "<group>"; };
 		DC8C6C1A251BE9C7B48F03D81906EBE7 /* PaymentRefund.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PaymentRefund.swift; path = TamaraSDK/TamaraSDK/model/request/PaymentRefund.swift; sourceTree = "<group>"; };
@@ -310,10 +307,13 @@
 		EFE3E6F0B2264201D69E83E03E54931F /* Alamofire-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-umbrella.h"; sourceTree = "<group>"; };
 		F003074C2FB753A764F442382798003C /* Discount.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Discount.swift; path = TamaraSDK/TamaraSDK/model/Discount.swift; sourceTree = "<group>"; };
 		F2023AE77947F7DAB8B6A84B353F8E35 /* ServerTrustEvaluation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServerTrustEvaluation.swift; path = Source/Features/ServerTrustEvaluation.swift; sourceTree = "<group>"; };
+		F2BCE582B6B9498FCA08E2DD50BC60DA /* Pods-JazJobsProvider-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-JazJobsProvider-dummy.m"; sourceTree = "<group>"; };
 		F34B30E697C348C7542E6BFD7AB0D28A /* RequestCompression.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RequestCompression.swift; path = Source/Features/RequestCompression.swift; sourceTree = "<group>"; };
+		F4F8F8C61F3E08018B29C2BAC8FDB761 /* Pods-JazJobsProvider.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-JazJobsProvider.modulemap"; sourceTree = "<group>"; };
 		F506759ECC9BEC1CF6781ECCB9504F46 /* TamaraSDKPayment.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TamaraSDKPayment.swift; path = TamaraSDK/TamaraSDK/TamaraSDKPayment.swift; sourceTree = "<group>"; };
 		F516BDD23719136383CBEB8F8832E8CF /* Moya-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Moya-umbrella.h"; sourceTree = "<group>"; };
 		F6BE47BD2E465C6CC57714AB9DB82CC5 /* UploadRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UploadRequest.swift; path = Source/Core/UploadRequest.swift; sourceTree = "<group>"; };
+		F8D0B1057BE58A3C7130F69D6DF4308D /* Pods-JazJobsProvider */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-JazJobsProvider"; path = Pods_JazJobsProvider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAFC3D8A71DF5AB6DE333429C948C2B2 /* Address.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Address.swift; path = TamaraSDK/TamaraSDK/model/Address.swift; sourceTree = "<group>"; };
 		FC1EFCE15586E62C210863E434AE01AB /* Concurrency.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Concurrency.swift; path = Source/Features/Concurrency.swift; sourceTree = "<group>"; };
 		FCED12F817ACDDF79F706E6B16FECC85 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; name = PrivacyInfo.xcprivacy; path = Source/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
@@ -355,11 +355,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BB4FD9EC0F7DAB232B6760CF7154352B /* Frameworks */ = {
+		A4620324BBD309566697B17B68D9BBA0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				71B1998E145112E51BBEBADD71FCECEE /* Foundation.framework in Frameworks */,
+				4CE89C03F8940A66C1787682057F0113 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,12 +434,33 @@
 			path = Alamofire;
 			sourceTree = "<group>";
 		};
-		23B2AE3DFDEC193552CB784CDB403251 /* Targets Support Files */ = {
+		50703177CB6BC119374A62ADA4C4A7D3 /* Pods-JazJobsProvider */ = {
 			isa = PBXGroup;
 			children = (
-				E7F39F1398F97064FDC9A99A1018B270 /* Pods-JazJobs */,
+				F4F8F8C61F3E08018B29C2BAC8FDB761 /* Pods-JazJobsProvider.modulemap */,
+				B7FD2188D59378599E0D3DC40489624A /* Pods-JazJobsProvider-acknowledgements.markdown */,
+				CAA4F434937F0302298E6B39A04C763F /* Pods-JazJobsProvider-acknowledgements.plist */,
+				F2BCE582B6B9498FCA08E2DD50BC60DA /* Pods-JazJobsProvider-dummy.m */,
+				C7A044650AC17F4B36387CCF85A90F69 /* Pods-JazJobsProvider-frameworks.sh */,
+				91C49F19A4848516BD708E58E1C3B637 /* Pods-JazJobsProvider-Info.plist */,
+				175BF86B5487401743761A45CECC2225 /* Pods-JazJobsProvider-umbrella.h */,
+				D81C1EF0A95113E222E5BEE00BED5CFA /* Pods-JazJobsProvider.debug.xcconfig */,
+				74541F381F741853D2E1686CC67019AB /* Pods-JazJobsProvider.release.xcconfig */,
 			);
-			name = "Targets Support Files";
+			name = "Pods-JazJobsProvider";
+			path = "Target Support Files/Pods-JazJobsProvider";
+			sourceTree = "<group>";
+		};
+		61940BFF17BF42913A13A49D1BA02C91 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5D797E9A5C5782CE845840781FA1CC81 /* Alamofire */,
+				085DBCE7DD98588B2ED103B1C1F36026 /* Alamofire-Alamofire */,
+				3756A9BBE41ABEE8DCBF5BCA6972C4DA /* Moya */,
+				F8D0B1057BE58A3C7130F69D6DF4308D /* Pods-JazJobsProvider */,
+				16BB123BF9FF9B17448308E940598942 /* TamaraSDK */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		6EDF51462ACDA84CCEE87E035924C419 /* Pods */ = {
@@ -450,6 +471,14 @@
 				9C56C364CFA19676E99CE093D80469CB /* TamaraSDK */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		700E65A1CC1645FF5A94D82527D91BD7 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				50703177CB6BC119374A62ADA4C4A7D3 /* Pods-JazJobsProvider */,
+			);
+			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
 		70974B5212CD08BDCA75527269E66E0B /* Support Files */ = {
@@ -515,18 +544,6 @@
 			path = TamaraSDK;
 			sourceTree = "<group>";
 		};
-		AD7BB706409D88E4202A9B9AFA18A59C /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				5D797E9A5C5782CE845840781FA1CC81 /* Alamofire */,
-				085DBCE7DD98588B2ED103B1C1F36026 /* Alamofire-Alamofire */,
-				3756A9BBE41ABEE8DCBF5BCA6972C4DA /* Moya */,
-				9C1BD4F51E67477BF35C7EFA006ABFEF /* Pods-JazJobs */,
-				16BB123BF9FF9B17448308E940598942 /* TamaraSDK */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		B3C2B2ACEBA53F60B172071CBA8F8854 /* Moya */ = {
 			isa = PBXGroup;
 			children = (
@@ -559,8 +576,8 @@
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */,
 				6EDF51462ACDA84CCEE87E035924C419 /* Pods */,
-				AD7BB706409D88E4202A9B9AFA18A59C /* Products */,
-				23B2AE3DFDEC193552CB784CDB403251 /* Targets Support Files */,
+				61940BFF17BF42913A13A49D1BA02C91 /* Products */,
+				700E65A1CC1645FF5A94D82527D91BD7 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
@@ -571,23 +588,6 @@
 				574581962A29DE4FA03BAD8D30FD58FC /* Foundation.framework */,
 			);
 			name = iOS;
-			sourceTree = "<group>";
-		};
-		E7F39F1398F97064FDC9A99A1018B270 /* Pods-JazJobs */ = {
-			isa = PBXGroup;
-			children = (
-				30FAFC65BE30C96D4E4141CDFB5518E0 /* Pods-JazJobs.modulemap */,
-				B8C465DD9A303614B6C5FE0D8D957540 /* Pods-JazJobs-acknowledgements.markdown */,
-				0049525A675582A0BAC47CF1DF05CF48 /* Pods-JazJobs-acknowledgements.plist */,
-				C6117DBBB2934841DA7D880F42C7986E /* Pods-JazJobs-dummy.m */,
-				38200F957959989B472B6F9E88012B28 /* Pods-JazJobs-frameworks.sh */,
-				D74FC4692A3F2875C7511E503688837D /* Pods-JazJobs-Info.plist */,
-				73B2377BC55194F96480444804B30175 /* Pods-JazJobs-umbrella.h */,
-				2010AA92A98A1D5CB0561BE55DABAB32 /* Pods-JazJobs.debug.xcconfig */,
-				C664850AFF45838C61CA21A070096AC3 /* Pods-JazJobs.release.xcconfig */,
-			);
-			name = "Pods-JazJobs";
-			path = "Target Support Files/Pods-JazJobs";
 			sourceTree = "<group>";
 		};
 		EA264D93275C71D80AB2B787E89268E7 /* Support Files */ = {
@@ -639,14 +639,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		144BABE752B9B1ACE9F1D96EA4F5B1F9 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				96E83A75366EDF6026B6DC8DCC10CA89 /* Pods-JazJobs-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		1A1A81122263D5D8BE4DF5082CACE201 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -668,6 +660,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				0DA9AFA64DFDAEB489A5C0585952D1E5 /* TamaraSDK-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		580D3B4C9BCFFB7448511A42177525B6 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				34EDFBBD394F92D22AA0552046438150 /* Pods-JazJobsProvider-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -693,25 +693,25 @@
 			productReference = 3756A9BBE41ABEE8DCBF5BCA6972C4DA /* Moya */;
 			productType = "com.apple.product-type.framework";
 		};
-		19475BF4E4F269D8FFB041EC95F384CE /* Pods-JazJobs */ = {
+		260E9A1102D438368A80C088255F3975 /* Pods-JazJobsProvider */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5C5846164A04E91A33134EDB5958A67F /* Build configuration list for PBXNativeTarget "Pods-JazJobs" */;
+			buildConfigurationList = BE65B078649FEE428DA234CDB7851765 /* Build configuration list for PBXNativeTarget "Pods-JazJobsProvider" */;
 			buildPhases = (
-				144BABE752B9B1ACE9F1D96EA4F5B1F9 /* Headers */,
-				66074BBDF763830B22042117856F7278 /* Sources */,
-				BB4FD9EC0F7DAB232B6760CF7154352B /* Frameworks */,
-				7DC54E185B6D31A52F80E07CCEB8995E /* Resources */,
+				580D3B4C9BCFFB7448511A42177525B6 /* Headers */,
+				3181CFB380C17425C441893F0C86D01D /* Sources */,
+				A4620324BBD309566697B17B68D9BBA0 /* Frameworks */,
+				744680DE1F69D06A8A8E5EC07E87C3F4 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				69E6A14056778B2A6A06177AB27555C6 /* PBXTargetDependency */,
-				C73451EAE9AA61AEE4AADA555B4757ED /* PBXTargetDependency */,
-				0773BF8C546E304200B2F39581B87302 /* PBXTargetDependency */,
+				630F30AED358D767351403B752BF0972 /* PBXTargetDependency */,
+				42865A0C7657110B3ADF009EA8D8AC28 /* PBXTargetDependency */,
+				181400BA1B70A6C05720765D7224B922 /* PBXTargetDependency */,
 			);
-			name = "Pods-JazJobs";
-			productName = Pods_JazJobs;
-			productReference = 9C1BD4F51E67477BF35C7EFA006ABFEF /* Pods-JazJobs */;
+			name = "Pods-JazJobsProvider";
+			productName = Pods_JazJobsProvider;
+			productReference = F8D0B1057BE58A3C7130F69D6DF4308D /* Pods-JazJobsProvider */;
 			productType = "com.apple.product-type.framework";
 		};
 		976126A1CE06DC6E162563800E1BDF14 /* Alamofire-Alamofire */ = {
@@ -779,7 +779,7 @@
 				LastUpgradeCheck = 1600;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
-			compatibilityVersion = "Xcode 15.0";
+			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -789,14 +789,14 @@
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
 			minimizedProjectReferenceProxies = 0;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = AD7BB706409D88E4202A9B9AFA18A59C /* Products */;
+			productRefGroup = 61940BFF17BF42913A13A49D1BA02C91 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				EAAA1AD3A8A1B59AB91319EE40752C6D /* Alamofire */,
 				976126A1CE06DC6E162563800E1BDF14 /* Alamofire-Alamofire */,
 				17F9141D333DA1A7BE5937F227221070 /* Moya */,
-				19475BF4E4F269D8FFB041EC95F384CE /* Pods-JazJobs */,
+				260E9A1102D438368A80C088255F3975 /* Pods-JazJobsProvider */,
 				EAAF68CB5C03DE3146C00A64D8B8DCEF /* TamaraSDK */,
 			);
 		};
@@ -826,14 +826,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		752EFEC46FD97D2729CDA7ADED7EEDCE /* Resources */ = {
+		744680DE1F69D06A8A8E5EC07E87C3F4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7DC54E185B6D31A52F80E07CCEB8995E /* Resources */ = {
+		752EFEC46FD97D2729CDA7ADED7EEDCE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -940,11 +940,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		66074BBDF763830B22042117856F7278 /* Sources */ = {
+		3181CFB380C17425C441893F0C86D01D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				70727F2A6C6AA2CA1964B8C5FF131CCF /* Pods-JazJobs-dummy.m in Sources */,
+				7C7FAED2EEA61B7901B5F94CD61AD076 /* Pods-JazJobsProvider-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -996,11 +996,17 @@
 			target = 976126A1CE06DC6E162563800E1BDF14 /* Alamofire-Alamofire */;
 			targetProxy = AFADC5375FEF5FE57F09340169B647F0 /* PBXContainerItemProxy */;
 		};
-		0773BF8C546E304200B2F39581B87302 /* PBXTargetDependency */ = {
+		181400BA1B70A6C05720765D7224B922 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = TamaraSDK;
 			target = EAAF68CB5C03DE3146C00A64D8B8DCEF /* TamaraSDK */;
-			targetProxy = FAF02658F8761875E96232F7B50CE0AE /* PBXContainerItemProxy */;
+			targetProxy = F1EB63336EDD1DDA19663665D821CB4C /* PBXContainerItemProxy */;
+		};
+		42865A0C7657110B3ADF009EA8D8AC28 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Moya;
+			target = 17F9141D333DA1A7BE5937F227221070 /* Moya */;
+			targetProxy = 5457C8EDE9517D6A89EF8313A9B7549B /* PBXContainerItemProxy */;
 		};
 		449FF667E69142E3E8EC3F2A7C82A84D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1014,60 +1020,15 @@
 			target = EAAA1AD3A8A1B59AB91319EE40752C6D /* Alamofire */;
 			targetProxy = 6F880E1833D02F339F3F8D4AA06ABF84 /* PBXContainerItemProxy */;
 		};
-		69E6A14056778B2A6A06177AB27555C6 /* PBXTargetDependency */ = {
+		630F30AED358D767351403B752BF0972 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Alamofire;
 			target = EAAA1AD3A8A1B59AB91319EE40752C6D /* Alamofire */;
-			targetProxy = 93DA6E628306FD9F05168155CA37EAD1 /* PBXContainerItemProxy */;
-		};
-		C73451EAE9AA61AEE4AADA555B4757ED /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Moya;
-			target = 17F9141D333DA1A7BE5937F227221070 /* Moya */;
-			targetProxy = 6A66F14A418B4CAD07DA22952C44C34A /* PBXContainerItemProxy */;
+			targetProxy = 296828CA4BAF630190273AAB28AD4A01 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		0226C08A55B4FD6AFA66BCA25C28F5F9 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2010AA92A98A1D5CB0561BE55DABAB32 /* Pods-JazJobs.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_MODULE_VERIFIER = NO;
-				ENABLE_USER_SCRIPT_SANDBOXING = NO;
-				INFOPLIST_FILE = "Target Support Files/Pods-JazJobs/Pods-JazJobs-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-JazJobs/Pods-JazJobs.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		30E0B9EFD9A5C45D0D351231E81B30B3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1130,6 +1091,45 @@
 			};
 			name = Release;
 		};
+		360472F1B257308B8912FE0886C34961 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D81C1EF0A95113E222E5BEE00BED5CFA /* Pods-JazJobsProvider.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				INFOPLIST_FILE = "Target Support Files/Pods-JazJobsProvider/Pods-JazJobsProvider-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-JazJobsProvider/Pods-JazJobsProvider.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		43E6F219681645AA6A1DC48E87B56284 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A98EF0ED72B86BD502F78343988AF879 /* Alamofire.debug.xcconfig */;
@@ -1169,46 +1169,6 @@
 			};
 			name = Debug;
 		};
-		47C50818007A68097047BE61D3F4384B /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C664850AFF45838C61CA21A070096AC3 /* Pods-JazJobs.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_MODULE_VERIFIER = NO;
-				ENABLE_USER_SCRIPT_SANDBOXING = NO;
-				INFOPLIST_FILE = "Target Support Files/Pods-JazJobs/Pods-JazJobs-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-JazJobs/Pods-JazJobs.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		4C6450248165267FCCE1E931FDCC492D /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3956C276DD2344297FB0AF5D4E67302F /* Alamofire.release.xcconfig */;
@@ -1242,6 +1202,46 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_INSTALL_OBJC_HEADER = YES;
 				SWIFT_VERSION = 5;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		6801B9DAB044F8772B09B83117A47569 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 74541F381F741853D2E1686CC67019AB /* Pods-JazJobsProvider.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				INFOPLIST_FILE = "Target Support Files/Pods-JazJobsProvider/Pods-JazJobsProvider-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-JazJobsProvider/Pods-JazJobsProvider.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1537,15 +1537,6 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5C5846164A04E91A33134EDB5958A67F /* Build configuration list for PBXNativeTarget "Pods-JazJobs" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				0226C08A55B4FD6AFA66BCA25C28F5F9 /* Debug */,
-				47C50818007A68097047BE61D3F4384B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		63ECDE2C79B8ED0684A10A9659C0EAFB /* Build configuration list for PBXNativeTarget "Alamofire" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1560,6 +1551,15 @@
 			buildConfigurations = (
 				D46C3831C4FE82D4B7459DE5A26193DE /* Debug */,
 				A935B314D900497F850A829165DEB3D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BE65B078649FEE428DA234CDB7851765 /* Build configuration list for PBXNativeTarget "Pods-JazJobsProvider" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				360472F1B257308B8912FE0886C34961 /* Debug */,
+				6801B9DAB044F8772B09B83117A47569 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -1,4 +1,4 @@
-${PODS_ROOT}/Target Support Files/Pods-JazJobs/Pods-JazJobs-frameworks.sh
+${PODS_ROOT}/Target Support Files/Pods-JazJobsProvider/Pods-JazJobsProvider-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
 ${BUILT_PRODUCTS_DIR}/Moya/Moya.framework
 ${BUILT_PRODUCTS_DIR}/TamaraSDK/TamaraSDK.framework

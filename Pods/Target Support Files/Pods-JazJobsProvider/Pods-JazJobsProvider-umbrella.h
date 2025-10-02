@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_JazJobsVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_JazJobsVersionString[];
+FOUNDATION_EXPORT double Pods_JazJobsProviderVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_JazJobsProviderVersionString[];
 

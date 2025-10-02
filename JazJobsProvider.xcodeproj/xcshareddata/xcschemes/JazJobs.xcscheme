@@ -16,9 +16,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "1EEC2BCB2BD83E6000975953"
-               BuildableName = "JazJobs.app"
-               BlueprintName = "JazJobs"
-               ReferencedContainer = "container:JazJobs.xcodeproj">
+               BuildableName = "JazJobsProvider.app"
+               BlueprintName = "JazJobsProvider"
+               ReferencedContainer = "container:JazJobsProvider.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -45,9 +45,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1EEC2BCB2BD83E6000975953"
-            BuildableName = "JazJobs.app"
-            BlueprintName = "JazJobs"
-            ReferencedContainer = "container:JazJobs.xcodeproj">
+            BuildableName = "JazJobsProvider.app"
+            BlueprintName = "JazJobsProvider"
+            ReferencedContainer = "container:JazJobsProvider.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -62,9 +62,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1EEC2BCB2BD83E6000975953"
-            BuildableName = "JazJobs.app"
-            BlueprintName = "JazJobs"
-            ReferencedContainer = "container:JazJobs.xcodeproj">
+            BuildableName = "JazJobsProvider.app"
+            BlueprintName = "JazJobsProvider"
+            ReferencedContainer = "container:JazJobsProvider.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

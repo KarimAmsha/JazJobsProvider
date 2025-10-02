@@ -1,13 +1,11 @@
 # Uncomment the next line to define a global platform for your project
 # platform :ios, '9.0'
 
-target 'JazJobs' do
+target 'JazJobsProvider' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
-  # Pods for JazJobs
-  #  pod 'goSellSDK'
-  #  pod 'TapApplePayKit-iOS'
+  # Pods for JazJobsProvider
     pod 'TamaraSDK'
 
 end

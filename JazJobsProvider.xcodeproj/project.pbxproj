@@ -255,7 +255,7 @@
 		52BEF2EF2DD9DD9D0013309C /* Notification.Name+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BEF2EE2DD9DD8E0013309C /* Notification.Name+Extension.swift */; };
 		52DDC82E2E8D238400BAEECF /* IdentityConfirmationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DDC82D2E8D238400BAEECF /* IdentityConfirmationView.swift */; };
 		52F03F922DC1448F00D11215 /* TamaraProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F03F912DC1448E00D11215 /* TamaraProduct.swift */; };
-		A65284F7A04F7A40F9111F3B /* Pods_JazJobs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC3995C4F256389773EFD36C /* Pods_JazJobs.framework */; };
+		FC5410254B27CFC4228AF19C /* Pods_JazJobsProvider.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA261FC1FB10C323E4454A0C /* Pods_JazJobsProvider.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -307,7 +307,7 @@
 		1E2804432C067E4E0021DFB0 /* ProductsSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsSearchView.swift; sourceTree = "<group>"; };
 		1E38FB652C24A8E7001A2B78 /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
 		1E41E1FB2BE942490061AC47 /* FirestoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreService.swift; sourceTree = "<group>"; };
-		1E41E1FD2BE947560061AC47 /* JazJobs.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = JazJobs.entitlements; sourceTree = "<group>"; };
+		1E41E1FD2BE947560061AC47 /* JazJobsProvider.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = JazJobsProvider.entitlements; sourceTree = "<group>"; };
 		1E479B302C4D881B006130E1 /* WhatsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsApp.swift; sourceTree = "<group>"; };
 		1E5F318A2BE23C9B00E5A914 /* FriendWishesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendWishesListView.swift; sourceTree = "<group>"; };
 		1E5F318C2BE23E5100E5A914 /* FriendWishesDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendWishesDetailsView.swift; sourceTree = "<group>"; };
@@ -454,7 +454,7 @@
 		1EDEF6822BE1A1D200863C10 /* SelectedGiftView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedGiftView.swift; sourceTree = "<group>"; };
 		1EDEF6842BE1A93600863C10 /* FriendWishesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendWishesView.swift; sourceTree = "<group>"; };
 		1EDEF6862BE1ABDF00863C10 /* ProgressLineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressLineView.swift; sourceTree = "<group>"; };
-		1EEC2BCC2BD83E6000975953 /* JazJobs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JazJobs.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1EEC2BCC2BD83E6000975953 /* JazJobsProvider.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JazJobsProvider.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EEC2BCF2BD83E6000975953 /* JazJobsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JazJobsApp.swift; sourceTree = "<group>"; };
 		1EEC2BD12BD83E6000975953 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1EEC2BD32BD83E6300975953 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -494,9 +494,9 @@
 		52BEF2EE2DD9DD8E0013309C /* Notification.Name+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification.Name+Extension.swift"; sourceTree = "<group>"; };
 		52DDC82D2E8D238400BAEECF /* IdentityConfirmationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentityConfirmationView.swift; sourceTree = "<group>"; };
 		52F03F912DC1448E00D11215 /* TamaraProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TamaraProduct.swift; sourceTree = "<group>"; };
-		BC3995C4F256389773EFD36C /* Pods_JazJobs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JazJobs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D31B94C544F163DA89F2F895 /* Pods-JazJobs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JazJobs.release.xcconfig"; path = "Target Support Files/Pods-JazJobs/Pods-JazJobs.release.xcconfig"; sourceTree = "<group>"; };
-		FE259B3E2B25452256D3027D /* Pods-JazJobs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JazJobs.debug.xcconfig"; path = "Target Support Files/Pods-JazJobs/Pods-JazJobs.debug.xcconfig"; sourceTree = "<group>"; };
+		8F5E9993E396A94658536912 /* Pods-JazJobsProvider.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JazJobsProvider.release.xcconfig"; path = "Target Support Files/Pods-JazJobsProvider/Pods-JazJobsProvider.release.xcconfig"; sourceTree = "<group>"; };
+		CA261FC1FB10C323E4454A0C /* Pods_JazJobsProvider.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JazJobsProvider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB322BB426395649C1E4D3F0 /* Pods-JazJobsProvider.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JazJobsProvider.debug.xcconfig"; path = "Target Support Files/Pods-JazJobsProvider/Pods-JazJobsProvider.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -534,7 +534,7 @@
 				1ECC948D2BDC5D8B002BFE54 /* FirebaseAppDistribution-Beta in Frameworks */,
 				1ECC94992BDC5D8B002BFE54 /* FirebaseDynamicLinks in Frameworks */,
 				1ECC949F2BDC5D8B002BFE54 /* FirebaseFirestoreSwift in Frameworks */,
-				A65284F7A04F7A40F9111F3B /* Pods_JazJobs.framework in Frameworks */,
+				FC5410254B27CFC4228AF19C /* Pods_JazJobsProvider.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -985,25 +985,25 @@
 		1EEC2BC32BD83E6000975953 = {
 			isa = PBXGroup;
 			children = (
-				1EEC2BCE2BD83E6000975953 /* JazJobs */,
+				1EEC2BCE2BD83E6000975953 /* JazJobsProvider */,
 				1EEC2BCD2BD83E6000975953 /* Products */,
 				304E035519AD4FBEEEDC9A60 /* Pods */,
-				D03752232625DF48AAE5C406 /* Frameworks */,
+				F8300FF034C156130E5C144A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		1EEC2BCD2BD83E6000975953 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1EEC2BCC2BD83E6000975953 /* JazJobs.app */,
+				1EEC2BCC2BD83E6000975953 /* JazJobsProvider.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		1EEC2BCE2BD83E6000975953 /* JazJobs */ = {
+		1EEC2BCE2BD83E6000975953 /* JazJobsProvider */ = {
 			isa = PBXGroup;
 			children = (
-				1E41E1FD2BE947560061AC47 /* JazJobs.entitlements */,
+				1E41E1FD2BE947560061AC47 /* JazJobsProvider.entitlements */,
 				1ECC94E52BDC638A002BFE54 /* Info.plist */,
 				1ECC944D2BDC56EE002BFE54 /* Models */,
 				1ECC944C2BDC56E6002BFE54 /* Views */,
@@ -1014,7 +1014,7 @@
 				1ECC94472BDC56B8002BFE54 /* Supporting Files */,
 				1EEC2BD52BD83E6300975953 /* Preview Content */,
 			);
-			path = JazJobs;
+			path = JazJobsProvider;
 			sourceTree = "<group>";
 		};
 		1EEC2BD52BD83E6300975953 /* Preview Content */ = {
@@ -1048,8 +1048,8 @@
 		304E035519AD4FBEEEDC9A60 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				FE259B3E2B25452256D3027D /* Pods-JazJobs.debug.xcconfig */,
-				D31B94C544F163DA89F2F895 /* Pods-JazJobs.release.xcconfig */,
+				CB322BB426395649C1E4D3F0 /* Pods-JazJobsProvider.debug.xcconfig */,
+				8F5E9993E396A94658536912 /* Pods-JazJobsProvider.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -1075,10 +1075,10 @@
 			path = Chat;
 			sourceTree = "<group>";
 		};
-		D03752232625DF48AAE5C406 /* Frameworks */ = {
+		F8300FF034C156130E5C144A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				BC3995C4F256389773EFD36C /* Pods_JazJobs.framework */,
+				CA261FC1FB10C323E4454A0C /* Pods_JazJobsProvider.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1086,22 +1086,22 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1EEC2BCB2BD83E6000975953 /* JazJobs */ = {
+		1EEC2BCB2BD83E6000975953 /* JazJobsProvider */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1EEC2BDA2BD83E6300975953 /* Build configuration list for PBXNativeTarget "JazJobs" */;
+			buildConfigurationList = 1EEC2BDA2BD83E6300975953 /* Build configuration list for PBXNativeTarget "JazJobsProvider" */;
 			buildPhases = (
-				DD9A23977B8D2FC8943BDE91 /* [CP] Check Pods Manifest.lock */,
+				CC737163429188621DAA7BE2 /* [CP] Check Pods Manifest.lock */,
 				1EEC2BC82BD83E6000975953 /* Sources */,
 				1EEC2BC92BD83E6000975953 /* Frameworks */,
 				1EEC2BCA2BD83E6000975953 /* Resources */,
 				526644BC2E17AD31005DEA6D /* Embed Frameworks */,
-				CC4BE6B0C982B0B3D3160C9E /* [CP] Embed Pods Frameworks */,
+				2C46EA1275D42ED78A1C27D2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = JazJobs;
+			name = JazJobsProvider;
 			packageProductDependencies = (
 				1ECC94822BDC5D8B002BFE54 /* FirebaseAnalytics */,
 				1ECC94842BDC5D8B002BFE54 /* FirebaseAnalyticsOnDeviceConversion */,
@@ -1135,7 +1135,7 @@
 				1EA740552BFBADC20028AAD0 /* RefreshableScrollView */,
 			);
 			productName = Wishy;
-			productReference = 1EEC2BCC2BD83E6000975953 /* JazJobs.app */;
+			productReference = 1EEC2BCC2BD83E6000975953 /* JazJobsProvider.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -1153,7 +1153,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 1EEC2BC72BD83E6000975953 /* Build configuration list for PBXProject "JazJobs" */;
+			buildConfigurationList = 1EEC2BC72BD83E6000975953 /* Build configuration list for PBXProject "JazJobsProvider" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = ar;
 			hasScannedForEncodings = 0;
@@ -1173,7 +1173,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1EEC2BCB2BD83E6000975953 /* JazJobs */,
+				1EEC2BCB2BD83E6000975953 /* JazJobsProvider */,
 			);
 		};
 /* End PBXProject section */
@@ -1199,28 +1199,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		CC4BE6B0C982B0B3D3160C9E /* [CP] Embed Pods Frameworks */ = {
+		2C46EA1275D42ED78A1C27D2 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-JazJobs/Pods-JazJobs-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-JazJobsProvider/Pods-JazJobsProvider-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-JazJobs/Pods-JazJobs-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			outputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-JazJobsProvider/Pods-JazJobsProvider-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-JazJobs/Pods-JazJobs-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-JazJobsProvider/Pods-JazJobsProvider-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		DD9A23977B8D2FC8943BDE91 /* [CP] Check Pods Manifest.lock */ = {
+		CC737163429188621DAA7BE2 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1235,7 +1231,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-JazJobs-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-JazJobsProvider-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1598,11 +1594,11 @@
 		};
 		1EEC2BDB2BD83E6300975953 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FE259B3E2B25452256D3027D /* Pods-JazJobs.debug.xcconfig */;
+			baseConfigurationReference = CB322BB426395649C1E4D3F0 /* Pods-JazJobsProvider.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = JazJobs/JazJobs.entitlements;
+				CODE_SIGN_ENTITLEMENTS = JazJobsProvider/JazJobsProvider.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
@@ -1612,14 +1608,14 @@
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = CKZBH9QCG3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = JazJobs/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = JazJobs;
+				INFOPLIST_FILE = JazJobsProvider/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = JazJobsProvider;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
-				INFOPLIST_KEY_NSCameraUsageDescription = "JazJobs will use camera to upload user photo";
-				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "JazJobs will use location to send orders, track your order, and continuously provide real-time updates";
-				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "JazJobs will use location to send orders, track your order, and continuously provide real-time updates";
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "JazJobs will use location to send orders, track your order, and continuously provide real-time updates";
-				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "JazJobs will use photo library to upload user photo";
+				INFOPLIST_KEY_NSCameraUsageDescription = "JazJobsProvider will use camera to upload user photo";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "JazJobsProvider will use location to send orders, track your order, and continuously provide real-time updates";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "JazJobsProvider will use location to send orders, track your order, and continuously provide real-time updates";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "JazJobsProvider will use location to send orders, track your order, and continuously provide real-time updates";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "JazJobsProvider will use photo library to upload user photo";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -1647,11 +1643,11 @@
 		};
 		1EEC2BDC2BD83E6300975953 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D31B94C544F163DA89F2F895 /* Pods-JazJobs.release.xcconfig */;
+			baseConfigurationReference = 8F5E9993E396A94658536912 /* Pods-JazJobsProvider.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = JazJobs/JazJobs.entitlements;
+				CODE_SIGN_ENTITLEMENTS = JazJobsProvider/JazJobsProvider.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
@@ -1661,14 +1657,14 @@
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = CKZBH9QCG3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = JazJobs/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = JazJobs;
+				INFOPLIST_FILE = JazJobsProvider/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = JazJobsProvider;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
-				INFOPLIST_KEY_NSCameraUsageDescription = "JazJobs will use camera to upload user photo";
-				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "JazJobs will use location to send orders, track your order, and continuously provide real-time updates";
-				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "JazJobs will use location to send orders, track your order, and continuously provide real-time updates";
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "JazJobs will use location to send orders, track your order, and continuously provide real-time updates";
-				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "JazJobs will use photo library to upload user photo";
+				INFOPLIST_KEY_NSCameraUsageDescription = "JazJobsProvider will use camera to upload user photo";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "JazJobsProvider will use location to send orders, track your order, and continuously provide real-time updates";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "JazJobsProvider will use location to send orders, track your order, and continuously provide real-time updates";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "JazJobsProvider will use location to send orders, track your order, and continuously provide real-time updates";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "JazJobsProvider will use photo library to upload user photo";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -1698,7 +1694,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1EEC2BC72BD83E6000975953 /* Build configuration list for PBXProject "JazJobs" */ = {
+		1EEC2BC72BD83E6000975953 /* Build configuration list for PBXProject "JazJobsProvider" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1EEC2BD82BD83E6300975953 /* Debug */,
@@ -1707,7 +1703,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1EEC2BDA2BD83E6300975953 /* Build configuration list for PBXNativeTarget "JazJobs" */ = {
+		1EEC2BDA2BD83E6300975953 /* Build configuration list for PBXNativeTarget "JazJobsProvider" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1EEC2BDB2BD83E6300975953 /* Debug */,
