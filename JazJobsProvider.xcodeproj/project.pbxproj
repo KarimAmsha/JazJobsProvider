@@ -233,7 +233,6 @@
 		1EFB9B372C1C624B00C15CE4 /* EventListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFB9B362C1C624B00C15CE4 /* EventListView.swift */; };
 		520BB0382DC959AC00DB6315 /* SafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520BB0372DC959AB00DB6315 /* SafariView.swift */; };
 		52348E0B2DD8B84F00E4EBE5 /* ValidatedTextEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52348E0A2DD8B84E00E4EBE5 /* ValidatedTextEditor.swift */; };
-		525B70D42E8E577000E4B347 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 525B70D32E8E577000E4B347 /* GoogleService-Info.plist */; };
 		525B70DA2E8E596300E4B347 /* ChatListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525B70D82E8E596300E4B347 /* ChatListView.swift */; };
 		525B70DB2E8E596300E4B347 /* ChatBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525B70D52E8E596300E4B347 /* ChatBubble.swift */; };
 		525B70DC2E8E596300E4B347 /* ChatDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525B70D62E8E596300E4B347 /* ChatDetailView.swift */; };
@@ -246,6 +245,7 @@
 		525B70EA2E8E5A8100E4B347 /* FirebaseUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525B70E92E8E5A8100E4B347 /* FirebaseUserService.swift */; };
 		525B70EC2E8E5AEB00E4B347 /* PushNotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525B70EB2E8E5AEB00E4B347 /* PushNotificationService.swift */; };
 		525B70EE2E8E5BA200E4B347 /* UserRole.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525B70ED2E8E5BA200E4B347 /* UserRole.swift */; };
+		525B70F02E8E963900E4B347 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 525B70EF2E8E963900E4B347 /* GoogleService-Info.plist */; };
 		529EC5042DC8B8F0009AB1FF /* ErrorObserverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529EC5032DC8B8EF009AB1FF /* ErrorObserverView.swift */; };
 		529EC5062DC8C0AA009AB1FF /* PopupObserverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529EC5052DC8C0A9009AB1FF /* PopupObserverView.swift */; };
 		529EC5082DC8C1F2009AB1FF /* MessageStatusObserverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529EC5072DC8C1F1009AB1FF /* MessageStatusObserverView.swift */; };
@@ -472,7 +472,6 @@
 		1EFB9B362C1C624B00C15CE4 /* EventListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListView.swift; sourceTree = "<group>"; };
 		520BB0372DC959AB00DB6315 /* SafariView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariView.swift; sourceTree = "<group>"; };
 		52348E0A2DD8B84E00E4EBE5 /* ValidatedTextEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidatedTextEditor.swift; sourceTree = "<group>"; };
-		525B70D32E8E577000E4B347 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		525B70D52E8E596300E4B347 /* ChatBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBubble.swift; sourceTree = "<group>"; };
 		525B70D62E8E596300E4B347 /* ChatDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatDetailView.swift; sourceTree = "<group>"; };
 		525B70D72E8E596300E4B347 /* ChatInputBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatInputBar.swift; sourceTree = "<group>"; };
@@ -485,6 +484,7 @@
 		525B70E92E8E5A8100E4B347 /* FirebaseUserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseUserService.swift; sourceTree = "<group>"; };
 		525B70EB2E8E5AEB00E4B347 /* PushNotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotificationService.swift; sourceTree = "<group>"; };
 		525B70ED2E8E5BA200E4B347 /* UserRole.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRole.swift; sourceTree = "<group>"; };
+		525B70EF2E8E963900E4B347 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		529EC5032DC8B8EF009AB1FF /* ErrorObserverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorObserverView.swift; sourceTree = "<group>"; };
 		529EC5052DC8C0A9009AB1FF /* PopupObserverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupObserverView.swift; sourceTree = "<group>"; };
 		529EC5072DC8C1F1009AB1FF /* MessageStatusObserverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageStatusObserverView.swift; sourceTree = "<group>"; };
@@ -622,7 +622,7 @@
 		1ECC94482BDC56C0002BFE54 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				525B70D32E8E577000E4B347 /* GoogleService-Info.plist */,
+				525B70EF2E8E963900E4B347 /* GoogleService-Info.plist */,
 				1EEC2BD32BD83E6300975953 /* Assets.xcassets */,
 				1ECC950E2BDD166A002BFE54 /* CountryNumbers.json */,
 				1ECC95202BDD1C21002BFE54 /* Localizable.strings */,
@@ -1190,7 +1190,7 @@
 				1ECC95222BDD1C21002BFE54 /* Localizable.strings in Resources */,
 				1EEC2BD42BD83E6300975953 /* Assets.xcassets in Resources */,
 				1ECC94E12BDC6362002BFE54 /* IBMPlexSansArabic-SemiBold.ttf in Resources */,
-				525B70D42E8E577000E4B347 /* GoogleService-Info.plist in Resources */,
+				525B70F02E8E963900E4B347 /* GoogleService-Info.plist in Resources */,
 				1ECC94E32BDC6362002BFE54 /* IBMPlexSansArabic-Regular.ttf in Resources */,
 				1ECC94E02BDC6362002BFE54 /* IBMPlexSansArabic-Light.ttf in Resources */,
 			);
@@ -1207,9 +1207,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-JazJobsProvider/Pods-JazJobsProvider-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-JazJobsProvider/Pods-JazJobsProvider-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1603,7 +1607,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 14;
-				DEVELOPMENT_ASSET_PATHS = "\"JazJobs/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"JazJobsProvider/Preview Content\"";
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = CKZBH9QCG3;
 				ENABLE_PREVIEWS = YES;
@@ -1652,7 +1656,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 14;
-				DEVELOPMENT_ASSET_PATHS = "\"JazJobs/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"JazJobsProvider/Preview Content\"";
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = CKZBH9QCG3;
 				ENABLE_PREVIEWS = YES;

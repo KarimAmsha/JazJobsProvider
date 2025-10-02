@@ -9,7 +9,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>sa.com.jaz.jobs</string>
+	<string>sa.com.jaz.jobs.provider</string>
 	<key>PROJECT_ID</key>
 	<string>jazapp-c3a3c</string>
 	<key>STORAGE_BUCKET</key>
@@ -25,7 +25,7 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:198605339648:ios:2536cb09911a47f925ece5</string>
+	<string>1:198605339648:ios:0ac79866964cb50725ece5</string>
 	<key>DATABASE_URL</key>
 	<string>https://jazapp-c3a3c-default-rtdb.europe-west1.firebasedatabase.app</string>
 </dict>
