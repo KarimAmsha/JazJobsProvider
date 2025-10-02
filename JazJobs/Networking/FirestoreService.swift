@@ -18,7 +18,7 @@ class FirestoreService {
 
     private init() {}
     
-    // Upload Image
+    // Upload Image (existing API - kept for backward compatibility)
     func uploadImageWithThumbnail(image: UIImage?, id: String, imageName: String, completion: @escaping(String?, Bool)->Void) {
         guard let image = image,
               let uploadData = image.jpegData(compressionQuality: 0.5) else {
@@ -46,7 +46,7 @@ class FirestoreService {
         }
     }
     
-    // Upload Multi Images
+    // Upload Multi Images (existing API)
     func uploadMultipleImages2(images: [UIImage?], id: String, completion: @escaping ([String]?, Bool) -> Void) {
         var uploadedImageUrls: [String] = []
         var uploadCount = 0
@@ -116,4 +116,93 @@ class FirestoreService {
         let imageName = "image_\(uuid)" // Append it to a base name or use it directly
         return imageName
     }
+    
+    // MARK: - New APIs with progress support
+
+    // Upload UIImage with progress callback
+    func uploadImageWithThumbnail(image: UIImage?,
+                                  id: String,
+                                  imageName: String,
+                                  progress: ((Double) -> Void)? = nil,
+                                  completion: @escaping (Result<String, Error>) -> Void) {
+        guard let image = image,
+              let uploadData = image.jpegData(compressionQuality: 0.5) else {
+            completion(.failure(NSError(domain: "Upload", code: -3, userInfo: [NSLocalizedDescriptionKey: "Invalid image data"])))
+            return
+        }
+        
+        let storedImage = imageStorage.child(id).child(imageName)
+        let metadata = StorageMetadata()
+        metadata.contentType = "image/jpeg"
+        
+        let uploadTask = storedImage.putData(uploadData, metadata: metadata)
+        
+        uploadTask.observe(.progress) { snapshot in
+            if let snapProgress = snapshot.progress {
+                let fraction = Double(snapProgress.completedUnitCount) / Double(max(snapProgress.totalUnitCount, 1))
+                progress?(fraction)
+            }
+        }
+        
+        uploadTask.observe(.success) { _ in
+            storedImage.downloadURL { (url, error) in
+                if let error = error {
+                    completion(.failure(error))
+                } else if let url = url {
+                    completion(.success(url.absoluteString))
+                } else {
+                    completion(.failure(NSError(domain: "Upload", code: -1, userInfo: [NSLocalizedDescriptionKey: "Unknown storage error"])))
+                }
+            }
+        }
+        
+        uploadTask.observe(.failure) { snapshot in
+            if let error = snapshot.error {
+                completion(.failure(error))
+            } else {
+                completion(.failure(NSError(domain: "Upload", code: -2, userInfo: [NSLocalizedDescriptionKey: "Upload failed"])))
+            }
+        }
+    }
+    
+    // Upload raw Data with progress callback (preserves caller's chosen compression/quality)
+    func uploadImageData(_ data: Data,
+                         id: String,
+                         imageName: String,
+                         progress: ((Double) -> Void)? = nil,
+                         completion: @escaping (Result<String, Error>) -> Void) {
+        let storedImage = imageStorage.child(id).child(imageName)
+        let metadata = StorageMetadata()
+        metadata.contentType = "image/jpeg"
+        
+        let uploadTask = storedImage.putData(data, metadata: metadata)
+        
+        uploadTask.observe(.progress) { snapshot in
+            if let snapProgress = snapshot.progress {
+                let fraction = Double(snapProgress.completedUnitCount) / Double(max(snapProgress.totalUnitCount, 1))
+                progress?(fraction)
+            }
+        }
+        
+        uploadTask.observe(.success) { _ in
+            storedImage.downloadURL { (url, error) in
+                if let error = error {
+                    completion(.failure(error))
+                } else if let url = url {
+                    completion(.success(url.absoluteString))
+                } else {
+                    completion(.failure(NSError(domain: "Upload", code: -1, userInfo: [NSLocalizedDescriptionKey: "Unknown storage error"])))
+                }
+            }
+        }
+        
+        uploadTask.observe(.failure) { snapshot in
+            if let error = snapshot.error {
+                completion(.failure(error))
+            } else {
+                completion(.failure(NSError(domain: "Upload", code: -2, userInfo: [NSLocalizedDescriptionKey: "Upload failed"])))
+            }
+        }
+    }
 }
+

@@ -84,7 +84,6 @@
 		1EC27FEC2C0377450007279D /* CartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC27FEB2C0377450007279D /* CartViewModel.swift */; };
 		1EC27FEE2C0383720007279D /* CartItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC27FED2C0383720007279D /* CartItems.swift */; };
 		1EC27FF02C038A0E0007279D /* CartItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC27FEF2C038A0E0007279D /* CartItemView.swift */; };
-		1EC27FF22C038C7C0007279D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1EC27FF12C038C7B0007279D /* GoogleService-Info.plist */; };
 		1EC27FF42C0392060007279D /* UpdateCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC27FF32C0392060007279D /* UpdateCart.swift */; };
 		1EC27FF62C03A4FF0007279D /* CartTotal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC27FF52C03A4FF0007279D /* CartTotal.swift */; };
 		1EC27FF82C03ACAE0007279D /* OrderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC27FF72C03ACAE0007279D /* OrderViewModel.swift */; };
@@ -234,6 +233,19 @@
 		1EFB9B372C1C624B00C15CE4 /* EventListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFB9B362C1C624B00C15CE4 /* EventListView.swift */; };
 		520BB0382DC959AC00DB6315 /* SafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520BB0372DC959AB00DB6315 /* SafariView.swift */; };
 		52348E0B2DD8B84F00E4EBE5 /* ValidatedTextEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52348E0A2DD8B84E00E4EBE5 /* ValidatedTextEditor.swift */; };
+		525B70D42E8E577000E4B347 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 525B70D32E8E577000E4B347 /* GoogleService-Info.plist */; };
+		525B70DA2E8E596300E4B347 /* ChatListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525B70D82E8E596300E4B347 /* ChatListView.swift */; };
+		525B70DB2E8E596300E4B347 /* ChatBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525B70D52E8E596300E4B347 /* ChatBubble.swift */; };
+		525B70DC2E8E596300E4B347 /* ChatDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525B70D62E8E596300E4B347 /* ChatDetailView.swift */; };
+		525B70DD2E8E596300E4B347 /* ChatInputBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525B70D72E8E596300E4B347 /* ChatInputBar.swift */; };
+		525B70E22E8E599500E4B347 /* FirebaseChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525B70DE2E8E599500E4B347 /* FirebaseChat.swift */; };
+		525B70E32E8E599500E4B347 /* FirebaseUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525B70E02E8E599500E4B347 /* FirebaseUser.swift */; };
+		525B70E42E8E599500E4B347 /* FirebaseMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525B70DF2E8E599500E4B347 /* FirebaseMessage.swift */; };
+		525B70E72E8E59D600E4B347 /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525B70E62E8E59D600E4B347 /* ChatViewModel.swift */; };
+		525B70E82E8E59D600E4B347 /* ChatListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525B70E52E8E59D600E4B347 /* ChatListViewModel.swift */; };
+		525B70EA2E8E5A8100E4B347 /* FirebaseUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525B70E92E8E5A8100E4B347 /* FirebaseUserService.swift */; };
+		525B70EC2E8E5AEB00E4B347 /* PushNotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525B70EB2E8E5AEB00E4B347 /* PushNotificationService.swift */; };
+		525B70EE2E8E5BA200E4B347 /* UserRole.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525B70ED2E8E5BA200E4B347 /* UserRole.swift */; };
 		529EC5042DC8B8F0009AB1FF /* ErrorObserverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529EC5032DC8B8EF009AB1FF /* ErrorObserverView.swift */; };
 		529EC5062DC8C0AA009AB1FF /* PopupObserverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529EC5052DC8C0A9009AB1FF /* PopupObserverView.swift */; };
 		529EC5082DC8C1F2009AB1FF /* MessageStatusObserverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529EC5072DC8C1F1009AB1FF /* MessageStatusObserverView.swift */; };
@@ -336,7 +348,6 @@
 		1EC27FEB2C0377450007279D /* CartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewModel.swift; sourceTree = "<group>"; };
 		1EC27FED2C0383720007279D /* CartItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartItems.swift; sourceTree = "<group>"; };
 		1EC27FEF2C038A0E0007279D /* CartItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartItemView.swift; sourceTree = "<group>"; };
-		1EC27FF12C038C7B0007279D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1EC27FF32C0392060007279D /* UpdateCart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateCart.swift; sourceTree = "<group>"; };
 		1EC27FF52C03A4FF0007279D /* CartTotal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartTotal.swift; sourceTree = "<group>"; };
 		1EC27FF72C03ACAE0007279D /* OrderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewModel.swift; sourceTree = "<group>"; };
@@ -461,6 +472,19 @@
 		1EFB9B362C1C624B00C15CE4 /* EventListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListView.swift; sourceTree = "<group>"; };
 		520BB0372DC959AB00DB6315 /* SafariView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariView.swift; sourceTree = "<group>"; };
 		52348E0A2DD8B84E00E4EBE5 /* ValidatedTextEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidatedTextEditor.swift; sourceTree = "<group>"; };
+		525B70D32E8E577000E4B347 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		525B70D52E8E596300E4B347 /* ChatBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBubble.swift; sourceTree = "<group>"; };
+		525B70D62E8E596300E4B347 /* ChatDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatDetailView.swift; sourceTree = "<group>"; };
+		525B70D72E8E596300E4B347 /* ChatInputBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatInputBar.swift; sourceTree = "<group>"; };
+		525B70D82E8E596300E4B347 /* ChatListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListView.swift; sourceTree = "<group>"; };
+		525B70DE2E8E599500E4B347 /* FirebaseChat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseChat.swift; sourceTree = "<group>"; };
+		525B70DF2E8E599500E4B347 /* FirebaseMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseMessage.swift; sourceTree = "<group>"; };
+		525B70E02E8E599500E4B347 /* FirebaseUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseUser.swift; sourceTree = "<group>"; };
+		525B70E52E8E59D600E4B347 /* ChatListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListViewModel.swift; sourceTree = "<group>"; };
+		525B70E62E8E59D600E4B347 /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
+		525B70E92E8E5A8100E4B347 /* FirebaseUserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseUserService.swift; sourceTree = "<group>"; };
+		525B70EB2E8E5AEB00E4B347 /* PushNotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotificationService.swift; sourceTree = "<group>"; };
+		525B70ED2E8E5BA200E4B347 /* UserRole.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRole.swift; sourceTree = "<group>"; };
 		529EC5032DC8B8EF009AB1FF /* ErrorObserverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorObserverView.swift; sourceTree = "<group>"; };
 		529EC5052DC8C0A9009AB1FF /* PopupObserverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupObserverView.swift; sourceTree = "<group>"; };
 		529EC5072DC8C1F1009AB1FF /* MessageStatusObserverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageStatusObserverView.swift; sourceTree = "<group>"; };
@@ -598,7 +622,7 @@
 		1ECC94482BDC56C0002BFE54 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				1EC27FF12C038C7B0007279D /* GoogleService-Info.plist */,
+				525B70D32E8E577000E4B347 /* GoogleService-Info.plist */,
 				1EEC2BD32BD83E6300975953 /* Assets.xcassets */,
 				1ECC950E2BDD166A002BFE54 /* CountryNumbers.json */,
 				1ECC95202BDD1C21002BFE54 /* Localizable.strings */,
@@ -612,6 +636,8 @@
 				1ECC94532BDC57D3002BFE54 /* APIEndpoint.swift */,
 				1ECC94552BDC57EA002BFE54 /* APIClient.swift */,
 				1E41E1FB2BE942490061AC47 /* FirestoreService.swift */,
+				525B70E92E8E5A8100E4B347 /* FirebaseUserService.swift */,
+				525B70EB2E8E5AEB00E4B347 /* PushNotificationService.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -630,6 +656,8 @@
 			isa = PBXGroup;
 			children = (
 				529EC50B2DC90302009AB1FF /* TamaraWebViewModel.swift */,
+				525B70E52E8E59D600E4B347 /* ChatListViewModel.swift */,
+				525B70E62E8E59D600E4B347 /* ChatViewModel.swift */,
 				1E28042F2C04D41A0021DFB0 /* NotificationsViewModel.swift */,
 				1ECC94EF2BDD11D4002BFE54 /* LanguageManager.swift */,
 				1ECC94F12BDD1215002BFE54 /* AppRouter.swift */,
@@ -648,6 +676,7 @@
 				1EFB9B262C1B98CC00C15CE4 /* ReminderViewModel.swift */,
 				1EA6D3282C1DB15C007E8AE0 /* PaymentState.swift */,
 				1EA6D32A2C1DB17A007E8AE0 /* PaymentViewModel.swift */,
+				525B70ED2E8E5BA200E4B347 /* UserRole.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -673,6 +702,7 @@
 				1ECC94522BDC579E002BFE54 /* Modifiers+Styles+UIViewControllerRepresentable */,
 				1ECC944F2BDC5775002BFE54 /* Loading */,
 				1ECC944E2BDC5750002BFE54 /* Initial */,
+				525B70D92E8E596300E4B347 /* Chat */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -723,6 +753,7 @@
 				1EA6D3262C1DB13A007E8AE0 /* WalletData.swift */,
 				1EA6D32C2C1DB39C007E8AE0 /* Coupon.swift */,
 				1E479B302C4D881B006130E1 /* WhatsApp.swift */,
+				525B70E12E8E599500E4B347 /* Chat */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1023,6 +1054,27 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		525B70D92E8E596300E4B347 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				525B70D52E8E596300E4B347 /* ChatBubble.swift */,
+				525B70D62E8E596300E4B347 /* ChatDetailView.swift */,
+				525B70D72E8E596300E4B347 /* ChatInputBar.swift */,
+				525B70D82E8E596300E4B347 /* ChatListView.swift */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		525B70E12E8E599500E4B347 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				525B70DE2E8E599500E4B347 /* FirebaseChat.swift */,
+				525B70DF2E8E599500E4B347 /* FirebaseMessage.swift */,
+				525B70E02E8E599500E4B347 /* FirebaseUser.swift */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
 		D03752232625DF48AAE5C406 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -1138,7 +1190,7 @@
 				1ECC95222BDD1C21002BFE54 /* Localizable.strings in Resources */,
 				1EEC2BD42BD83E6300975953 /* Assets.xcassets in Resources */,
 				1ECC94E12BDC6362002BFE54 /* IBMPlexSansArabic-SemiBold.ttf in Resources */,
-				1EC27FF22C038C7C0007279D /* GoogleService-Info.plist in Resources */,
+				525B70D42E8E577000E4B347 /* GoogleService-Info.plist in Resources */,
 				1ECC94E32BDC6362002BFE54 /* IBMPlexSansArabic-Regular.ttf in Resources */,
 				1ECC94E02BDC6362002BFE54 /* IBMPlexSansArabic-Light.ttf in Resources */,
 			);
@@ -1223,12 +1275,16 @@
 				1EA6D31C2C1D961F007E8AE0 /* WishCheckOutView.swift in Sources */,
 				1ECC95372BDD8150002BFE54 /* PersonalInfoView.swift in Sources */,
 				1EA6D3212C1DB0E7007E8AE0 /* TransactionsRowiew.swift in Sources */,
+				525B70EE2E8E5BA200E4B347 /* UserRole.swift in Sources */,
 				1E2804342C04D4DA0021DFB0 /* NotificationsStruct.swift in Sources */,
 				1ECC95092BDD15A5002BFE54 /* LoginView.swift in Sources */,
 				1ECC95392BDD81EF002BFE54 /* LocationManager.swift in Sources */,
 				1EA7FEEF2C1A0BC100823465 /* EditGroupView.swift in Sources */,
 				1E0053382C1F009800C75E42 /* MyWishView.swift in Sources */,
 				1ED8DE372C22EFD000613489 /* CustomeEmptyView.swift in Sources */,
+				525B70E22E8E599500E4B347 /* FirebaseChat.swift in Sources */,
+				525B70E32E8E599500E4B347 /* FirebaseUser.swift in Sources */,
+				525B70E42E8E599500E4B347 /* FirebaseMessage.swift in Sources */,
 				1EDEF6712BE1761F00863C10 /* ConstantView.swift in Sources */,
 				1EA6D3292C1DB15C007E8AE0 /* PaymentState.swift in Sources */,
 				1EFB9B2E2C1BAD9D00C15CE4 /* AddUserProductView.swift in Sources */,
@@ -1260,6 +1316,10 @@
 				1EA6D3252C1DB109007E8AE0 /* AddBalanceView.swift in Sources */,
 				1EA7405A2BFBE9190028AAD0 /* AppConstants.swift in Sources */,
 				1ECC951D2BDD1874002BFE54 /* CustomTextField.swift in Sources */,
+				525B70DA2E8E596300E4B347 /* ChatListView.swift in Sources */,
+				525B70DB2E8E596300E4B347 /* ChatBubble.swift in Sources */,
+				525B70DC2E8E596300E4B347 /* ChatDetailView.swift in Sources */,
+				525B70DD2E8E596300E4B347 /* ChatInputBar.swift in Sources */,
 				1EC27FFC2C03B1AB0007279D /* OrderItemView.swift in Sources */,
 				1EFB9B372C1C624B00C15CE4 /* EventListView.swift in Sources */,
 				1ECC94F62BDD1291002BFE54 /* UserSettings.swift in Sources */,
@@ -1357,6 +1417,7 @@
 				1EA6D32B2C1DB17A007E8AE0 /* PaymentViewModel.swift in Sources */,
 				1EDEF6852BE1A93600863C10 /* FriendWishesView.swift in Sources */,
 				1EC27FF02C038A0E0007279D /* CartItemView.swift in Sources */,
+				525B70EA2E8E5A8100E4B347 /* FirebaseUserService.swift in Sources */,
 				1E1EDA7C2C1CDA27003047CA /* UserWishesView.swift in Sources */,
 				1EDEF67D2BE1930C00863C10 /* ProductsListView.swift in Sources */,
 				1E2804422C0634450021DFB0 /* Supplier.swift in Sources */,
@@ -1366,6 +1427,7 @@
 				1ECC952D2BDD2C02002BFE54 /* MainView.swift in Sources */,
 				1ECC94792BDC5B8B002BFE54 /* Constants.swift in Sources */,
 				1EA7405E2BFBEA190028AAD0 /* Special.swift in Sources */,
+				525B70EC2E8E5AEB00E4B347 /* PushNotificationService.swift in Sources */,
 				1ECC94CA2BDC5E49002BFE54 /* DismissingKeyboard.swift in Sources */,
 				1E28043E2C0503850021DFB0 /* AddressListView.swift in Sources */,
 				1ECC946C2BDC5B68002BFE54 /* Encodable+Extensions.swift in Sources */,
@@ -1382,6 +1444,8 @@
 				1E28041D2C04C6B00021DFB0 /* Mark.swift in Sources */,
 				1ECC95352BDD77FF002BFE54 /* AppState.swift in Sources */,
 				1EA562392C0776440016B508 /* OrderDetails.swift in Sources */,
+				525B70E72E8E59D600E4B347 /* ChatViewModel.swift in Sources */,
+				525B70E82E8E59D600E4B347 /* ChatListViewModel.swift in Sources */,
 				1E2804402C0506F70021DFB0 /* ShowMapView.swift in Sources */,
 				1E2804182C04C6700021DFB0 /* AddressDetailsView.swift in Sources */,
 				1ECC94702BDC5B68002BFE54 /* Int+Extensions.swift in Sources */,

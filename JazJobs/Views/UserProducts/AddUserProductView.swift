@@ -150,7 +150,7 @@ struct AddUserProductView: View {
         )
         .popup(isPresented: $isShowingCategory) {
             let model = CustomModel(
-                title: LocalizedStringKey.categories,
+                title: LocalizedStringKey.publicCategories,
                 content: "",
                 items: viewModel.mainCategoryItems ?? [],
                 onSelect: { item in

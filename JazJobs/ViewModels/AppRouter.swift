@@ -46,6 +46,8 @@ final class AppRouter: ObservableObject {
         case explorWishView(String)
         case myWishView(String)
         case addReview(String)
+        // إضافة حالة الدردشة
+        case chat(chatId: String, currentUserId: String, receiverId: String)
     }
     
     public enum Popup: Hashable {

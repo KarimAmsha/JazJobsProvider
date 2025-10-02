@@ -15,7 +15,15 @@ class UserSettings: ObservableObject {
     @Published var user: User?
     @Published var id: String?
     @Published var token: String?
-    
+    @Published var userRole: UserRole = .client
+    @Published var fcmToken: String? {
+        didSet {
+            if let token = fcmToken {
+                saveFCMTokenToStorage(token: token)
+            }
+        }
+    }
+
     @Published var loggedIn: Bool {
         didSet {
             if !loggedIn {
@@ -63,6 +71,10 @@ class UserSettings: ObservableObject {
         loggedIn = false
     }
     
+    private func saveFCMTokenToStorage(token: String) {
+        UserDefaults.standard.set(token, forKey: Keys.fcmToken)
+    }
+
     private func loadUserFromStorage() -> (user: User, id: String, token: String)? {
         if let userData = UserDefaults.standard.data(forKey: Keys.userData),
            let decodedUser = try? JSONDecoder().decode(User.self, from: userData),
@@ -85,10 +97,11 @@ class UserSettings: ObservableObject {
         UserDefaults.standard.set(token, forKey:  Keys.token)
     }
 
-    private func clearUserStorage() {
+    func clearUserStorage() {
         UserDefaults.standard.removeObject(forKey: Keys.userData)
         UserDefaults.standard.removeObject(forKey:  Keys.id)
         UserDefaults.standard.removeObject(forKey:  Keys.token)
+        UserDefaults.standard.removeObject(forKey: Keys.fcmToken)
     }
 }
 
@@ -97,5 +110,6 @@ extension UserSettings {
         static let id = "id"
         static let userData = "userData"
         static let token = "token"
+        static let fcmToken = "fcmToken"
     }
 }

@@ -43,15 +43,12 @@ struct MainView: View {
                     EditProfileView()
                 case .changePassword:
                     EmptyView()
-//                    ChangePasswordView()
                 case .changePhoneNumber:
                     EmptyView()
-//                    ChangePhoneNumberView()
                 case .contactUs:
                     ContactUsView()
                 case .rewards:
                     EmptyView()
-//                    RewardsView()
                 case .paymentSuccess:
                     SuccessView()
                 case .constant(let item):
@@ -112,6 +109,8 @@ struct MainView: View {
                     MyWishView(wishId: id, viewModel: viewModel)
                 case .addReview(let id):
                     AddReviewView(orderId: id)
+                case let .chat(chatId, currentUserId, receiverId):
+                    ChatDetailView(chatId: chatId, currentUserId: currentUserId, receiverId: receiverId)
                 }
             }
             .popup(isPresented: Binding<Bool>(
@@ -177,16 +176,23 @@ extension MainView {
         switch appState.currentPage {
         case .home:
             HomeView() // الطلبات
-        case .explor:
-            ExplorView() // الرسائل (Placeholder)
-        case .cart:
+        case .messages:
+            // الرسائل: قائمة الدردشة إن كان المستخدم مسجلاً الدخول
             if settings.id == nil {
                 CustomeEmptyView()
             } else {
-                NotificationsView() // الإشعارات
+                ChatListView(userId: settings.id ?? "")
             }
-        case .favourite:
-            ExplorView() // الاستكشاف
+        case .notifications:
+            // الإشعارات
+            if settings.id == nil {
+                CustomeEmptyView()
+            } else {
+                NotificationsView()
+            }
+        case .discover:
+            // الاستكشاف
+            ExplorView()
         case .more:
             if settings.id == nil {
                 CustomeEmptyView()
@@ -217,10 +223,10 @@ extension MainView {
 
                 TabBarIcon(
                     appState: appState,
-                    assignedPage: .explor,
+                    assignedPage: .messages,
                     width: 22, height: 22,
                     iconName: "",
-                    tabName: LocalizedStringKey.messages,
+                    tabName: LocalizedStringKey.messages, // الرسائل
                     isAddButton: false,
                     isCart: false,
                     systemIconName: "bubble.left.and.bubble.right",
@@ -231,10 +237,10 @@ extension MainView {
 
                 TabBarIcon(
                     appState: appState,
-                    assignedPage: .favourite,
+                    assignedPage: .discover,
                     width: 22, height: 22,
                     iconName: "",
-                    tabName: LocalizedStringKey.discover,
+                    tabName: LocalizedStringKey.discover, // الاستكشاف
                     isAddButton: false,
                     isCart: false,
                     systemIconName: "safari",
@@ -245,10 +251,10 @@ extension MainView {
 
                 TabBarIcon(
                     appState: appState,
-                    assignedPage: .cart,
+                    assignedPage: .notifications,
                     width: 22, height: 22,
                     iconName: "",
-                    tabName: LocalizedStringKey.notifications,
+                    tabName: LocalizedStringKey.notifications, // الإشعارات
                     isAddButton: false,
                     isCart: false,
                     systemIconName: "bell",

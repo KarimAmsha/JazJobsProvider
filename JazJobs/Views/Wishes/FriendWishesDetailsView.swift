@@ -149,7 +149,7 @@ struct FriendWishesDetailsView: View {
         .popup(isPresented: $showAddToCartPopup) {
             AddToCartPopup(isPresented: $showAddToCartPopup) {
                 // ما يحدث عند "الذهاب إلى السلة"
-                appState.currentPage = .cart
+                appState.currentPage = .home
                 appRouter.navigateBack()
             }
         } customize: {
@@ -209,7 +209,7 @@ extension FriendWishesDetailsView {
             onOKAction: {
                 appRouter.togglePopup(nil)
                 appRouter.navigateBack()
-                appState.currentPage = .cart
+                appState.currentPage = .home
             },
             onCancelAction: {
                 withAnimation {

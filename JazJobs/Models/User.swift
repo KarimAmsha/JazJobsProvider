@@ -29,12 +29,14 @@ struct User: Codable, Hashable, Identifiable {
 //    let delivery_address: [AddressItem]?
     let points: Int?
     let dob: String?
+    let bio: String? // ADDED
 
     enum CodingKeys: String, CodingKey {
         case createAt, isVerify, isBlock, wallet, streetName, floorNo, buildingNo, flatNo, rate, by
         case id = "_id"
         case full_name, email, password, phone_number, os, lat, lng, fcmToken
         case verify_code, isEnableNotifications, token, image, address, orders, delivery_address, points, dob
+        case bio // ADDED
     }
 
     init(from decoder: Decoder) throws {
@@ -67,6 +69,7 @@ struct User: Codable, Hashable, Identifiable {
 //        delivery_address = try container.decodeIfPresent([AddressItem].self, forKey: .delivery_address)
         points = try container.decodeIfPresent(Int.self, forKey: .points)
         dob = try container.decodeIfPresent(String.self, forKey: .dob)
+        bio = try container.decodeIfPresent(String.self, forKey: .bio) // ADDED
     }
 
     func encode(to encoder: Encoder) throws {
@@ -99,6 +102,7 @@ struct User: Codable, Hashable, Identifiable {
 //        try container.encodeIfPresent(delivery_address, forKey: .delivery_address)
         try container.encodeIfPresent(points, forKey: .points)
         try container.encodeIfPresent(dob, forKey: .dob)
+        try container.encodeIfPresent(bio, forKey: .bio) // ADDED
     }
     
     init(fromDictionary dictionary: [String: Any]) {
@@ -130,6 +134,7 @@ struct User: Codable, Hashable, Identifiable {
 //        delivery_address = dictionary["delivery_address"] as? [AddressItem]
         points = dictionary["points"] as? Int
         dob = dictionary["dob"] as? String
+        bio = dictionary["bio"] as? String // ADDED
     }
 }
 

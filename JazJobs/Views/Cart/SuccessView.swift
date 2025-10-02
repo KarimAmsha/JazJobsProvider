@@ -42,7 +42,7 @@ struct SuccessView: View {
                 Button {
                     withAnimation {
                         appRouter.navigateBack()
-                        appState.currentPage = .explor
+                        appState.currentPage = .home
                     }
                 } label: {
                     Text(LocalizedStringKey.discoverCategories)

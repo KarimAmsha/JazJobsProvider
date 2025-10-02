@@ -87,9 +87,9 @@ enum MediaType {
 
 enum Page {
     case home
-    case explor
-    case cart
-    case favourite
+    case messages
+    case notifications
+    case discover
     case more
 }
 
@@ -319,11 +319,9 @@ enum LoginStatus: Equatable {
             return true
 
         case let (.identityConfirmation(lhsString), .identityConfirmation(rhsString)):
-            // Compare identityConfirmation based on the associated String
             return lhsString == rhsString
 
         case let (.profile(lhsString), .profile(rhsString)):
-            // Compare profiles based on the associated String and array of tuples
             return lhsString == rhsString 
 
         default:
@@ -598,6 +596,7 @@ enum LocalizedStringKey {
     static let orderNo = "Order No".localized
     static let payWithCard = "Pay with Card".localized
     static let payWithApplePay = "Pay with Apple Pay".localized
+    static let payment = "Payment".localized
     static let amount = "Amount".localized
     static let exceedsLimits = "Exceeds Limits".localized
     static let acceptedOffers = "Accepted Offers".localized
@@ -693,6 +692,7 @@ enum LocalizedStringKey {
     static let progress = "Progress".localized
     static let updated = "Updated".localized
     static let noOrdersFound = "No orders found".localized
+    static let noDataFound = "No data found".localized
     static let startOrder = "Start Order".localized
     static let finishOrder = "Finish Order".localized
     static let updateOrder = "Update Order".localized
@@ -749,119 +749,6 @@ enum LocalizedStringKey {
     static let applicationSettings = "Application Settings!".localized
     static let settingsHint = "Adjust the application settings to suit you...".localized
     static let notificationHint = "Control sending and receiving notifications from the application!".localized
-    static let aboutUsHint = "Click to learn more about us and what we offer!".localized
-    static let termsOfUseAndPrivacyPolicy = "Terms of use and privacy policy".localized
-    static let termsOfUseAndPrivacyPolicyHint = "If you want to avoid problems with usage, click here!".localized
-    static let logoutHint = "We are happy and hope to see you again soon!".localized
-    static let notificationHint2 = "Browse the list of received notifications".localized
-    static let changeProfilePicture = "Click to change your profile picture".localized
-    static let editProfileHint = "Edit your personal account information (name, photo, etc.)".localized
-    static let discoverOffers = "Discover Offers!".localized
-    static let discoverOffersHint = "Explore the world of offers here...".localized
-    static let searchHint = "Job title, company name, contract type".localized
-    static let makeYourOffer = "Make your offer now!".localized
-    static let facilityEvaluations = "Facility Evaluations".localized
-    static let submitYourOffer = "Submit your offer".localized
-    static let hourlyRate = "Hourly Rate".localized
-    static let salary = "Salary".localized
-    static let submitOffer = "Submit Offer".localized
-    static let submitOfferHint = "Please note that the facility will be able to browse your profile and profile, in addition to the value of the offer you entered!".localized
-    static let filterTitle = "Filter your search for offers".localized
-    static let employmentApplication = "Employment Application".localized
-    static let employmentApplications = "Employment Applications".localized
-    static let serviceRequests = "Service Requests".localized
-    static let filterSearch = "Filter your search".localized
-    static let writeMessage = "Write the message here".localized
-    static let companyName = "Company Name".localized
-    static let support = "Support".localized
-    static let addOrder = "Add Order".localized
-    static let addOrderHint = "Add a order and wait for offers!".localized
-    static let workField2 = "Work Field".localized
-    static let orderTitle = "Order Title".localized
-    static let orderDescription = "Order Description".localized
-    static let postOffer = "Post Offer".localized
-    static let openedMessage = "Opened Message".localized
-    static let newMessage = "New Message".localized
-    static let sendMessage = "Send Message".localized
-    static let messageDescription = "Message Description".localized
-    static let supportHint = "We are always here to hear from you!".localized
-    static let changeProfileImageHint = "It is preferable that the image be clear and show the details of the logo to better identify the facility...".localized
-    static let companyFile = "Company File".localized
-    static let manageYourProfile = "Browse and manage your profile".localized
-    static let receivedOffers = "Received Offers".localized
-    static let acceptRejectOffer = "Accept Or Reject Offer".localized
-    static let userType = "User Type".localized
-    static let personal = "Personal".localized
-    static let company = "Company".localized
-    static let imagesRequired = "Images Required".localized
-    static let orderType = "Order Type".localized
-    static let offerType = "Offer Type".localized
-    static let workType = "Work Type".localized
-    static let jobOrders = "Job Orders".localized
-    static let servicesOrders = "Services Orders".localized
-    static let online = "Online".localized
-    static let offline = "Offline".localized
-    static let personal1 = "Personal1".localized
-    static let company1 = "Company1".localized
-    static let hourly = "Hourly".localized
-    static let daily = "Daily".localized
-    static let yearly = "Yearly".localized
-    static let limited = "Limited".localized
-    static let unlimted = "Unlimted".localized
-    static let executionType = "Execution Type".localized
-    static let daysNo = "Days No.".localized
-    static let employeeNo = "Employee No.".localized
-    static let guest = "Guest".localized
-    static let password = "Password".localized
-    static let forgetPassword = "Forget Password".localized
-    static let restorePassword = "Restore password".localized
-    static let restorePasswordMessage = "Don't worry, simple steps to recover your account password..".localized
-    static let verifyPhoneNumber = "Verify Phone Number".localized
-    static let areYouRememberPassword = "Are you remember Password?".localized
-    static let backToLogin = "Back To Login".localized
-    static let weSendMessageToYou = "We send message to You".localized
-    static let createNewPassword = "Create New Password".localized
-    static let createNewPasswordHint = "Amazing, now create a new password and please do not share it with anyone.".localized
-    static let newPassword = "New Password".localized
-    static let confirmNewPassword = "Confirm New Password".localized
-    static let confirmChangePassword = "Confirm Change Password".localized
-    static let selectLocationHint = "Drop a map pin to your location".localized
-    static let selectThisLocation = "Select This Location".localized
-    static let skipForLater = "Skip for later".localized
-    static let categories = "Categories".localized
-    static let completeOrder = "Complete Order".localized
-    static let selectedServices = "Selected Services".localized
-    static let addNewServices = "Add New Services".localized
-    static let addNewLocation = "Add New Location".localized
-    static let serviceLocation = "Service Location".localized
-    static let attachIllustrativePictures = "Attach illustrative pictures".localized
-    static let attachIllustrativePicturesHint = "Click here to attach illustrative pictures of the nature of the problem you are facing and which requires a technician to solve it!".localized
-    static let moreDescriptionAboutService = "More description about the service".localized
-    static let payment = "Payment".localized
-    static let chooseThePaymentMethodThatSuitsYou = "Choose the payment method that suits you".localized
-    static let discountCoupun = "Discount Coupun".localized
-    static let paymentMethodHint = "Prices do not include spare parts!".localized
-    static let paymentMethod = "Payment Method".localized
-    static let paymentCompletedSuccessfully = "Payment completed successfully!".localized
-    static let paymentCompletedSuccessfullyHint = "The payment process has been completed successfully and you can now follow the status of your order from the orders page.".localized
-    static let backToHome = "Back To Home".localized
-    static let PaymentProcessWasNotCompleted = "The payment process was not completed!".localized
-    static let PaymentProcessWasNotCompletedHint = "Your payment was not completed. Please ensure that there is sufficient balance or contact the bank.".localized
-    static let chooseAnotherPaymentMethod = "Choose another payment method".localized
-    static let backToOrders = "Back To Orders".localized
-    static let continueToOrder = "Continue To Order".localized
-    static let orderDetailsHint = "Show Order details and status".localized
-    static let detailsOfServiceProvision = "Details of service provision".localized
-    static let contactNumber = "Contact Number".localized
-    static let wantCompleteOrder = "I want to complete the order!".localized
-    static let iWantCancel = "Yes, I want to cancel!".localized
-    static let noDataFound = "No data found".localized
-    static let profileHint = "Control your profile and data from here!".localized
-    static let accountPassword = "Account Password".localized
-    static let editPhoneNumber = "Edit Phone Number".localized
-    static let accountPasswordHint = "Change your account password in simple and quick steps!".localized
-    static let editPhoneNumberHint = "Change your phone number in simple and quick steps!".localized
-    static let notificationsHint = "Control the style of receiving notifications “offers, order status, etc.”".localized
     static let contactUsHint = "If you encounter a problem during your journey through the application, we are here for you!".localized
     static let termsHint = "Please review and read the usage policy to avoid any error during your transaction!".localized
     static let privacyHint = "Please review and read the privacy policy to save your data and information!".localized
@@ -997,6 +884,28 @@ enum LocalizedStringKey {
     static let payMada = "Pay Mada".localized
     static let payTamara = "Pay Tamara".localized
 
+    // Returned keys (from screenshot + extras)
+    static let aboutUsHint = "Click to learn more about us".localized
+    static let termsOfUseAndPrivacyPolicy = "Terms of Use and Privacy Policy".localized
+    static let termsOfUseAndPrivacyPolicyHint = "Read the terms of use and the privacy policy".localized
+    static let logoutHint = "We are happy to see you again anytime. You can log in again whenever you want.".localized
+    static let notificationHint2 = "Browse and manage your notifications".localized
+    static let changeProfilePicture = "Click to change your profile picture".localized
+    static let editProfileHint = "Edit your profile information and address".localized
+    static let discoverOffers = "Discover Offers".localized
+    static let discoverOffersHint = "Explore the latest offers and discounts".localized
+    static let searchHint = "Job title, service, or company name".localized
+
+    // Explicitly requested missing keys
+    static let orderType = "Order Type".localized
+    static let iWantCancel = "I want to cancel".localized
+    static let wantCompleteOrder = "Do you want to complete the order?".localized
+    static let backToHome = "Back To Home".localized
+
+    // Newly added for RegisterView
+    static let userType = "User Type".localized
+    static let personal = "Personal".localized
+    static let company = "Company".localized
 }
 
 enum LocalizedError {

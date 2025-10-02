@@ -136,7 +136,7 @@ struct ProductDetailsView: View {
         .popup(isPresented: $showAddToCartPopup) {
             AddToCartPopup(isPresented: $showAddToCartPopup) {
                 NotificationCenter.default.post(name: .cartUpdated, object: nil)
-                appState.currentPage = .cart
+                appState.currentPage = .home
             }
         } customize: {
             $0.type(.floater()).position(.bottom).animation(.spring()).closeOnTapOutside(true).backgroundColor(Color.black.opacity(0.4))

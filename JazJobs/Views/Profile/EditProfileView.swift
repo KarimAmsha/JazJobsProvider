@@ -43,30 +43,35 @@ struct EditProfileView: View {
         GeometryReader { geometry in
             VStack(alignment: .leading, spacing: 0) {
                 ScrollView(.vertical, showsIndicators: false) {
-                    VStack(alignment: .leading, spacing: 12) {
-                        VStack(alignment: .center, spacing: 8) {
-                            profileImageView()
+                    VStack(alignment: .leading, spacing: 16) {
+                        // MARK: - Dashed tappable box (change profile picture)
+                        VStack(spacing: 10) {
+                            circleProfileImageView(size: 72)
                                 .shadow(color: .primary().opacity(0.16), radius: 2.5, x: 0, y: 5)
-                            
-                            Button {
-                                isFloatingPickerPresented.toggle()
-                            } label: {
-                                Text(LocalizedStringKey.uploadProfilePicture)
-                            }
-                            .buttonStyle(PrimaryButton(fontSize: 12, fontWeight: .medium, background: .primaryLightActive(), foreground: .primary(), height: 44, radius: 12))
-                            .disabled(viewModel.isLoading)
+
+                            Text("قم بالضغط لتغيير صورتك الشخصية")
+                                .customFont(weight: .bold, size: 14)
+                                .foregroundColor(.primaryBlack())
+
+                            Text("يفضل أن تكون صورة واضحة وتوضح ملامح الشخص للتعرف على شخصيتك بشكل أفضل ...")
+                                .customFont(weight: .regular, size: 12)
+                                .foregroundColor(.gray999999())
+                                .multilineTextAlignment(.center)
                         }
                         .frame(maxWidth: .infinity)
-                        .padding(24)
-                        .background(Color.primaryLightHover().cornerRadius(4))
-                        .padding(6)
-                        .background(Color.primaryLight().cornerRadius(4))
+                        .padding(20)
+                        .background(
+                            RoundedRectangle(cornerRadius: 12)
+                                .stroke(style: StrokeStyle(lineWidth: 1, dash: [6]))
+                                .foregroundColor(.grayCCCCCC())
+                        )
+                        .contentShape(Rectangle())
+                        .onTapGesture {
+                            isFloatingPickerPresented.toggle()
+                        }
 
-                        Text(LocalizedStringKey.personalInformation)
-                            .customFont(weight: .bold, size: 16)
-                            .foregroundColor(.primaryBlack())
-
-                        VStack(alignment: .leading) {
+                        // MARK: - Full name
+                        VStack(alignment: .leading, spacing: 8) {
                             Text(LocalizedStringKey.fullName)
                                 .customFont(weight: .medium, size: 12)
 
@@ -84,58 +89,39 @@ struct EditProfileView: View {
                         }
                         .foregroundColor(.black222020())
 
-                        VStack(alignment: .leading) {
-                            Text(LocalizedStringKey.email)
+                        // MARK: - Full description (bio)
+                        VStack(alignment: .leading, spacing: 8) {
+                            Text("الوصف الكامل")
                                 .customFont(weight: .medium, size: 12)
+                                .foregroundColor(.black222020())
 
-                            TextField(LocalizedStringKey.email, text: $email)
-                                .placeholder(when: name.isEmpty) {
-                                    Text(LocalizedStringKey.email)
+                            ZStack(alignment: .topLeading) {
+                                TextEditor(text: $description)
+                                    .customFont(weight: .regular, size: 14)
+                                    .frame(minHeight: 120, alignment: .topLeading)
+                                    .padding(.horizontal, 12)
+                                    .padding(.vertical, 12)
+                                    .accentColor(.primary())
+                                    .background(Color.white)
+                                    .roundedBackground(cornerRadius: 12, strokeColor: .primaryBlack(), lineWidth: 1)
+
+                                if description.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+                                    Text(placeholderString)
+                                        .customFont(weight: .regular, size: 14)
                                         .foregroundColor(.gray999999())
+                                        .padding(.horizontal, 20)
+                                        .padding(.vertical, 20)
                                 }
-                                .focused($keyIsFocused)
-                                .customFont(weight: .regular, size: 14)
-                                .keyboardType(.emailAddress)
-                                .accentColor(.primary())
-                                .padding(.horizontal, 16)
-                                .padding(.vertical, 18)
-                                .roundedBackground(cornerRadius: 12, strokeColor: .primaryBlack(), lineWidth: 1)
+                            }
                         }
-                        .foregroundColor(.black222020())
-                        
-//                        VStack(alignment: .leading) {
-//                            Text(LocalizedStringKey.dob)
-//                                .customFont(weight: .medium, size: 12)
-//                            
-//                            HStack {
-//                                TextField(LocalizedStringKey.dmy, text: $dateStr)
-//                                    .placeholder(when: dateStr.isEmpty) {
-//                                        Text(LocalizedStringKey.dmy)
-//                                            .foregroundColor(.gray999999())
-//                                    }
-//                                    .customFont(weight: .regular, size: 14)
-//                                    .disabled(true)
-//
-//                                Spacer()
-//                                
-//                                Image("ic_calendar")
-//                                    .foregroundColor(.black)
-//                            }
-//                            .padding(.horizontal, 16)
-//                            .padding(.vertical, 18)
-//                            .roundedBackground(cornerRadius: 12, strokeColor: .primaryBlack(), lineWidth: 1)
-//                            .onTapGesture {
-//                                isShowingDatePicker = true
-//                            }
-//                        }
 
-                        Spacer()
+                        Spacer(minLength: 8)
 
                         if let uploadProgress = viewModel.uploadProgress {
                             // Display the progress view only when upload is in progress
                             LinearProgressView(LocalizedStringKey.loading, progress: uploadProgress, color: .primary())
                         }
-                        
+
                         Button {
                             update()
                         } label: {
@@ -158,11 +144,9 @@ struct EditProfileView: View {
             FloatingPickerView(
                 isPresented: $isFloatingPickerPresented,
                 onChoosePhoto: {
-                    // Handle choosing a photo here
                     mediaPickerViewModel.choosePhoto()
                 },
                 onTakePhoto: {
-                    // Handle taking a photo here
                     mediaPickerViewModel.takePhoto()
                 }
             )
@@ -195,7 +179,7 @@ struct EditProfileView: View {
         .onAppear {
             getUserData()
 
-//             Use the user's current location if available
+            // Use the user's current location if available
             if let userLocation = LocationManager.shared.userLocation {
                 self.userLocation = userLocation
             }
@@ -214,7 +198,7 @@ struct EditProfileView: View {
             } onCancelAction: {
                 isShowingDatePicker = false
             }
-            
+
             DateTimePicker(model: dateModel)
         } customize: {
             $0
@@ -231,9 +215,10 @@ struct EditProfileView: View {
 }
 
 #Preview {
-    PersonalInfoView()
+    EditProfileView()
         .environmentObject(UserSettings())
         .environmentObject(AppState())
+        .environmentObject(AppRouter())
 }
 
 extension EditProfileView {
@@ -242,37 +227,74 @@ extension EditProfileView {
             name = viewModel.user?.full_name ?? ""
             email = viewModel.user?.email ?? ""
             dateStr = viewModel.user?.formattedDOB ?? ""
+            description = viewModel.user?.bio ?? description
         }
     }
-    
+
     private func update() {
-        var imageData: Data? = nil
-        var params: [String: Any] = [:]
-
-        if isImageSelected, let uiImage = mediaPickerViewModel.selectedImage {
-            // Convert the UIImage to Data, if needed
-            imageData = uiImage.jpegData(compressionQuality: 0.8)
-        }
-
-        params = [
+        var params: [String: Any] = [
             "email": email,
             "full_name": name,
             "lat": userLocation?.latitude ?? 0.0,
             "lng": userLocation?.longitude ?? 0.0,
             "address": "",
             "dob": dateStr,
+            "bio": description
         ]
-        
-        viewModel.updateUserDataWithImage(imageData: imageData, additionalParams: params) { message in
-            showMessage(message: message)
+
+        // If user selected a new image, upload it to Firebase then send URL
+        if let uiImage = mediaPickerViewModel.selectedImage,
+           let imageData = uiImage.jpegData(compressionQuality: 0.8) {
+            uploadProfileImageToFirebase(imageData: imageData) { result in
+                switch result {
+                case .success(let downloadURL):
+                    params["image"] = downloadURL.absoluteString
+                    self.viewModel.updateUserData(params: params) { message in
+                        showMessage(message: message)
+                    }
+                case .failure(let error):
+                    self.viewModel.errorMessage = error.localizedDescription
+                }
+            }
+        } else {
+            // No image change, just update the other fields
+            viewModel.updateUserData(params: params) { message in
+                showMessage(message: message)
+            }
         }
     }
-    
+
+    // Now uses FirestoreService with progress reporting
+    private func uploadProfileImageToFirebase(imageData: Data, completion: @escaping (Result<URL, Error>) -> Void) {
+        viewModel.startUpload()
+        viewModel.updateUploadProgress(newProgress: 0.0)
+
+        let userId = settings.id ?? UUID().uuidString
+        let fileName = "profile_\(Int(Date().timeIntervalSince1970)).jpg"
+
+        FirestoreService.shared.uploadImageData(imageData, id: userId, imageName: fileName, progress: { fraction in
+            self.viewModel.updateUploadProgress(newProgress: fraction)
+        }, completion: { result in
+            // Finish upload and map result to URL
+            self.viewModel.finishUpload()
+            switch result {
+            case .success(let urlString):
+                if let url = URL(string: urlString) {
+                    completion(.success(url))
+                } else {
+                    completion(.failure(NSError(domain: "Upload", code: -4, userInfo: [NSLocalizedDescriptionKey: "Invalid download URL"])))
+                }
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        })
+    }
+
     private func showMessage(message: String) {
         let alertModel = AlertModel(icon: "",
                                     title: "",
                                     message: message,
-                                    hasItem: false, 
+                                    hasItem: false,
                                     item: nil,
                                     okTitle: LocalizedStringKey.ok,
                                     cancelTitle: LocalizedStringKey.back,
@@ -283,29 +305,48 @@ extension EditProfileView {
         } onCancelAction: {
             appRouter.dismissPopup()
         }
-        
+
         appRouter.togglePopup(.alert(alertModel))
     }
 }
 
 extension EditProfileView {
     @ViewBuilder
-    func profileImageView() -> some View {
+    func circleProfileImageView(size: CGFloat) -> some View {
         if let selectedImage = mediaPickerViewModel.selectedImage {
             Image(uiImage: selectedImage)
                 .resizable()
-                .frame(width: 115, height: 115)
-                .cornerRadius(8)
+                .scaledToFill()
+                .frame(width: size, height: size)
+                .clipShape(Circle())
         } else {
             let imageURL = viewModel.user?.image?.toURL()
-            AsyncImageView(
-                width: 115,
-                height: 115,
-                cornerRadius: 8,
-                imageURL: imageURL,
-                placeholder: Image(systemName: "photo"),
-                contentMode: .fill
-            )
+            AsyncImage(url: imageURL) { phase in
+                switch phase {
+                case .empty:
+                    Image(systemName: "person.crop.circle.fill")
+                        .resizable()
+                        .scaledToFill()
+                        .foregroundColor(.grayCCCCCC())
+                case .success(let image):
+                    image
+                        .resizable()
+                        .scaledToFill()
+                case .failure(_):
+                    Image(systemName: "person.crop.circle.fill")
+                        .resizable()
+                        .scaledToFill()
+                        .foregroundColor(.grayCCCCCC())
+                @unknown default:
+                    Image(systemName: "person.crop.circle.fill")
+                        .resizable()
+                        .scaledToFill()
+                        .foregroundColor(.grayCCCCCC())
+                }
+            }
+            .frame(width: size, height: size)
+            .clipShape(Circle())
         }
     }
 }
+
