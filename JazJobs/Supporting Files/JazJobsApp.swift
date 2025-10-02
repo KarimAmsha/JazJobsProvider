@@ -1,6 +1,6 @@
 //
-//  WishyApp.swift
-//  Wishy
+//  JazJobsApp.swift
+//  JazJobs
 //
 //  Created by Karim Amsha on 23.04.2024.
 //
@@ -9,10 +9,9 @@ import SwiftUI
 import Firebase
 import FirebaseMessaging
 import FirebaseCrashlytics
-//import goSellSDK
 
 @main
-struct WishyApp: App {
+struct JazJobsApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     @StateObject var languageManager = LanguageManager()
     @StateObject var appState = AppState()

@@ -216,7 +216,7 @@
 		1EDEF6832BE1A1D200863C10 /* SelectedGiftView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDEF6822BE1A1D200863C10 /* SelectedGiftView.swift */; };
 		1EDEF6852BE1A93600863C10 /* FriendWishesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDEF6842BE1A93600863C10 /* FriendWishesView.swift */; };
 		1EDEF6872BE1ABDF00863C10 /* ProgressLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDEF6862BE1ABDF00863C10 /* ProgressLineView.swift */; };
-		1EEC2BD02BD83E6000975953 /* WishyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEC2BCF2BD83E6000975953 /* WishyApp.swift */; };
+		1EEC2BD02BD83E6000975953 /* JazJobsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEC2BCF2BD83E6000975953 /* JazJobsApp.swift */; };
 		1EEC2BD22BD83E6000975953 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEC2BD12BD83E6000975953 /* ContentView.swift */; };
 		1EEC2BD42BD83E6300975953 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1EEC2BD32BD83E6300975953 /* Assets.xcassets */; };
 		1EEC2BD72BD83E6300975953 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1EEC2BD62BD83E6300975953 /* Preview Assets.xcassets */; };
@@ -455,7 +455,7 @@
 		1EDEF6842BE1A93600863C10 /* FriendWishesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendWishesView.swift; sourceTree = "<group>"; };
 		1EDEF6862BE1ABDF00863C10 /* ProgressLineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressLineView.swift; sourceTree = "<group>"; };
 		1EEC2BCC2BD83E6000975953 /* JazJobs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JazJobs.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		1EEC2BCF2BD83E6000975953 /* WishyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishyApp.swift; sourceTree = "<group>"; };
+		1EEC2BCF2BD83E6000975953 /* JazJobsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JazJobsApp.swift; sourceTree = "<group>"; };
 		1EEC2BD12BD83E6000975953 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1EEC2BD32BD83E6300975953 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1EEC2BD62BD83E6300975953 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -614,7 +614,7 @@
 		1ECC94472BDC56B8002BFE54 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				1EEC2BCF2BD83E6000975953 /* WishyApp.swift */,
+				1EEC2BCF2BD83E6000975953 /* JazJobsApp.swift */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -1326,7 +1326,7 @@
 				1EDEF6812BE19DA000863C10 /* ProductDetailsView.swift in Sources */,
 				1EC27FFA2C03AF740007279D /* OrderModel.swift in Sources */,
 				1ECC946A2BDC5B68002BFE54 /* Int64+Extensions.swift in Sources */,
-				1EEC2BD02BD83E6000975953 /* WishyApp.swift in Sources */,
+				1EEC2BD02BD83E6000975953 /* JazJobsApp.swift in Sources */,
 				1ECC95312BDD77B5002BFE54 /* SMSVerificationView.swift in Sources */,
 				1ECC94C82BDC5E49002BFE54 /* RoundedCorner.swift in Sources */,
 				1EFB9B322C1C40B900C15CE4 /* AddUserProduct.swift in Sources */,
